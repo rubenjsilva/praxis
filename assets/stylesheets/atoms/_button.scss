@@ -1,0 +1,17 @@
+.button {
+  font-size: 1.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 16rem;
+  padding: 2rem 1.2rem;
+
+  &.dark {
+    background-color: $dark;
+    color: $white;
+  }
+
+  &.light {
+    background-color: $white;
+    color: $dark;
+  }
+}

@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    height: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    .navbar-brand {
+        position: relative;
+        width: 18rem;
+        height: 9rem;
+        padding: 2.5rem 3.4rem;
+        background-color: $dark;
+
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+/*
+--------------------------------------------------------------------------------
+Fonts auxiliar mixins
+--------------------------------------------------------------------------------
+*/
+
+
+/*
+--------------------------------------------------------------------------------
+Mobile first queries
+--------------------------------------------------------------------------------
+*/
+@mixin phablet        { @media (min-width: 550px)  { @content; } }
+@mixin tablet         { @media (min-width: 750px)  { @content; } }
+@mixin desktop        { @media (min-width: 1000px) { @content; } }
+@mixin hd             { @media (min-width: 1400px) { @content; } }
+@mixin resolution($r) { @media (min-width: #{$r})  { @content; } }
+
+
+/*
+--------------------------------------------------------------------------------
+Retina queries
+--------------------------------------------------------------------------------
+*/
+@mixin retina($dp) { @media (-webkit-min-device-pixel-ratio: #{$dp}) { @content; } }
+
+
+/*
+--------------------------------------------------------------------------------
+GRID CONTAINER
+--------------------------------------------------------------------------------
+*/
+@mixin grid($columns, $rows, $column_gap:0, $row_gap:0) {
+  display: grid;
+  grid-column-gap: $column_gap;
+  grid-row-gap: $row_gap;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+
+/*
+--------------------------------------------------------------------------------
+Fix for mobile devices
+--------------------------------------------------------------------------------
+*/
+@mixin remove_tap_highlight() {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+@mixin smooth_scroll() {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/*
+--------------------------------------------------------------------------------
+Custom helpers
+--------------------------------------------------------------------------------
+*/
+@mixin no_select() {
+  user-select: none;
+}
+
+@mixin transition($duration:0.2) {
+  transition: #{$duration}s ease-in-out;
+}
+
+@mixin ease_out() {
+  transition: 0.3s cubic-bezier(0, 0, .3, .9);
+}
+
+@mixin translate($x, $y) {
+  transform: translate($x, $y);
+}
