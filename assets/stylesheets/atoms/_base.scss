@@ -48,12 +48,14 @@ h4 {
 }
 
 h5 {
+  font-family: $font-family-sans-serif-med;
   font-size: $h5-font-size;
   letter-spacing: 0.02em;
   line-height: 130%;
 }
 
 h6 {
+  font-family: $font-family-sans-serif-bold;
   font-size: $h6-font-size;
   letter-spacing: 0.14em;
   line-height: 100%;
