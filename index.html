@@ -32,21 +32,40 @@
     </head>
 
     <body>
-      <nav class="navbar">
-        <a class="navbar-brand">
-          <img src="assets/images/praxis-logo.svg">
-        </a>
+      <header class="menu">
+        <nav class="navbar">
+          <a class="navbar-brand">
+            <img src="assets/images/praxis-logo.svg">
+          </a>
+          <a class="burger-menu" href="#">
+            <span class="bar"></span>
+          </a>
 
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link">Dashboard</a>
-              </li>
-            </ul>
+          <div class="overlay">
+            <div class="overlay-backdrop"></div>
+            <div class="menu-panel">
+            </div>
           </div>
-      </nav>
-
+        </nav>
+      </header>
+      
+      <main>
         <h1>Praxis Beer</h1>
         <button class="button dark">Praxis Beer</button>
+      </main>
     </body>
+
+    <script>
+      var isActive = false;
+      $('.burger-menu').on('click', function() {
+        if (isActive) {
+          $(this).removeClass('active');
+          $('.overlay').removeClass('menu-open');
+        } else {
+          $(this).addClass('active');
+          $('.overlay').addClass('menu-open');
+        }
+        isActive = !isActive;
+      });
+    </script>
 </html>
