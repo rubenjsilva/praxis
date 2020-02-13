@@ -14,7 +14,7 @@ body {
   font-family: $font-family-sans-serif;
   background-color: $white;
   color: $dark;
-  font-size: 1.6rem;
+  font-size: $font-size-baseline;
   letter-spacing: .02em;
   line-height: 150%;
 }
@@ -24,37 +24,37 @@ h1, h2, h3, h4, button, label, a {
 }
 
 h1 {
-  font-size: 23rem;
+  font-size: $h1-font-size;
   letter-spacing: 0.06em;
   line-height: 90%;
 }
 
 h2 {
-  font-size: 15rem;
+  font-size: $h2-font-size;
   letter-spacing: 0.04em;
   line-height: 90%;
 }
 
 h3 {
-  font-size: 8.6rem;
+  font-size: $h3-font-size;
   letter-spacing: 0.02em;
   line-height: 110%;
 }
 
 h4 {
-  font-size: 3.6rem;
+  font-size: $h4-font-size;
   letter-spacing: 0.02em;
   line-height: 100%;
 }
 
 h5 {
-  font-size: 2.4rem;
+  font-size: $h5-font-size;
   letter-spacing: 0.02em;
   line-height: 130%;
 }
 
 h6 {
-  font-size: 1.4rem;
+  font-size: $h6-font-size;
   letter-spacing: 0.14em;
   line-height: 100%;
   text-transform: uppercase;

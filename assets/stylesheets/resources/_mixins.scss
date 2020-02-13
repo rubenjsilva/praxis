@@ -27,6 +27,19 @@ Retina queries
 
 /*
 --------------------------------------------------------------------------------
+Position
+--------------------------------------------------------------------------------
+*/
+@mixin position ($position: null, $top: null, $left: null, $bottom: null, $right: null) {
+  position: $position;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+/*
+--------------------------------------------------------------------------------
 GRID CONTAINER
 --------------------------------------------------------------------------------
 */
@@ -62,11 +75,11 @@ Custom helpers
   user-select: none;
 }
 
-@mixin transition($duration:0.2) {
-  transition: #{$duration}s ease-in-out;
+@mixin transition($type: all, $duration: 0.3) {
+  transition: $type #{$duration}s cubic-bezier(.19,1,.22,1)
 }
 
-@mixin ease_out() {
+@mixin transition-cubic() {
   transition: 0.3s cubic-bezier(0, 0, .3, .9);
 }
 
