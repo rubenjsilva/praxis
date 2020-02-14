@@ -28,7 +28,8 @@
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
 
     <body>
@@ -50,6 +51,16 @@
       </header>
 
       <main>
+        <section class="fullscreen-wrapper dark-section">
+          <img class="bg-image" src="assets/images/pure-malt-lg.jpg">
+
+          <div class="w-50">
+            <h2 class="invert">Pure <br>Malt Beer</h2>
+          </div>
+        </section>
+        <section class="fullscreen-wrapper dark-section">
+
+        </section>
         <h1>Praxis Beer</h1>
         <button class="button dark">Praxis Beer</button>
       </main>
@@ -57,6 +68,7 @@
 
     <script>
       var isActive = false;
+      AOS.init();
       $('.burger-menu').on('click', function() {
         if (isActive) {
           $(this).removeClass('active');

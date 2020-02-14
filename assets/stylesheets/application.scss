@@ -1,7 +1,13 @@
 @import
 'resources/reset',
 'resources/mixins',
-'resources/grid',
+'resources/grid/breakpoints',
+'resources/grid/grid-framework',
+'resources/grid/grid-mixin',
+'resources/grid/grid',
+'resources/grid/display',
+'resources/grid/flex',
+'resources/grid/spacing',
 
 'resources/fonts',
 'resources/palette',
@@ -13,6 +19,8 @@
 'atoms/button_safari',
 
 'blocs/header',
+'blocs/main',
 'blocs/navbar',
 
 'resources/helpers';
+

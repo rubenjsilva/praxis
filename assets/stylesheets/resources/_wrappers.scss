@@ -1,19 +1,16 @@
-.flex {
-  display: flex;
-}
+.fullscreen-wrapper {
+  padding: 8rem;
+  height: 100vh;
+  width: 100%;
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-sb {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex-vam {
-  display: flex;
-  align-items: center;
+  img {
+    &.bg-image{
+      @include position(absolute, 0, 0);
+      height: 100%;
+      width: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
 }
