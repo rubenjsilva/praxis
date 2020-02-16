@@ -1,6 +1,5 @@
 
 .menu {
-    
     .navbar {
         @include position(fixed, 0, 0);
         display: flex;
@@ -8,7 +7,7 @@
         z-index: 20;
 
         .navbar-brand {
-            background-color: $dark;
+            background-color: $black;
             position: relative;
             width: $navbar-height*2;
             height: $navbar-height;
@@ -29,10 +28,10 @@
             z-index: 20;
 
             &:hover {
-                @include transition();
+                @include transition(all, .4);
 
                 .bar {
-                    @include transition();
+                    @include transition(all, .3);
                     width: 4.5rem;
 
                     &:before {
@@ -43,7 +42,7 @@
             }
 
             .bar {
-                @include transition(all, .4);
+                @include transition(all, .3);
                 margin: auto 2.2rem;
                 width: 3rem;
 
@@ -51,8 +50,8 @@
                     content: '';
                     @include position(absolute, 50%, 0);
                     @include transition(transform, .4);
-                    background: $dark;
-                    height: 2px;
+                    background: $black;
+                    height: 3px;
                 }
 
                 &:before {
@@ -95,7 +94,7 @@
 
     .overlay {
         @include position(fixed, 0, 0);
-        @include transition(all, .4);
+        @include transition(all, .7);
         width: 100%;
         height: 100%;
         min-height: 100vh;
@@ -104,7 +103,7 @@
 
         .overlay-backdrop {
             @include position(absolute, 0, 0);
-            background-color: $dark;
+            background-color: $black;
             width: 100%;
             height: 100%;
             z-index: -1;

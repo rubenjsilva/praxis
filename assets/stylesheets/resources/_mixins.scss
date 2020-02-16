@@ -75,7 +75,7 @@ Custom helpers
   user-select: none;
 }
 
-@mixin transition($type: all, $duration: 0.3) {
+@mixin transition($type: all, $duration: .3) {
   transition: $type #{$duration}s cubic-bezier(.19,1,.22,1)
 }
 
