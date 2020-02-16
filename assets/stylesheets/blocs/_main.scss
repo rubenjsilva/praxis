@@ -1,0 +1,11 @@
+main, section {
+    position: relative;
+}
+
+section {
+    &.dark-section {
+        .invert {
+            color: $white !important;
+        }
+    }
+}
