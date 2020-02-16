@@ -39,7 +39,8 @@ h2 {
 h3 {
   font-size: $h3-font-size;
   letter-spacing: 0.02em;
-  line-height: 110%;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -49,8 +50,8 @@ h4 {
 }
 
 h5 {
-  font-family: $font-family-sans-serif-med;
   font-size: $h5-font-size;
+  font-weight: 200;
   letter-spacing: 0.02em;
   line-height: 130%;
 }
