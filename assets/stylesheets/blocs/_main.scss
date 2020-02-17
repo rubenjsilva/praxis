@@ -9,6 +9,10 @@ section {
         }
     }
 
+    &.light-section {
+        background-color: $gray-5;
+    }
+
    .section-title {
        border-top: 2px solid $gray-5;
        padding-top: 3.6rem;
