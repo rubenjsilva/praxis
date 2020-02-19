@@ -50,6 +50,56 @@
         top: 50%;
         transform: translateY(-50%);
         backface-visibility: hidden;
+
+        &:hover .picture::after {
+            height: 40rem;
+        }
+
+        &:hover .picture::before {
+            filter: blur(10px);
+            opacity: 0.35;
+            bottom: -5rem;
+        }
+
+        &:hover .picture .media {
+            transform: scale(1.03);
+        }
+
+        .label {
+            color: $white;
+        }
+
+        .obj-label-left {
+            @include transition(all, .7);
+            transform: rotate(-90deg) translateY(-50%);
+            transition-delay: .2s;
+            position: absolute;
+            top: 65%;
+            left: 6rem;
+            z-index: 0;
+            opacity: .2;
+        }
+
+        &:hover .obj-label-left{
+            left: .5rem;
+            opacity: 1;
+        }
+
+        .obj-label-right {
+            @include transition(all, .7);
+            transition-delay: .2s;
+            transform: rotate(90deg) translateY(-50%);
+            position: absolute;
+            top: 65%;
+            right: 6rem;
+            z-index: 0;
+            opacity: .2;
+        }
+
+        &:hover .obj-label-right{
+            right: .5rem;
+            opacity: 1;
+        }
     }
 
     @media only screen and (max-width: 600px) {
@@ -73,25 +123,30 @@
         transform: translateX(-50%);
         z-index: 3;
 
-        &:hover:after {
-            height: 40rem;
-        }
-
-        &:hover .media {
-            transform: scale(1.03);
-        }
-
         &:after {
             content:'';
-            @include transition(all, .7);
+            @include transition(all, 1.4);
             background-color: #FACA78;
             position: absolute;
             left: 0;
-            bottom: -6rem;
+            bottom: -8rem;
             height: 0rem;
             width: 100%;
             z-index: -1;
+        }
 
+        &:before {
+            content: '';
+            @include transition(all, 1.4);
+            background: $dark;
+            filter: blur(14px);
+            position: absolute;
+            width: 17rem;
+            height: 1rem;
+            bottom: -6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
         }
         
         .media {
@@ -100,12 +155,11 @@
             height: 100%;
             object-fit: contain;
             transform: scale(1);
+            z-index: 4;
         }
     }
 
-    a {
-        text-decoration: none;
-
+    h3 {
         &.title {
             display: inline-block;
             position: absolute;
