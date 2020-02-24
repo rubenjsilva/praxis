@@ -57,16 +57,25 @@
 
         &:hover .picture::before {
             filter: blur(10px);
-            opacity: 0.35;
+            opacity: 0.4;
             bottom: -5rem;
         }
 
         &:hover .picture .media {
-            transform: scale(1.03);
+            transform: scale(1.01);
+        }
+
+        &:hover .title {
+            transform: translate(-50%, -8rem);
         }
 
         .label {
             color: $white;
+        }
+
+        .obj-label-left, .obj-label-right {
+            width: 14rem;
+            text-align: center;
         }
 
         .obj-label-left {
@@ -75,13 +84,13 @@
             transition-delay: .2s;
             position: absolute;
             top: 65%;
-            left: 6rem;
+            left: 4rem;
             z-index: 0;
             opacity: .2;
         }
 
         &:hover .obj-label-left{
-            left: .5rem;
+            left: -3rem;
             opacity: 1;
         }
 
@@ -91,13 +100,13 @@
             transform: rotate(90deg) translateY(-50%);
             position: absolute;
             top: 65%;
-            right: 6rem;
+            right: 4rem;
             z-index: 0;
             opacity: .2;
         }
 
         &:hover .obj-label-right{
-            right: .5rem;
+            right: -3rem;
             opacity: 1;
         }
     }
@@ -141,7 +150,7 @@
             background: $dark;
             filter: blur(14px);
             position: absolute;
-            width: 17rem;
+            width: 16rem;
             height: 1rem;
             bottom: -6rem;
             left: 50%;
@@ -154,19 +163,22 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transform: scale(1);
+            transform: scale(.96);
             z-index: 4;
         }
     }
 
     h3 {
         &.title {
+            @include transition(all, .7);
             display: inline-block;
+            backface-visibility: hidden;
+            color: $white;
             position: absolute;
             top: 2rem;
-            left: 10%;
-            color: $white;
-            backface-visibility: hidden;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
             z-index: 2;
         }
     }

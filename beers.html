@@ -59,37 +59,37 @@
                         <span class="label obj-label-right">Pilsener</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Weiss</h3>
+                    <h3 class="title">Pilsener</h3>
                 </div>
             </div>
             <div id="obj_2" class="obj">
                 <div class="cover" data-velocity="-10">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
-                        <span class="label obj-label-right">Pilsener</span>
+                        <span class="label obj-label-right">Dunkel</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Pilsener</h3>
+                    <h3 class="title">Dunkel</h3>
                 </div>
             </div>
             <div id="obj_3" class="obj">
                 <div class="cover" data-velocity="-10">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
-                        <span class="label obj-label-right">Pilsener</span>
+                        <span class="label obj-label-right">Ambar</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Ambar</h3>
+                    <h3 class="title">Ambar</h3>
                 </div>
             </div>
             <div id="obj_4" class="obj">
                 <div class="cover" data-velocity="-10">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
-                        <span class="label obj-label-right">Pilsener</span>
+                        <span class="label obj-label-right">Weiss</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Pumpkin Ale</h3>
+                    <h3 class="title">Weiss</h3>
                     </a>
                 </div>
             </div> 
@@ -97,20 +97,50 @@
                 <div class="cover" data-velocity="-10">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
-                        <span class="label obj-label-right">Pilsener</span>
+                        <span class="label obj-label-right">Belgian Dark</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Pilsener</h3>
+                    <h3 class="title">Belgian Dark</h3>
                 </div>
             </div> 
             <div id="obj_6" class="obj">
                 <div class="cover" data-velocity="-10">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
-                        <span class="label obj-label-right">Pilsener</span>
+                        <span class="label obj-label-right">Portuguese Pedro</span>
                         <img src="./assets/images/pilsener-beer.png" class="media"/>
                     </div>
-                    <h3 class="title parallax" data-velocity="-50">Pilsener</h3>
+                    <h3 class="title">Portuguese<br>Pedro</h3>
+                </div>
+            </div> 
+            <div id="obj_7" class="obj">
+                <div class="cover" data-velocity="-10">
+                    <div class="picture">
+                        <span class="label obj-label-left">Descobrir</span>
+                        <span class="label obj-label-right">IPA</span>
+                        <img src="./assets/images/pilsener-beer.png" class="media"/>
+                    </div>
+                    <h3 class="title">IPA</h3>
+                </div>
+            </div> 
+            <div id="obj_8" class="obj">
+                <div class="cover" data-velocity="-10">
+                    <div class="picture">
+                        <span class="label obj-label-left">Descobrir</span>
+                        <span class="label obj-label-right">Pumpkin Ale</span>
+                        <img src="./assets/images/pilsener-beer.png" class="media"/>
+                    </div>
+                    <h3 class="title">Pumpkin Ale</h3>
+                </div>
+            </div> 
+            <div id="obj_9" class="obj">
+                <div class="cover" data-velocity="-10">
+                    <div class="picture">
+                        <span class="label obj-label-left">Descobrir</span>
+                        <span class="label obj-label-right">Lausus</span>
+                        <img src="./assets/images/pilsener-beer.png" class="media"/>
+                    </div>
+                    <h3 class="title">Lausus</h3>
                 </div>
             </div> 
         </section>
@@ -164,11 +194,8 @@
                 return -Math.round(Math.round(e / (.3 * span_window_w)) * (.3 * span_window_w)) // This changes the threshold for dragging and snapping the obj's
             },
         onDragStart: function() {
-        
-        
             },
         onThrowComplete: function() { 
-            
                 TweenLite.set(".obj", {className:"+=loc"})
             }
         
