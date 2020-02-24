@@ -1,5 +1,9 @@
 .beers-page {
     background-color: $black;
+    background-image: url('../../assets/images/beer-vector-texture.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 
     .beer-wrapper {
@@ -56,13 +60,13 @@
         }
 
         &:hover .picture::before {
-            filter: blur(10px);
+            filter: blur(9px);
             opacity: 0.4;
-            bottom: -5rem;
+            bottom: -4rem;
         }
 
         &:hover .picture .media {
-            transform: scale(1.01);
+            transform: scale(1);
         }
 
         &:hover .title {
@@ -138,7 +142,7 @@
             background-color: #FACA78;
             position: absolute;
             left: 0;
-            bottom: -8rem;
+            bottom: -7rem;
             height: 0rem;
             width: 100%;
             z-index: -1;
@@ -148,9 +152,9 @@
             content: '';
             @include transition(all, 1.4);
             background: $dark;
-            filter: blur(14px);
+            filter: blur(13px);
             position: absolute;
-            width: 16rem;
+            width: 17rem;
             height: 1rem;
             bottom: -6rem;
             left: 50%;
@@ -163,7 +167,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transform: scale(.96);
+            transform: scale(.95);
             z-index: 4;
         }
     }
