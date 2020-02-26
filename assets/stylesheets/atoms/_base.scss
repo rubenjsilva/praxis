@@ -77,14 +77,18 @@ a {
   &:hover { text-decoration: underline; }
 }
 
+label, .label {
+  font-family:$font-family-condensed;
+  font-size: $font-size-sm;
+  line-height: 100%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 b {
   font-weight: 700;
 }
 
 strong {
   font-weight: 900;
-}
-
-i {
-  font-style: italic;
 }

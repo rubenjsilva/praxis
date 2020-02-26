@@ -1,0 +1,202 @@
+.beers-page {
+    background-color: $black;
+    background-image: url('../../assets/images/beer-vector-texture.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .beer-wrapper {
+        position: relative;
+        white-space: nowrap;
+        overflow: scroll;
+        overflow-y: hidden;
+        height: 95vh;
+    
+        .obj {
+            position: relative;
+            height: 100vh;
+        }
+    }
+
+    /*
+    .active .picture {
+    background: black;
+    }*/
+
+    .obj {
+        display: inline-block;
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+
+        @include tablet {
+            width: 50vw;
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+
+        @include desktop {
+            width: 20.6vw;
+            margin-left: 6.5vw;
+            margin-right: 6.5vw;
+        }
+    }
+
+    /*
+    .obj:nth-of-type(1) {
+        margin-left: 5vw;
+    }
+    .obj:nth-of-type(6) {
+        margin-right: 5vw;
+    }*/
+
+    .cover {
+        position: absolute;
+        width: 100%;
+        height: 90vw;
+        top: 50%;
+        transform: translateY(-40%);
+        backface-visibility: hidden;       
+
+        @include tablet {
+            height: 70vw;
+            transform: translateY(-50%);
+        }
+
+        @include desktop {
+            height: 30vw;
+            transform: translateY(-50%);
+        }
+
+        &:hover .picture::after {
+            height: 35rem;
+
+            @include phablet {
+                height: 40rem;
+            }
+        }
+
+        &:hover .picture::before {
+            filter: blur(9px);
+            opacity: 0.4;
+            bottom: -4rem;
+        }
+
+        &:hover .picture .media {
+            transform: scale(1);
+        }
+
+        &:hover .title {
+            transform: translate(-50%, -10rem);
+            color: #FACA78;
+
+            @include phablet {
+                transform: translate(-50%, -8rem);
+            }
+        }
+
+        .label {
+            color: $white;
+        }
+
+        .obj-label-left, .obj-label-right {
+            width: 14rem;
+            text-align: center;
+        }
+
+        .obj-label-left {
+            @include transition(all, .7);
+            transform: rotate(-90deg) translateY(-50%);
+            transition-delay: .2s;
+            position: absolute;
+            top: 65%;
+            left: 4rem;
+            z-index: 0;
+            opacity: .2;
+        }
+
+        &:hover .obj-label-left{
+            left: -3rem;
+            opacity: 1;
+        }
+
+        .obj-label-right {
+            @include transition(all, .7);
+            transition-delay: .2s;
+            transform: rotate(90deg) translateY(-50%);
+            position: absolute;
+            top: 65%;
+            right: 4rem;
+            z-index: 0;
+            opacity: .2;
+        }
+
+        &:hover .obj-label-right{
+            right: -3rem;
+            opacity: 1;
+        }
+    }
+
+    .picture {
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        width: 100%;
+        transition: all 1s;
+        transform: translateX(-50%);
+        z-index: 3;
+
+        &:after {
+            content:'';
+            @include transition(all, 1.2);
+            background-color: #FACA78;
+            position: absolute;
+            left: 0;
+            bottom: -7rem;
+            height: 0rem;
+            width: 100%;
+            z-index: -1;
+        }
+
+        &:before {
+            content: '';
+            @include transition(all, 1.2);
+            background: $dark;
+            filter: blur(13px);
+            position: absolute;
+            width: 17rem;
+            height: 1rem;
+            bottom: -6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        
+        .media {
+            @include transition(transform, .7);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(.95);
+            z-index: 4;
+        }
+    }
+
+    h3 {
+        &.title {
+            @include transition(all, .7);
+            display: inline-block;
+            backface-visibility: hidden;
+            color: $white;
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 2;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+    }
+}
