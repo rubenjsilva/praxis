@@ -8,12 +8,13 @@ position_obj.push($(this).offset().left);
 
 Draggable.create(".beer-wrapper", {
     type: "scrollLeft",
-    edgeResistance: 0.9,
-    throwProps: !0,
-    maxDuration: 1.2,
-    minDuration: 1.2,
+    edgeResistance: 0.5,
+    resistance: 100,
+    maxDuration: .5,
+    minDuration: 100,
     lockAxis:true,
     throwProps:true,
+    throwResistance: 9999999999999999999999999999999999999999,
     onThrowUpdate : function(){
     var wrapper_left = this.x *(-1) + half_w_width;
 
