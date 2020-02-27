@@ -6,25 +6,21 @@
     background-size: cover;
     height: 100vh;
 
-    .beer-wrapper {
-        position: relative;
-        white-space: nowrap;
-        overflow: scroll;
-        overflow-y: hidden;
-        height: 95vh;
-    
-        .obj {
-            position: relative;
-            height: 100vh;
-        }
+    .wrapper {
+        background-color: $black;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
     }
 
-    /*
-    .active .picture {
-    background: black;
-    }*/
+    .sections {
+        width: percentage(8);
+        height: 100%;
+    }
 
     .obj {
+        position: relative;
+        height: 100vh;
         display: inline-block;
         width: 70vw;
         margin-left: 15vw;
