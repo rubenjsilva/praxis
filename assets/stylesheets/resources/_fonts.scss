@@ -1,0 +1,26 @@
+
+@font-face {
+  font-family: 'DIN';
+  src: url(../resources/D-DINCondensed-Bold.woff) format('woff'),
+    url(../resources/D-DINCondensed-Bold.woff2) format('woff2'),
+    url(../resources/D-DINCondensed-Bold.otf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pangram-Regular';
+  src: url(../resources/Pangram-Regular.otf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pangram-Medium';
+  src: url(../resources/Pangram-Medium.otf) format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PanExt';
+  src: url(../resources/Pangram-ExtraBold.otf) format('opentype');
+  font-display: swap;
+}

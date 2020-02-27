@@ -1,0 +1,28 @@
+.fullscreen-wrapper {
+  padding: 6rem 2rem 2rem 2rem;
+  height: 100vh;
+  width: 100%;
+
+  @include phablet {
+    padding: 6rem 4rem 4rem 4rem;
+  }
+
+  @include tablet {
+    padding: 6rem;
+  }
+
+  @include desktop {
+    padding: 9rem 8rem 8rem 8rem;
+  }
+
+  img {
+    &.bg-image{
+      @include position(absolute, 0, 0);
+      height: 100%;
+      width: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
