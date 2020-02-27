@@ -1,0 +1,22 @@
+.pilsener-wrapper {
+    background: linear-gradient(153.33deg, rgba(242, 216, 171, 0.6) 21.01%, rgba(230, 195, 136, 0.6) 87.05%);
+    position: relative;
+
+    h1 {
+        text-align: center;
+        opacity: .04;
+    }
+
+    .beer-bottle {
+        position: absolute;
+        height: 80vh;
+        left: 50%;
+        bottom: -1rem;
+        transform: translateX(-50%);
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
