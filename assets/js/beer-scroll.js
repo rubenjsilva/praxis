@@ -1,35 +1,119 @@
-var object = document.querySelectorAll(".obj");
- 
+/*
+
+ Horizontal Scroll Slider
+
+ Version: 0.0.1
+ Author: Alexandre Buffet
+ Website: https://www.alexandrebuffet.fr
+*/
+!(function($) {
+
+    'use strict';
   
-  var controller = new ScrollMagic.Controller();
+    var $slider = $('.scroll-slider'),
+        $slides = $('.scroll-slide'),
+        $sliderWrapper = $('.scroll-wrapper'),
+        $firstSlide = $slides.first();
 
-  var horizontalSlide = new TimelineMax()
-  // animate panels
-  .to("#js-slideContainer", 1,   {x: "-3%", onComplete:addActive,onCompleteParams:[1],onReverseComplete:addActive,onReverseCompleteParams:[0]})    
-  .to("#js-slideContainer", 1,   {x: "-6%", onComplete:addActive,onCompleteParams:[2],onReverseComplete:addActive,onReverseCompleteParams:[1]})
-  .to("#js-slideContainer", 1,   {x: "-9%", onComplete:addActive,onCompleteParams:[3],onReverseComplete:addActive,onReverseCompleteParams:[2]})
-  .to("#js-slideContainer", 1,   {x: "-12%", onComplete:addActive,onCompleteParams:[4],onReverseComplete:addActive,onReverseCompleteParams:[3]})
-  .to("#js-slideContainer", 1,   {x: "-15%", onComplete:addActive,onCompleteParams:[5],onReverseComplete:addActive,onReverseCompleteParams:[4]})    
-  .to("#js-slideContainer", 1,   {x: "-18%", onComplete:addActive,onCompleteParams:[6],onReverseComplete:addActive,onReverseCompleteParams:[5]})
-  .to("#js-slideContainer", 1,   {x: "-21%", onComplete:addActive,onCompleteParams:[7],onReverseComplete:addActive,onReverseCompleteParams:[6]})
-  .to("#js-slideContainer", 1,   {x: "-24%", onComplete:addActive,onCompleteParams:[8],onReverseComplete:addActive,onReverseCompleteParams:[7]})
-  .to("#js-slideContainer", 1,   {x: "-27%", onComplete:addActive,onCompleteParams:[9],onReverseComplete:addActive,onReverseCompleteParams:[8]})
+    var settings = {},
+        resizing = false,
+        scrollController = null,
+        scrollTween = null,
+        scrollTimeline = null,
+        progress = 0,
+        scrollScene = null;
 
+    function scrollSlider(options) {
 
-  // create scene to pin and link animation
-  new ScrollMagic.Scene({
-    triggerElement: "#js-wrapper",
-    triggerHook: "onLeave",
-    duration: "200%"
-  })
-    .setPin("#js-wrapper")
-    .setTween(horizontalSlide) 
-    .addTo(controller);
-  
- 
-function addActive(index){
-  //console.log(headers[index]);
-  for(i=0;i<object.length;i++)       
-    if(i === index) {object[i].classList.add("active");}
-    else{object[i].classList.remove("active");}
-  }
+        // Default
+        settings = $.extend({
+            slider: '.scroll-slider',
+            sliderWrapper: '.scroll-wrapper',
+            slides: '.scroll-slide',
+            slideWidth: null,
+            slideHeight: null,
+        }, options);
+
+        // Set dimensions
+        setDimensions();
+        
+        // On resize        
+        $(window).on( 'resize', function() {
+          clearTimeout(resizing);
+          resizing = setTimeout(function() {
+            setDimensions();
+          }, 250); 
+        });
+      
+    }
+
+    function setDimensions() {
+
+        settings.slideWidth = $firstSlide.width();
+        settings.slideHeight = $firstSlide.height();
+      
+        console.log("slide width" + settings.slideWidth);
+        console.log("slide height" + settings.slideHeight);
+
+        // Calculate slider width and height
+        settings.sliderWidth = Math.ceil((settings.slideWidth * $slides.length));
+        settings.sliderHeight = $firstSlide.outerHeight(true);
+
+        // Set slider width and height
+        $sliderWrapper.width(settings.sliderWidth);
+        //$sliderWrapper.height(settings.sliderHeight);
+
+        // Set scene
+        setScene();
+
+        //resizing = false;
+    }
+
+    function setScene() {
+
+        // FIXME: not showing 2 bottles in mobile
+      var xDist = -$slides.width() * ( $slides.length - 3 ),
+          tlParams = { x: xDist, ease: Power2.easeInOut };
+              
+      if (scrollScene != null && scrollTimeline != null) {
+          
+          progress = 0;
+          scrollScene.progress(progress);
+
+          scrollTimeline = new TimelineMax();
+          scrollTimeline.to( $sliderWrapper, 2, tlParams );
+        
+          scrollScene.setTween(scrollTimeline);
+        
+          scrollScene.refresh();
+        
+      } else {
+          // Init ScrollMagic controller
+          scrollController = new ScrollMagic.Controller();
+
+          //Create Tween
+          scrollTimeline = new TimelineMax();
+          scrollTimeline.to( $sliderWrapper, 2, tlParams );
+          scrollTimeline.progress( progress );
+        
+          // Create scene to pin and link animation
+          scrollScene = new ScrollMagic.Scene({
+              triggerElement: settings.slider,
+              triggerHook: "onLeave",
+              duration: settings.sliderWidth
+          })
+          .setPin(settings.slider)
+          .setTween(scrollTimeline)
+          .addTo(scrollController)
+          .on('start', function (event) {
+            scrollTimeline.time(0);
+          });
+      }
+        
+    }
+    
+  $(document).ready(function() {
+    scrollSlider(); 
+  });
+    
+})(jQuery);
