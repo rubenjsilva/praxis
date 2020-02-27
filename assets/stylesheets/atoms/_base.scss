@@ -73,8 +73,6 @@ a {
   @include transition();
   cursor: pointer;
   text-decoration: none;
-
-  &:hover { text-decoration: underline; }
 }
 
 label, .label {
