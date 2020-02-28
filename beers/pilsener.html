@@ -66,21 +66,87 @@
       </header>
 
       <main>
-        <section class="fullscreen-wrapper pilsener-wrapper d-flex">
-            <img class="bg-texture" src="../assets/images/seeds-vector-texture.svg" alt="Seeds Background">
-
-          <div class="fw align-self-end">
-            <h1>Pilsener</h1>
-          </div>
+        <div class="two-section-sticky">
           <div class="beer-bottle">
-            <img src="../assets/images/pilsener-beer-lg.png">
+            <img class="bottle-img" id="bottle-shr" src="../assets/images/pilsener-beer-lg.png">
           </div>
-        </section>
-      
+
+          <section class="fullscreen-wrapper pilsener-wrapper d-flex">
+              <img class="bg-texture" src="../assets/images/seeds-vector-texture.svg" alt="Seeds Background">
+
+            <div class="fw align-self-end">
+              <h1>Pilsener</h1>
+            </div>
+          </section>
+
+          <section class="fullscreen-wrapper beer-info-wrapper">
+            <div class="row beer-row">
+              <div class="beer-name-col col-md-4">
+                <h2 class="beer-name">Pilse<br>ner</h2>
+              </div>
+              <div class="beer-description-col col-md-4 offset-md-4">
+                <h5 class="beer-description">Cerveja com amargor e aroma singulares, 
+                  combina na perfeição com a música de Portuguese Pedro.
+                </h5>
+                <h5 class="beer-ingredients">Ingredientes</h5>
+                <div class="beer-ingredient-container">
+                  <p>
+                    <img src="../assets/images/water-vector.svg">
+                    Água de Coimbra</p>
+                  <p>
+                    <img src="../assets/images/wheat-vector.svg">
+                    Cevada Maltada</p>
+                  <p><img src="../assets/images/hop-vector.svg">
+                  Lúpulo e Leveduras</p>
+                </div>
+                <div class="form-group">
+                  <input>
+                  <button class="button dark">Comprar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row b-all beer-specs-container">
+              <div class="col-2 specs-card">
+                <h6>Tipo</h6>
+                <h4>APA</h4>
+              </div>
+              <div class="col-2 specs-card">
+                <h6>Alcool</h6>
+                <h4>6%</h4>
+              </div>
+              <div class="col-2 specs-card">
+                <h6>IBU</h6>
+                <h4>35</h4>
+              </div>
+              <div class="col-2 specs-card">
+                <h6>Desde</h6>
+                <h4>Maio 2016</h4>
+              </div>
+              <div class="col-4 specs-card">
+                <h6>Cor</h6>
+                <div class="mt-4">
+                  <span class="beer-color"></span>
+                  <span class="beer-color selected"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                  <span class="beer-color"></span>
+                </div>
+              </div>
+
+            </div>
+            
+          </section>
+        </div>
+
       </main>
     </body>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/sticky-beer.js"></script>
 </html>

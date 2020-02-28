@@ -24,7 +24,7 @@ h1, h2, h3, h4, button, label, a {
   font-family: $font-family-condensed;
 }
 
-h1, h2, h3, h6, label, button {
+h1, h2, h3, h4, h6, label, button {
   text-transform: uppercase;
 }
 
@@ -53,6 +53,7 @@ h4 {
 }
 
 h5 {
+  font-family: $font-family-sans-serif-med;
   font-size: $h5-font-size;
   font-weight: 200;
   letter-spacing: 0.02em;
