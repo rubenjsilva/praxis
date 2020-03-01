@@ -1,49 +1,119 @@
-var  w_width = $(window).width();
-var position_obj = [];
+/*
 
-var half_w_width = w_width /2;
-$('.obj').each(function(){ 
-position_obj.push($(this).offset().left);
-});
+ Horizontal Scroll Slider
 
-Draggable.create(".beer-wrapper", {
-    type: "scrollLeft",
-    edgeResistance: 0.9,
-    throwProps: !0,
-    maxDuration: 1.2,
-    minDuration: 1.2,
-    lockAxis:true,
-    throwProps:true,
-    onThrowUpdate : function(){
-    var wrapper_left = this.x *(-1) + half_w_width;
+ Version: 0.0.1
+ Author: Alexandre Buffet
+ Website: https://www.alexandrebuffet.fr
+*/
+!(function($) {
 
-    $(position_obj).each(function( i, val ) {
-        obj_c = i + 1;
-        if( val < wrapper_left) {
-            $('.obj').removeClass('active');
-            $('#obj_'+obj_c).addClass('active');
-        }
-    });
-    },
-    snap: function(e) { 
-    var span_window_w = $(window).width();
-        return -Math.round(Math.round(e / (.3 * span_window_w)) * (.3 * span_window_w)) // This changes the threshold for dragging and snapping the obj's
-    },
-onDragStart: function() {
-    },
-onThrowComplete: function() { 
-        TweenLite.set(".obj", {className:"+=loc"})
+    'use strict';
+  
+    var $slider = $('.scroll-slider'),
+        $slides = $('.scroll-slide'),
+        $sliderWrapper = $('.scroll-wrapper'),
+        $firstSlide = $slides.first();
+
+    var settings = {},
+        resizing = false,
+        scrollController = null,
+        scrollTween = null,
+        scrollTimeline = null,
+        progress = 0,
+        scrollScene = null;
+
+    function scrollSlider(options) {
+
+        // Default
+        settings = $.extend({
+            slider: '.scroll-slider',
+            sliderWrapper: '.scroll-wrapper',
+            slides: '.scroll-slide',
+            slideWidth: null,
+            slideHeight: null,
+        }, options);
+
+        // Set dimensions
+        setDimensions();
+        
+        // On resize        
+        $(window).on( 'resize', function() {
+          clearTimeout(resizing);
+          resizing = setTimeout(function() {
+            setDimensions();
+          }, 250); 
+        });
+      
     }
 
+    function setDimensions() {
 
-}), $(".beer-wrapper").scroll(function() {
-    $(".parallax").each(function() {
-        var leftOffset = $(this).offset().left;
-        var element_w = $(this).width();
+        settings.slideWidth = $firstSlide.width();
+        settings.slideHeight = $firstSlide.height();
+      
+        console.log("slide width" + settings.slideWidth);
+        console.log("slide height" + settings.slideHeight);
+
+        // Calculate slider width and height
+        settings.sliderWidth = Math.ceil((settings.slideWidth * $slides.length));
+        settings.sliderHeight = $firstSlide.outerHeight(true);
+
+        // Set slider width and height
+        $sliderWrapper.width(settings.sliderWidth);
+        //$sliderWrapper.height(settings.sliderHeight);
+
+        // Set scene
+        setScene();
+
+        //resizing = false;
+    }
+
+    function setScene() {
+
+        // FIXME: not showing 2 bottles in mobile
+      var xDist = -$slides.width() * ( $slides.length - 3 ),
+          tlParams = { x: xDist, ease: Power2.easeInOut };
+              
+      if (scrollScene != null && scrollTimeline != null) {
+          
+          progress = 0;
+          scrollScene.progress(progress);
+
+          scrollTimeline = new TimelineMax();
+          scrollTimeline.to( $sliderWrapper, 2, tlParams );
+        
+          scrollScene.setTween(scrollTimeline);
+        
+          scrollScene.refresh();
+        
+      } else {
+          // Init ScrollMagic controller
+          scrollController = new ScrollMagic.Controller();
+
+          //Create Tween
+          scrollTimeline = new TimelineMax();
+          scrollTimeline.to( $sliderWrapper, 2, tlParams );
+          scrollTimeline.progress( progress );
+        
+          // Create scene to pin and link animation
+          scrollScene = new ScrollMagic.Scene({
+              triggerElement: settings.slider,
+              triggerHook: "onLeave",
+              duration: settings.sliderWidth
+          })
+          .setPin(settings.slider)
+          .setTween(scrollTimeline)
+          .addTo(scrollController)
+          .on('start', function (event) {
+            scrollTimeline.time(0);
+          });
+      }
+        
+    }
     
-        leftOffset < w_width && leftOffset + element_w > 0 && TweenLite.to($(this), 1.2, {
-            xPercent: (w_width - leftOffset) / w_width * $(this).attr("data-velocity"),
-            overwrite: 0
-        })
-    })
-})
+  $(document).ready(function() {
+    scrollSlider(); 
+  });
+    
+})(jQuery);

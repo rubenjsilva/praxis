@@ -1,0 +1,111 @@
+.beer-specs {
+    &-container {
+        padding: 0 1.5rem;
+        margin-top: 6rem;
+
+        @include tablet {
+            padding: 0;
+            margin-top: 2rem;
+        }
+
+        &.pilsener-specs {
+            h4 {
+                color: $pilsener-color;
+            }
+        }
+        &.pumpkin-ale-specs {
+            h4 {
+                color: $pumpkin-ale-color;
+            }
+        }
+    }
+
+    &-card, &-recommend-card {
+        padding: 2rem;
+
+        @include tablet {
+            padding: 3rem;
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+
+        h6 {
+            margin-bottom: 1rem;
+            color: $gray-3;
+        }
+    }
+
+    &-card {
+        border-left: $gray-border;
+
+        &:nth-child(odd) {
+            border-left: none;
+
+            @include tablet {
+                border-left: $gray-border;
+            }
+        }
+
+        &:first-child {
+            border-left: none;
+        }
+
+        .beer-color {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: 1.4rem;
+            border-radius: 50%;
+
+            &:nth-child(1) {
+                background-color: #FDC802;
+            }
+            &:nth-child(2) {
+                background-color: #E9A302;
+            }
+            &:nth-child(3) {
+                background-color: #E28300;
+            }
+            &:nth-child(4) {
+                background-color: #D06600;
+            }
+            &:nth-child(5) {
+                background-color: #A33616;
+            }
+            &:nth-child(6) {
+                background-color: #882310;
+            }
+            &:nth-child(7) {
+                background-color: #6B1112;
+            }
+            &:nth-child(8) {
+                background-color: #4C0B0A;
+            }
+            &:nth-child(9) {
+                background-color: #2C0708;
+            }
+
+            &.selected {
+                transform: scale(1.6);
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+
+    &-recommend-card {
+        border-left: $light-border;
+
+        h4 {
+            color: $white;
+        }
+    }
+
+    &-separator {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: $gray-3;
+        margin: 0 0 .5rem 0;
+    }
+}
