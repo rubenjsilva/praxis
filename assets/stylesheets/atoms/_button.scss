@@ -5,12 +5,20 @@
   letter-spacing: 0.12em;
   min-width: 16rem;
   height: 5rem;
-  padding: 1rem 1.8rem;
+  padding: 1.4rem 1.8rem;
   @include transition(all, .5);
 
-  &:hover {
-    letter-spacing: 0.16em;
+  &.button-icon {
+    display: flex;
+    align-items: center;
 
+    img {
+      margin-right: 2rem;
+      height: 100%;
+    }
+  }
+
+  &:hover {
     &.dark {
       background-color: darken( $dark, 7% );
     }
