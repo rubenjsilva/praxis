@@ -95,10 +95,21 @@ span {
   display: inline-block;
 }
 
-a {
-  @include transition();
+a, button {
   cursor: pointer;
+  font-size: $btn-font-size-sm;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  @include transition(all, .5);
+
+  @include tablet {
+    font-size: $btn-font-size;
+  }
+}
+
+a {
   text-decoration: none;
+  
 }
 
 label, .label {

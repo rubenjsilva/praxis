@@ -1,16 +1,9 @@
 .button {
-  cursor: pointer;
-  font-size: $btn-font-size-sm;
   border-radius: 1px;
-  letter-spacing: 0.12em;
   min-width: 16rem;
   height: 5rem;
   padding: 1.4rem 1.8rem;
   @include transition(all, .5);
-
-  @include tablet {
-    font-size: $btn-font-size;
-  }
 
   &.button-icon {
     display: flex;
