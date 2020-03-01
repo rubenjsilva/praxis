@@ -29,7 +29,7 @@ bottleSize = function () {
         // var zoomedWidth = imgWidth - scrollChangePx;
         
         // set the width
-        $('.bottle-img').css('height', (85 - scrollTopPos/100)+'%');
+        $('.beer-bottle-img-lg').css('height', (85 - scrollTopPos/100)+'%');
     });
 }
 bottleSize();

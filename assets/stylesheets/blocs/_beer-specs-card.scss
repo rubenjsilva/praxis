@@ -1,5 +1,13 @@
 .beer-specs {
     &-container {
+        padding: 0 1.5rem;
+        margin-top: 6rem;
+
+        @include tablet {
+            padding: 0;
+            margin-top: 2rem;
+        }
+
         &.pilsener-specs {
             h4 {
                 color: $pilsener-color;
@@ -13,7 +21,11 @@
     }
 
     &-card, &-recommend-card {
-        padding: 3rem;
+        padding: 2rem;
+
+        @include tablet {
+            padding: 3rem;
+        }
 
         &:first-child {
             border-left: none;
@@ -27,6 +39,18 @@
 
     &-card {
         border-left: $gray-border;
+
+        &:nth-child(odd) {
+            border-left: none;
+
+            @include tablet {
+                border-left: $gray-border;
+            }
+        }
+
+        &:first-child {
+            border-left: none;
+        }
 
         .beer-color {
             width: 1.4rem;

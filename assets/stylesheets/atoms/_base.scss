@@ -29,42 +29,66 @@ h1, h2, h3, h4, h6, label, button {
 }
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: $h1-font-size-sm;
   letter-spacing: 0.06em;
   line-height: 90%;
+
+  @include tablet {
+    font-size: $h1-font-size;
+  }
 }
 
 h2 {
-  font-size: $h2-font-size;
+  font-size: $h2-font-size-sm;
   letter-spacing: 0.04em;
   line-height: 90%;
+
+  @include tablet {
+    font-size: $h2-font-size;
+  }
 }
 
 h3 {
-  font-size: $h3-font-size;
+  font-size: $h3-font-size-sm;
   letter-spacing: 0.02em;
   line-height: 100%;
+
+  @include tablet {
+    font-size: $h3-font-size;
+  }
 }
 
 h4 {
-  font-size: $h4-font-size;
+  font-size: $h4-font-size-sm;
   letter-spacing: 0.02em;
   line-height: 100%;
+
+  @include tablet {
+    font-size: $h4-font-size;
+  }
 }
 
 h5 {
   font-family: $font-family-sans-serif-med;
-  font-size: $h5-font-size;
+  font-size: $h5-font-size-sm;
   font-weight: 200;
   letter-spacing: 0.02em;
   line-height: 130%;
+
+  @include tablet {
+    font-size: $h5-font-size;
+  }
 }
 
 h6 {
   font-family: $font-family-sans-serif-bold;
-  font-size: $h6-font-size;
+  font-size: $h6-font-size-sm;
   letter-spacing: 0.14em;
   line-height: 100%;
+
+  @include tablet {
+    font-size: $h6-font-size;
+  }
 }
 
 span {
