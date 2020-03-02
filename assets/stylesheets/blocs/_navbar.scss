@@ -1,4 +1,17 @@
 
+@mixin show () {
+    display: block;
+}
+
+@mixin hide () {
+    display: none;
+}
+
+@keyframes opacity {
+      0% { opacity: 0; }   
+    100% { opacity: 1; }
+}
+
 .menu {
     .navbar {
         @include position(fixed, 0, 0);
@@ -114,14 +127,136 @@
         }
 
         .menu-panel {
-            padding: 16rem 8rem 10rem 18rem;
-            
-            .menu-link {
-                @extend h3;
-                color: $white;
-                display: block;
-                padding: 1rem;
-                text-decoration: none;
+            padding: 10rem 2rem 2rem;
+
+            @include tablet {
+                padding: 12rem 8rem 10rem 18rem;
+            }
+
+            ul {
+                @include transition(all, .7);
+                width: 100%;
+
+                @include tablet {
+                    width: 60%;
+                }
+
+                &:hover > li {
+                    opacity: .3;
+                }
+
+                li {
+                    @include transition(all, .7);
+                    display: flex;
+                    flex-direction: column;
+
+                    &.menu-hasdropdown {
+                        position: relative;
+
+                        > ul {
+                            position: relative;
+
+                            @include tablet {
+                                position: absolute;
+                                top: 20%;
+                                left: 100%;
+                            }
+
+                            .submenu-link {
+                                @extend h5;
+                                color: $white;
+                                padding-bottom: .8rem;
+                            }
+                        }
+
+                        label:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    
+                    .menu-link {
+                        @extend h3;
+                        color: $white;
+                        display: block;
+                        padding: 1rem 0;
+
+                        &.beers-link {
+                            @include transition(all, .7);
+
+                            &:before {
+                                @include desktop {
+                                    @include transition(all, .7);
+                                    content: '';
+                                    position: absolute;
+                                    left: -18rem;
+                                    top: 50%;
+                                    height: 2px;
+                                    background-color: $gray-2;
+                                    width: 0;
+                                    z-index: -1;
+                                }
+                            }
+
+                            .selected-link {
+                                background-color: $black;
+                                padding: 0 2rem;
+                                margin-left: -2rem;
+                            }
+                        }
+                    }
+
+                    .menu-dropdown, input[type="checkbox"] {
+                        @include hide;
+                    }
+
+                    ul {
+                        @include transition(all, .7);
+
+                        &.menu-dropdown {
+                            padding: 2rem 0;
+                        }
+                    }
+
+                }
+
+                > li {
+                    &:hover {
+                        opacity: 1 !important;
+                    }
+
+                    &.disabled {
+                        opacity: .2 !important;
+                    }
+
+                    &:hover .beers-link::before {
+                        width: 120%;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+            // hide navigation and right icons
+                input[type="checkbox"]:checked + ul {
+                    @include show;
+                }
+            }
+
+            @media screen and (min-width: 993px) {
+            // hide show navigation button and checkboxes
+                label, input[type="checkbox"] {
+                    @include hide;
+                }
+                
+                .menu-hasdropdown {
+                    position: relative;
+
+                    &:hover {
+                        > ul {
+                            @include show;
+                            animation: opacity .7s ease-out;
+                        }
+                    }
+                }
             }
         }
     }
