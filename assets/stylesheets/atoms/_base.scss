@@ -73,6 +73,10 @@ a {
   @include transition();
   cursor: pointer;
   text-decoration: none;
+
+  &:active {
+    color: $white;
+  }
 }
 
 label, .label {
