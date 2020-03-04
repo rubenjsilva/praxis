@@ -99,7 +99,6 @@ a, button {
   cursor: pointer;
   font-size: $btn-font-size-sm;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   @include transition(all, .5);
 
   @include tablet {
@@ -109,7 +108,10 @@ a, button {
 
 a {
   text-decoration: none;
-  
+
+  &:active {
+    color: $white;
+  }
 }
 
 label, .label {
