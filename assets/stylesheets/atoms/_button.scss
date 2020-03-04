@@ -1,9 +1,10 @@
 .button {
+  @include transition(all, .5);
   border-radius: 1px;
   min-width: 16rem;
   height: 5rem;
   padding: 1.4rem 1.8rem;
-  @include transition(all, .5);
+  text-transform: uppercase;
 
   &.button-icon {
     display: flex;
