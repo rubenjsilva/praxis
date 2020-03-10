@@ -115,10 +115,14 @@ a {
 }
 
 label, .label {
-  font-family:$font-family-condensed;
-  font-size: $font-size-sm;
+  font-family: $font-family-condensed;
+  font-size: $h6-font-size-sm;
   line-height: 100%;
   letter-spacing: 0.2em;
+
+  @include tablet {
+    font-size: $font-size-sm;
+  }
 }
 
 b {

@@ -1,12 +1,5 @@
 /*
 --------------------------------------------------------------------------------
-Colors
---------------------------------------------------------------------------------
-*/
-
-
-/*
---------------------------------------------------------------------------------
 Text and alignments
 --------------------------------------------------------------------------------
 */
@@ -14,32 +7,8 @@ Text and alignments
 
 .truncate    { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
 
-.relative    { position: relative; }
-.visible     { overflow: visible; }
-
-.block       { display: block; }
-.ib          { display: inline-block; }
-.hide        { display: none !important; }
-.fw          { width: 100%; }
-.fh          { height: 100%; }
-.left        { float: left; }
-.right       { float: right; }
-.center      { margin: auto; float: none; }
 .img-center  { margin-left: 50%; transform: translateX(-50%); }
 .clear:after { content: ''; clear: both; display: block; }
-.t-center    { text-align: center; }
-.t-left      { text-align: left; }
-.t-right     { text-align: right; }
-.t-justify   { text-align: justify; }
-.upper       { text-transform: uppercase; }
-.cammel      { text-transform: capitalize; }
-.no-upper    { text-transform: none; }
-.lower       { text-transform: lowercase; }
-.t-shadow    { text-shadow: 0 1px 1px rgba($black, .1); }
-
-.lh-150      { line-height: 150%; }
-
-.va-m        { vertical-align: middle; }
 
 .no-margin   { margin: 0 !important; }
 .no-padding  { padding: 0 !important; }
