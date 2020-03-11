@@ -1,52 +1,51 @@
-.pilsener-wrapper {
-    background: linear-gradient(153.33deg, rgba(242, 216, 171, 0.6) 21.01%, rgba(230, 195, 136, 0.6) 87.05%);
+.two-section-sticky {
+    position: relative;
+
+    .beer-bottle {
+        width: min-content;
+        height: 100vh;
+        transform-origin: center center; 
+        transform: translateX(-50%);
+        position: relative;
+        top: 20vh;
+        left: 50%;
+        z-index: 2;
+
+        @include tablet {
+            position: sticky;
+        }
+
+        img {
+            height: 85%;
+            padding-top: 8rem;
+            object-fit: contain;
+        }
+
+        &-img-lg {
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+        }
+
+        &-img-sm {
+            display: block;
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}
+
+.single-beer-wrapper {
     position: relative;
     margin-top: -100vh;
 
     h1 {
         text-align: center;
         opacity: .04;
-    }
-}
-
-.two-section-sticky {
-    position: relative;
-}
-
-.beer-bottle {
-    width: min-content;
-    height: 100vh;
-    transform-origin: center center; 
-    transform: translateX(-50%);
-    position: relative;
-    top: 20vh;
-    left: 50%;
-    z-index: 2;
-
-    @include tablet {
-        position: sticky;
-    }
-
-    img {
-        height: 85%;
-        padding-top: 8rem;
-        object-fit: contain;
-    }
-
-    &-img-lg {
-        display: none;
-
-        @include tablet {
-            display: block;
-        }
-    }
-
-    &-img-sm {
-        display: block;
-
-        @include tablet {
-            display: none;
-        }
     }
 }
 
@@ -67,7 +66,6 @@
         }
 
         &-name {
-            color: $pilsener-color;
             margin-bottom: 3rem;
         }
 
@@ -195,5 +193,29 @@
     &-description {
         color: $gray-3;
         padding-bottom: 4rem;
+    }
+}
+
+
+/* -------- BACKGROUND GRADIENTS ----------- */
+
+@each $beer, $gradient in $beer-bg {
+    .#{$beer}-wrapper {
+        background: $gradient;
+    }
+}
+
+/* -------- CUSTOM BEER COLORS ----------- */
+
+
+@each $beer, $color in $beer-colors {
+    .#{$beer}-section {
+        .beer-name {
+            color: $color;
+        }
+
+        .#{$beer}-specs h4 {
+            color: $color;
+        }
     }
 }
