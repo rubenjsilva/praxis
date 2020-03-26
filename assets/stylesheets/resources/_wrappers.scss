@@ -27,7 +27,7 @@
 
     &.bg-texture {
       @extend .bg-image;
-      z-index: 1;
+      z-index: 0;
     }
   }
 }

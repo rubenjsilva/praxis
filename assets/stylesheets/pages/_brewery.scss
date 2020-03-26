@@ -1,0 +1,68 @@
+.present-section {
+    .present {
+        &-title {
+            margin-top: 8rem;
+        }
+
+        &-trademark {
+            margin-left: 3rem;
+        }
+
+        &-trademark-name {
+            color: $gold;
+            font-size: $h5-font-size-sm;
+        }
+
+        &-beer {
+            position: absolute;
+            right: 25rem;
+            bottom: 8rem;
+        }
+
+        &-beer-img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.process-section {
+    .process-intro-wrapper {
+        padding: 9rem 8rem 10rem 8rem;
+    }
+
+    .process-phase {
+        &-title {
+            margin-bottom: 6rem;
+        }
+    }
+
+    .leftsided-wrapper {
+        padding: 5rem 8rem 5rem 0rem;
+
+        .illustrated-img {
+            position: absolute;
+            left: -30%;
+            bottom: -10rem;
+        }
+    }
+
+    .rightsided-wrapper {
+        padding: 5rem 0rem 5rem 8rem;
+
+        .illustrated-img {
+            position: absolute;
+            right: -30%;
+            bottom: -10rem;
+        }
+
+        .col-md-7 {
+            padding-right: 0;
+        }
+    }
+
+    .parallax-window {
+        min-height: 45rem;
+        background: transparent;
+    }
+}
