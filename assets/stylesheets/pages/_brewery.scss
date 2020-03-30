@@ -37,6 +37,7 @@
                 bottom: 8rem;
             }
         }
+        
 
         &-beer-img {
             width: 100%;
@@ -77,8 +78,11 @@
         }
 
         &-container {
-            margin-left: 2rem;
-            margin-right: 2rem;
+            padding-left: 3rem;
+
+            @include tablet {
+                padding-left: 15px;
+            }
         }
     }
 
@@ -94,6 +98,7 @@
             @include tablet {
                 @include position(absolute, null, -30%, -10rem);
             }
+            z-index: -101;
         }
     }
 
@@ -105,9 +110,8 @@
         }
 
         .illustrated-img {
-            position: absolute;
-            right: -30%;
-            bottom: -10rem;
+             @include position(absolute, null, null, -10rem, -30%);
+            z-index: -101;
         }
 
         .col-md-7 {
