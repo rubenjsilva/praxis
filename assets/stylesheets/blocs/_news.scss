@@ -4,10 +4,14 @@
     overflow: visible;
 
     &.swiper-container {
-        margin-top: -6rem;
+        margin-top: -4rem;
         position: relative;
         list-style: none;
         z-index: 1;
+
+        @include tablet {
+            margin-top: -6rem;
+        }
     }
 
     .swiper-wrapper {
@@ -28,12 +32,12 @@
     }
 
     .swiper-slide {
-        height: 40rem;
+        height: 70vh;
         min-width: 30rem;
         transition-delay: 0.02s;
 
         @include tablet {
-            height: 52rem;
+            height: 70vh;
             width: 32%;
             min-width: 30rem;
         }
