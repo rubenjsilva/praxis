@@ -1,0 +1,29 @@
+.media-links-container {
+    &-vertical {
+        position: relative;
+
+        @include desktop {
+            position: absolute;
+            right: 8rem;
+            top: 18rem;
+            flex-direction: column;
+        }
+
+        .media-link {
+            margin: 6rem 4rem 0 0;
+
+            @include desktop {
+                margin: 0 0 4rem 0;
+            }
+        }
+    }
+
+    &-horizontal {
+        position: relative;
+        margin-top: auto;
+
+        .media-link {
+            margin-right: 1.8rem;
+        }
+    }
+}

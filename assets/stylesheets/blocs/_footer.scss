@@ -1,0 +1,28 @@
+.footer {
+    background-color: $black;
+    color: $white;
+
+    &-link {
+        color: $white;
+        margin-bottom: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .policies {
+        .footer-link {
+            font-family: $pangram-regular;
+            letter-spacing: .02rem;
+            display: block;
+            line-height: 60%;
+        }
+    }
+
+    .sitemap-wrapper{
+        padding: 6rem 8rem 4rem 8rem;
+    }
+
+    .rights-wrapper{
+        padding: 3rem 8rem;
+        border-top: 1px solid $gray-2;
+    }
+}

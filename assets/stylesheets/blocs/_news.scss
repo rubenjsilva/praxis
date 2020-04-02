@@ -32,12 +32,11 @@
     }
 
     .swiper-slide {
-        height: 70vh;
+        height: 60vh;
         min-width: 30rem;
         transition-delay: 0.02s;
 
         @include tablet {
-            height: 70vh;
             width: 32%;
             min-width: 30rem;
         }
