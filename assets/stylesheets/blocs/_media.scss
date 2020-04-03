@@ -23,7 +23,11 @@
         margin-top: auto;
 
         .media-link {
-            margin-right: 1.8rem;
+            margin-right: 3rem;
+
+            @include tablet {
+                margin-right: 1.8rem;
+            }
         }
     }
 }
