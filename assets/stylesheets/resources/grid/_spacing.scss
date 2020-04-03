@@ -1,19 +1,6 @@
+// stylelint-disable declaration-no-important
+
 // Margin and Padding
-
-$spacer: 1rem;
-$spacers: ();
-
-$spacers: map-merge(
-  (
-    0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
-  ),
-  $spacers
-);
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
