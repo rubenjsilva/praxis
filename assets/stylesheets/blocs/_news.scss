@@ -21,12 +21,13 @@
         z-index: 1;
         display: flex;
         padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         transition-property: transform;
         overflow-x: auto;
         overflow-y: hidden;
 
-        @include tablet {
+        @include desktop {
+            padding-bottom: 2rem;
             overflow: none;
         }
     }

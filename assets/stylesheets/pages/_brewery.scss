@@ -33,6 +33,11 @@
             bottom: 5rem;
 
             @include tablet {
+                right: -5rem;
+                bottom: 20rem;
+            }
+
+            @include desktop {
                 right: 25rem;
                 bottom: 8rem;
             }
@@ -90,8 +95,14 @@
         padding: 5rem 0rem;
 
         @include tablet {
+            padding: 5rem 4rem 5rem 0rem;
+        }
+
+        @include desktop {
             padding: 5rem 8rem 5rem 0rem;
         }
+
+
 
         .illustrated-img {
             @include position(absolute, null, null, -10rem, -3rem);
@@ -106,6 +117,10 @@
         padding: 5rem 0rem;
 
         @include tablet {
+            padding: 5rem 0rem 5rem 4rem;
+        }
+
+        @include desktop {
             padding: 5rem 0rem 5rem 8rem;
         }
 
@@ -129,7 +144,7 @@
     }
 }
 
-@media (max-width: 556px) {
+@media (max-width: 576px) {
     .switcher-top {
         -webkit-box-ordinal-group: 2;
         -moz-box-ordinal-group: 2;
