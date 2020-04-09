@@ -11,7 +11,7 @@
         left: 50%;
         z-index: 2;
 
-        @include tablet {
+        @include desktop {
             position: sticky;
         }
 
@@ -24,7 +24,7 @@
         &-img-lg {
             display: none;
 
-            @include tablet {
+            @include desktop {
                 display: block;
             }
         }
@@ -32,7 +32,7 @@
         &-img-sm {
             display: block;
 
-            @include tablet {
+            @include desktop {
                 display: none;
             }
         }
@@ -66,6 +66,9 @@
         }
 
         &-name {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
             margin-bottom: 3rem;
         }
 
@@ -161,11 +164,12 @@
         height: auto;
 
         @include tablet {
-            height: 78vh;
+            height: 60vh;
             padding: 4rem 5rem 5rem;
         }
 
         @include desktop {
+            height: 78vh;
             padding: 7rem 8rem 8rem;
         }
 

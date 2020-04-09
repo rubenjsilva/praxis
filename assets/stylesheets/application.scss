@@ -1,13 +1,7 @@
 @import
 'resources/reset',
 'resources/mixins',
-'resources/grid/breakpoints',
-'resources/grid/grid-framework',
-'resources/grid/grid-mixin',
-'resources/grid/grid',
-'resources/grid/display',
-'resources/grid/flex',
-'resources/grid/spacing',
+'resources/grid',
 
 'resources/fonts',
 'resources/palette',
@@ -18,14 +12,20 @@
 'atoms/button',
 'atoms/button_safari',
 'atoms/scrollbar',
+'atoms/input',
 
 'blocs/main',
 'blocs/navbar',
+'blocs/footer',
 'blocs/news',
+'blocs/media',
+'blocs/recommended',
+'blocs/next-page',
 'blocs/beer-specs-card',
 
 'pages/beers',
 'pages/single-beer',
+'pages/brewery',
 
 'resources/helpers';
 

@@ -1,14 +1,14 @@
 .fullscreen-wrapper {
-  padding: 6rem 2rem 2rem 2rem;
+  padding: 8rem 2rem 2rem 2rem;
   height: 100vh;
   width: 100%;
 
   @include phablet {
-    padding: 6rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
   }
 
   @include tablet {
-    padding: 6rem;
+    padding: 9rem 6rem 6rem 6rem;
   }
 
   @include desktop {
@@ -27,7 +27,7 @@
 
     &.bg-texture {
       @extend .bg-image;
-      z-index: 1;
+      z-index: 0;
     }
   }
 }

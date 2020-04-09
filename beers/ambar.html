@@ -31,7 +31,7 @@
     <body>
       <header class="menu">
         <nav class="navbar">
-          <a class="navbar-brand">
+          <a href="../index.html" class="navbar-brand">
             <img src="../assets/images/praxis-logo.svg">
           </a>
           <a class="burger-menu" href="#">
@@ -74,7 +74,7 @@
                 <li><a href="../community.html" class="menu-link">Comunidade</a></li>
                 <li class="disabled"><a href="" class="menu-link">Loja Online</a></li>
               </ul>
-              <div class="media-links-container d-flex">
+              <div class="media-links-container-vertical d-flex">
                 <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
                   <img src="../assets/images/facebook-logo.svg">
                 </a>
@@ -114,10 +114,10 @@
 
           <section class="ambar-section beer-info-wrapper d-flex flex-column justify-content-between">
             <div class="row beer-row">
-              <div class="beer-name-col col-md-4">
+              <div class="beer-name-col col-12 col-lg-4">
                 <h2 class="beer-name">Ambar</h2>
               </div>
-              <div class="beer-description-col col-md-4 offset-md-4">
+              <div class="beer-description-col col-12 col-md-8 col-lg-4 offset-lg-4">
                 <h5 class="beer-description">De traços avermelhados, evidencia-se pelo ligeiro sabor a melaço e um amargo singular.
                 </h5>
                 <h5 class="beer-ingredients">Ingredientes</h5>
@@ -177,14 +177,14 @@
         </div>
 
         <section class="beer-recomendation-wrapper row">
-          <div class="col-md-7 beer-recomendation-image-link">
+          <div class="col-12 col-sm-9 col-lg-7 beer-recomendation-image-link">
             <img src="../assets/images/pilsener-recommend.jpg" class="beer-recomendation-bg">
             <a href="../beers.html" class="beer-recomendation-link d-flex align-items-center">
               <span class="mr-5">Restaurante</span>
               <img src="../assets/images/news-arrow.svg" class="beer-recomendation-arrow">
             </a>
           </div>
-          <div class="col-md-6 offset-md-6 beer-recomendation-card-container">
+          <div class="col-12 col-sm-10 col-lg-6 offset-sm-2 offset-lg-6 beer-recomendation-card-container">
             <div class="beer-recomendation-card d-flex flex-column justify-content-between">
               <div>
                 <h3 class="beer-recomendation-title">Recomendações</h3>
@@ -206,6 +206,59 @@
             </div>
           </div>
         </section>
+
+        <footer class="footer">
+          <div class="row sitemap-wrapper">
+            <div class="col-sm-12 col-lg-3 media-links-wrapper d-flex justify-content-between flex-column">
+              <div>
+                <img src="../assets/images/praxis-logo.svg">
+              </div>
+              <div class="media-links-container-horizontal d-flex">
+                <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
+                  <img src="../assets/images/facebook-logo.svg">
+                </a>
+                <a href="https://www.instagram.com/praxisbeer/" class="media-link instagram">
+                  <img src="../assets/images/instagram-logo.svg">
+                </a>
+                <!-- Youtube Link Missing -->
+                <a href="" class="media-link youtube">
+                  <img src="../assets/images/youtube-logo.svg">
+                </a>
+                <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" class="media-link tripadvisor">
+                  <img src="../assets/images/tripadvisor-logo.svg">
+                </a>
+                <a href="https://untappd.com/w/praxis/34853/" class="media-link untappd">
+                  <img src="../assets/images/untappd-logo.svg">
+                </a>
+              </div>
+            </div>
+            <div class="col-6 col-lg-2 sitemap">
+              <a href="shop.html"><h6 class="footer-link">Loja</h6></a>
+              <a href="community.html"><h6 class="footer-link">Comunidade</h6></a>
+              <a href="contacts.html"><h6 class="footer-link">Contactos</h6></a>
+              <a href="community"><h6 class="footer-link">Eventos</h6></a>
+            </div>
+            <div class="col-6 col-lg-3 policies">
+              <a href="faqs.html" class="footer-link"><small>Perguntas frequentes</small></a>
+              <a href="terms-conditions.html" class="footer-link"><small>Termos e Condições</small></a>
+              <a href="privacy-policy.html" class="footer-link"><small>Política de Privacidade</small></a>
+              <a href="complaint-book" class="footer-link"><small>Livro de reclamações</small></a>
+            </div>
+            <div class="col-sm-12 col-lg-4 newsletter">
+              <label>Fica a par das novidades</label>
+              <div class="d-flex newsletter-field-container">
+                <input type="email" placeholder="Insere o teu email..." class="field-input light">
+                <button class="button light">Subscrever</button>
+              </div>
+            </div>
+          </div>
+          <div class="row rights-wrapper">
+            <div class="col-12 rights-container d-flex justify-content-between">
+              <small class="mb-20">® 2020 Praxis. Todos os direitos reservados</small>
+              <small class="mb-20">Made by F*Amazing</small>
+            </div>
+          </div>
+        </footer>
 
       </main>
     </body>

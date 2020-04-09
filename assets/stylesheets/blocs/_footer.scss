@@ -1,0 +1,65 @@
+.footer {
+    background-color: $black;
+    color: $white;
+
+    &-link {
+        color: $white;
+        margin-bottom: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .policies {
+        .footer-link {
+            font-family: $pangram-regular;
+            letter-spacing: .02rem;
+            display: block;
+            line-height: 60%;
+        }
+    }
+
+    .sitemap-wrapper{
+        padding: 4rem 2rem 4rem 2rem;
+
+        @include tablet {
+            padding: 6rem 8rem 4rem 8rem;
+        }
+    }
+
+    .media-links-wrapper {
+        min-height: 10rem;
+        margin-bottom: 6rem;
+
+        @include tablet {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .newsletter {
+        margin-top: 5rem;
+
+        @include tablet {
+            margin-top: 0;
+        }
+
+        .button {
+            min-width: 14rem;
+        }
+    }
+
+    .rights-wrapper{
+        padding: 3rem 2rem 2rem 2rem;
+        border-top: 1px solid $gray-2;
+
+        @include tablet {
+            padding: 3rem 8rem 1rem 8rem;
+        }
+
+        .rights-container {
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+            }
+        }
+    }
+}
