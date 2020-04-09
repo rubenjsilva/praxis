@@ -1,0 +1,65 @@
+.next-page {
+    padding: 3rem 2rem 3rem 2rem;
+    background-color: $gray-5;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    @include tablet {
+        padding: 6rem 8rem 8rem 8rem;
+    }
+
+    &-surtitle, &-title {
+        color: $white;
+    }
+
+    &-surtitle {
+        padding-top: 1.8rem;
+        border-top: 2px solid $white;
+    }
+
+    &-title {
+        margin-top: 3rem;
+
+        @include tablet {
+            margin-top: 4rem;
+        }
+    }
+
+    .next-page-link {
+        &:hover .next-page-media img {
+            transform: scale(1);
+        }
+
+        &:hover .next-page-media {
+            transform: scale(1.05);
+        }
+    }
+
+    .next-page-media, .next-page-media:after, .next-page-media img {
+        @include position (absolute, 0, 0);
+        height: 100%;
+        width: 100%;
+    }
+
+    &-media {
+        @include transition(transform, 1.5);
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            background: linear-gradient(222.8deg, #2A2A2A 25.06%, rgba(42, 42, 42, 0.3) 92.53%);
+            mix-blend-mode: multiply;
+            opacity: 0.5;
+            transform: rotate(-180deg);
+            z-index: 0;
+        }
+
+        img {
+            @include transition(transform, 1.5);
+            transform: scale(1.2);
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+}
