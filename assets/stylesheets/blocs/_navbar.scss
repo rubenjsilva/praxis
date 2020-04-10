@@ -23,7 +23,6 @@ Praxis Logo & Burguer Menu
     .navbar {
         @include position(fixed, 0, 0);
         display: flex;
-        width: 100%;
         z-index: 20;
 
         .navbar-brand {
