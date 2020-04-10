@@ -1,4 +1,4 @@
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container-beers', {
   slidesPerView: 1,
   spaceBetween: 0,
   grabCursor: true,

@@ -1,0 +1,74 @@
+.tabs-navigation {
+    @include phablet {
+        padding: 0 8rem;
+    }
+
+    .tab-nav {
+        list-style: none;
+        position: relative;
+        text-align: left;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        z-index: 1;
+
+        .tab-item {
+            position: relative;
+            margin: 0 1rem;
+            display: inline-block;
+
+            &:first-child {
+                margin-left: 2rem;
+                
+                @include phablet {
+                    margin-left: 0;
+                }
+            }
+
+            .tab-link {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: .5rem .75rem;
+                color: $dark;
+                opacity: .3;
+
+                @include tablet {
+                    padding: 1rem 1.5rem;
+                }
+
+                &:hover {
+                    opacity: .5;
+                }
+
+                &.active, &:active {
+                    opacity: 1;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            &:not(:last-child) {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: -.8rem;
+                    height: 1.8rem;
+                    width: 1px;
+                    background-color: $dark;
+                    transform: rotate(12deg);
+                    opacity: .3;
+
+                    @include tablet {
+                        height: 2.2rem;
+                        right: -.6rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
