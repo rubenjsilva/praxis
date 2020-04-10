@@ -6,13 +6,13 @@
         color: $white;
         margin-bottom: 1.5rem;
         height: 1.5rem;
+        display: block;
     }
 
     .policies {
         .footer-link {
             font-family: $pangram-regular;
             letter-spacing: .02rem;
-            display: block;
             line-height: 60%;
         }
     }
@@ -59,6 +59,15 @@
 
             @include tablet {
                 flex-direction: row;
+            }
+
+            .madeby {
+                font-family: $font-family-sans-serif-med;
+                font-size: $font-size-sm;
+
+                &:visited {
+                    color: $white;
+                }
             }
         }
     }

@@ -1,40 +1,29 @@
 .carousel {
-    // height: 100%;
+    height: 90%;
     width: 100%;
-    overflow: visible;
+    position: relative;
 
-    &.scroll-container {
-        margin-top: -4rem;
+    .swiper-wrapper {
         position: relative;
-        list-style: none;
-        z-index: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+        padding: 4rem 2rem 2rem 2rem;
 
         @include tablet {
-            margin-top: -6rem;
+            padding: 4rem 0 2rem 8rem;
         }
     }
 
-    .scroll-wrapper {
-        position: relative;
-        width: 100%;
+    .swiper-slide {
         height: 100%;
-        z-index: 1;
-        display: flex;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-        transition-property: transform;
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        @include desktop {
-            padding-bottom: 2rem;
-            overflow: none;
-        }
-    }
-
-    .scroll-slide {
-        height: 60vh;
-        min-width: 30rem;
+        min-width: 20rem;
         transition-delay: 0.02s;
 
         @include tablet {
@@ -49,7 +38,6 @@
         .card-article {
             height: 100%;
             z-index: 1;
-            margin-left: 6rem;
 
             .card-article-link {
                 cursor: pointer;
@@ -76,7 +64,7 @@
                     transform: scale(1.05);
                 }
 
-                &:hover .card-article-content img {
+                &:hover .card-article-content img, &:active .card-article-content img {
                     bottom: -0.5rem;
                     transform: scale(1.3);
                 }

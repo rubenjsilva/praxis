@@ -211,7 +211,6 @@
 
 /* -------- CUSTOM BEER COLORS ----------- */
 
-
 @each $beer, $color in $beer-colors {
     .#{$beer}-section {
         .beer-name {

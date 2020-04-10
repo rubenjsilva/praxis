@@ -114,15 +114,15 @@
               <h3 class="section-title invert">Cervejaria Praxis</h3>
               <h5 class="section-description invert">A Praxis (MICROCERVEJARIA) devolve a Coimbra uma herança
                  cervejeira onde o principal segredo é a Água de Coimbra.</h5>
-              <button class="button light">Visitar</button>
+              <a href="brewery.html" class="button light">Visitar</a>
             </div>
           </div>
         </section>
 
         <section class="beers-page">
-          <div class="swiper-container">
+          <div class="swiper-container swiper-container-beers">
             <div class="swiper-wrapper">
-              <article class="swiper-slide item">
+              <article class="swiper-slide pilsener-item">
                 <a href="beers/pilsener.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -132,7 +132,7 @@
                   <h3 class="title">Pilsener</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide dunkel-item">
                 <a href="beers/dunkel.html" class="cover">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
@@ -142,7 +142,7 @@
                     <h3 class="title">Dunkel</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide ambar-item">
                 <a href="beers/ambar.html" class="cover">
                     <div class="picture">
                         <span class="label obj-label-left">Descobrir</span>
@@ -152,7 +152,7 @@
                     <h3 class="title">Ambar</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide weiss-item">
                 <a href="beers/weiss.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -162,7 +162,7 @@
                   <h3 class="title">Weiss</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide belgian-dark-item">
                 <a href="beers/belgian-dark.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -172,7 +172,7 @@
                   <h3 class="title">Belgian Dark</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide portuguese-pedro-item">
                 <a href="beers/portuguese-pedro.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -182,7 +182,7 @@
                   <h3 class="title">Portuguese<br>Pedro</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide ipa-item">
                 <a href="beers/ipa.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -192,7 +192,7 @@
                   <h3 class="title">IPA</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide pumpkin-ale-item">
                 <a href="beers/pumpkin-ale.html" class="cover">
                   <div class="picture">
                     <span class="label obj-label-left">Descobrir</span>
@@ -202,7 +202,7 @@
                   <h3 class="title">Pumpkin Ale</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide lausus-item">
                 <a href="beers/lausus.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -212,7 +212,7 @@
                   <h3 class="title">Lausus</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide bsda-item">
                 <a href="beers/bsda.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -222,7 +222,7 @@
                   <h3 class="title">B.S.D.A</h3>
                 </a>
               </article>
-              <article class="swiper-slide item">
+              <article class="swiper-slide strong-dunkel-item">
                 <a href="beers/strong-dunkel.html" class="cover">
                   <div class="picture">
                       <span class="label obj-label-left">Descobrir</span>
@@ -233,17 +233,17 @@
                 </a>
               </article>
             </div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <!-- If we need scrollbar
+            <div class="swiper-scrollbar"></div>-->
           </div>
         </section>
 
-        <section class="fullscreen-wrapper light-section">
-          <h2 class="o-10 mt-30">Novidades</h2>
+        <section class="news-section homepage-news">
+          <h2 class="news-title o-10">Novidades</h2>
 
-          <div class="carousel scroll-container scroll-container-horizontal">
-            <div class="scroll-wrapper">
-              <div class="scroll-slide">
+          <div class="carousel swiper-container swiper-container-news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <article class="card-article">
                   <a class="card-article-link" href="#">
                     <div class="card-article-media">
@@ -256,9 +256,8 @@
                     </div>
                   </a>
                 </article>
-              </div>  
-
-              <div class="scroll-slide">
+              </div>
+              <div class="swiper-slide">
                 <article class="card-article">
                   <a class="card-article-link" href="#">
                     <div class="card-article-media">
@@ -271,9 +270,8 @@
                     </div>
                   </a>
                 </article>
-              </div>      
-
-              <div class="scroll-slide">
+              </div>
+              <div class="swiper-slide">
                 <article class="card-article">
                   <a class="card-article-link" href="#">
                     <div class="card-article-media">
@@ -286,7 +284,21 @@
                     </div>
                   </a>
                 </article>
-              </div>            
+              </div>
+              <div class="swiper-slide">
+                <article class="card-article">
+                  <a class="card-article-link" href="#">
+                    <div class="card-article-media">
+                      <img src="./assets/images/news-topazio.jpg">
+                    </div>
+                    <div class="card-article-content">
+                      <h6 class="card-article-surtitle">Notícias</h6>
+                      <h4 class="card-article-title">Cervejas emblemáticas de Coimbra</h4>
+                      <img src="./assets/images/news-arrow.svg" class="card-article-arrow">
+                    </div>
+                  </a>
+                </article>
+              </div>
             </div>
           </div>
         </section>
@@ -299,7 +311,7 @@
               <h5 class="section-description invert">
                 This is the perfect place to shop for souvenirs, find the ultimate glass to drink a Praxis or to reserve a growler. 
                 Proudly showcase your wilder side by visiting the Praxis Brewery!</h5>
-              <button class="button light">Visitar</button>
+              <!--<a href="shop.html" class="button light disabled">Brevemente</a>-->
             </div>
           </div>
         </section>
@@ -330,10 +342,10 @@
               </div>
             </div>
             <div class="col-6 col-lg-2 sitemap">
-              <a href="shop.html"><h6 class="footer-link">Loja</h6></a>
-              <a href="community.html"><h6 class="footer-link">Comunidade</h6></a>
-              <a href="contacts.html"><h6 class="footer-link">Contactos</h6></a>
-              <a href="community"><h6 class="footer-link">Eventos</h6></a>
+              <a href="shop.html" class="footer-link disabled"><h6>Loja</h6></a>
+              <a href="community.html" class="footer-link"><h6>Comunidade</h6></a>
+              <a href="contacts.html" class="footer-link"><h6>Contactos</h6></a>
+              <a href="community" class="footer-link"><h6>Eventos</h6></a>
             </div>
             <div class="col-6 col-lg-3 policies">
               <a href="faqs.html" class="footer-link"><small>Perguntas frequentes</small></a>
@@ -352,7 +364,7 @@
           <div class="row rights-wrapper">
             <div class="col-12 rights-container d-flex justify-content-between">
               <small class="mb-20">® 2020 Praxis. Todos os direitos reservados</small>
-              <small class="mb-20">Made by F*Amazing</small>
+              <small class="mb-20">Made by <a class="madeby" href="https://famazing.pt/">F*Amazing</a></small>
             </div>
           </div>
         </footer>
@@ -362,5 +374,6 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/beer-scroll.js"></script>
+    <script src="assets/js/news-scroll.js"></script>
   </body>
 </html>

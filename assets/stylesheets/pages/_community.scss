@@ -1,0 +1,37 @@
+.news-section {
+    height: 100vh;
+    padding-bottom: 4rem;
+    background-color: $gray-5;
+
+    &.community-news {
+        padding-top: 14rem;
+    }
+
+    &.homepage-news {
+        padding-top: 10rem;
+
+        .carousel {
+            margin-top: -6rem;
+
+            @include tablet {
+                margin-top: -7rem;
+            }
+
+            .swiper-wrapper {
+                padding-left: 4rem;
+
+                @include tablet {
+                    padding-left: 12rem;
+                }
+            }
+        }
+    }
+
+    .news-title {
+        padding-left: 2rem;
+
+        @include tablet {
+            padding-left: 8rem;
+        }
+    }
+}

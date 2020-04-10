@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset=utf-8>
-    <title>Pilsener</title>
+    <title>Praxis</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
     <meta name="google-site-verification" content="">
@@ -13,8 +13,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="author" content="beerpraxis.com">
     <link rel="canonical" href="http://www.beerpraxis.com">
-    <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.jpg"/>
-    <link rel="icon" href="../assets/images/favicon.jpg" type="image/png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.jpg"/>
+    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpg">
     
     <!-- Sharing -->
     <meta property="og:title" content="Praxis">
@@ -24,15 +24,16 @@
     <meta property="og:description" content="Praxis Restaurante, Fábrica e Museu da Cerveja de Coimbra. Produzimos a Cerveja Praxis com várias variedades: Pilsener, Dunkel, Ambar, Weiss.">
     <meta property="article:publisher" content="https://www.facebook.com/cervejaPraxis"/>
     <meta property="article:author" content="https://www.facebook.com/cervejaPraxis"/>
-    
-    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/application.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
     </head>
 
     <body>
       <header class="menu">
         <nav class="navbar">
-          <a href="../index.html" class="navbar-brand">
-            <img src="../assets/images/praxis-logo.svg">
+          <a href="index.html" class="navbar-brand">
+            <img src="assets/images/praxis-logo.svg">
           </a>
           <a class="burger-menu" href="#">
             <span class="bar"></span>
@@ -46,15 +47,15 @@
               </div>
               <ul>
                 <li class="menu-hasdropdown">
-                  <a href="../beers.html" class="menu-link beers-link">
+                  <a href="beers.html" class="menu-link beers-link">
                     <span class="selected-link">Cervejas</span>
                     <label title="toggle menu" for="cervejas">
-                      <img src="../assets/images/navigation-arrow.svg">
+                      <img src="assets/images/navigation-arrow.svg">
                     </label>
                   </a>
                   <input type="checkbox" id="cervejas">
                   <ul class="menu-dropdown">
-                    <li><a href="../beers/pilsener.html" class="submenu-link">Pilsener</a></li>
+                    <li><a href="beers/pilsener.html" class="submenu-link">Pilsener</a></li>
                     <li><a href="" class="submenu-link">Dunkel</a></li>
                     <li><a href="" class="submenu-link">Ambar</a></li>
                     <li><a href="" class="submenu-link">Weiss</a></li>
@@ -68,28 +69,28 @@
                     <li><a href="" class="submenu-link">B.S.D.A</a></li>
                   </ul>
                 </li>
-                <li><a href="../museum.html" class="menu-link">Museu</a></li>
-                <li><a href="../restaurant.html" class="menu-link">Restaurante</a></li>
-                <li><a href="../brewery.html" class="menu-link">Fábrica Praxis</a></li>
-                <li><a href="../community.html" class="menu-link">Comunidade</a></li>
+                <li><a href="museum.html" class="menu-link">Museu</a></li>
+                <li><a href="restaurant.html" class="menu-link">Restaurante</a></li>
+                <li><a href="brewery.html" class="menu-link">Fábrica Praxis</a></li>
+                <li><a href="community.html" class="menu-link">Comunidade</a></li>
                 <li class="disabled"><a href="" class="menu-link">Loja Online</a></li>
               </ul>
               <div class="media-links-container-vertical d-flex">
                 <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
-                  <img src="../assets/images/facebook-logo.svg">
+                  <img src="assets/images/facebook-logo.svg">
                 </a>
                 <a href="https://www.instagram.com/praxisbeer/" class="media-link instagram">
-                  <img src="../assets/images/instagram-logo.svg">
+                  <img src="assets/images/instagram-logo.svg">
                 </a>
                 <!-- Youtube Link Missing -->
                 <a href="" class="media-link youtube">
-                  <img src="../assets/images/youtube-logo.svg">
+                  <img src="assets/images/youtube-logo.svg">
                 </a>
                 <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" class="media-link tripadvisor">
-                  <img src="../assets/images/tripadvisor-logo.svg">
+                  <img src="assets/images/tripadvisor-logo.svg">
                 </a>
                 <a href="https://untappd.com/w/praxis/34853/" class="media-link untappd">
-                  <img src="../assets/images/untappd-logo.svg">
+                  <img src="assets/images/untappd-logo.svg">
                 </a>
               </div>
             </div>
@@ -98,111 +99,85 @@
       </header>
 
       <main>
-        <div class="two-section-sticky">
-          <div class="beer-bottle">
-            <img class="beer-bottle-img-lg" src="../assets/images/pilsener-beer-lg.png">
-            <img class="beer-bottle-img-sm" src="../assets/images/pilsener-beer-md.png">
+        <section class="news-section community-news">
+
+          <div class="tabs-navigation">
+            <ul class="tab-nav">
+              <li class="tab-item">
+                <a class="tab-link active" href="#">Tudo</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#">Notícias</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#">Eventos</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#">Novidades</a>
+              </li>
+              <li class="tab-item">
+                <a class="tab-link" href="#">Outros</a>
+              </li>
+            </ul>
           </div>
 
-          <section class="fullscreen-wrapper single-beer-wrapper pilsener-wrapper d-flex">
-              <img class="bg-texture" src="../assets/images/seeds-vector-texture.svg" alt="Seeds Background">
-
-            <div class="w-100 align-self-end">
-              <h1>Pilsener</h1>
-            </div>
-          </section>
-
-          <section class="pilsener-section beer-info-wrapper d-flex flex-column justify-content-between">
-            <div class="row beer-row">
-              <div class="beer-name-col col-12 col-lg-4">
-                <h2 class="beer-name">Pilsener</h2>
+          <div class="carousel swiper-container swiper-container-news">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="card-article">
+                  <a class="card-article-link" href="#">
+                    <div class="card-article-media">
+                      <img src="./assets/images/news-standup-night.jpg">
+                    </div>
+                    <div class="card-article-content">
+                      <h6 class="card-article-surtitle">Eventos</h6>
+                      <h4 class="card-article-title">Quintas de standup Comedy</h4>
+                      <img src="./assets/images/news-arrow.svg" class="card-article-arrow">
+                    </div>
+                  </a>
+                </article>
               </div>
-              <div class="beer-description-col col-12 col-md-8 col-lg-4 offset-lg-4">
-                <h5 class="beer-description">Cerveja com amargor e aroma singulares, 
-                  combina na perfeição com a música de Portuguese Pedro.
-                </h5>
-                <h5 class="beer-ingredients">Ingredientes</h5>
-                <div class="beer-ingredient-container">
-                  <p>
-                    <img src="../assets/images/water-vector.svg">
-                    Água de Coimbra</p>
-                  <p>
-                    <img src="../assets/images/wheat-vector.svg">
-                    Cevada Maltada</p>
-                  <p><img src="../assets/images/hop-vector.svg">
-                  Lúpulo e Leveduras</p>
-                </div>
-
-                <!--<div class="form-group">
-                  <button class="button button-icon dark">
-                    <img src="../assets/images/shopping-cart-icon.svg">
-                    Adicionar
-                  </button>
-                </div>-->
+              <div class="swiper-slide">
+                <article class="card-article">
+                  <a class="card-article-link" href="#">
+                    <div class="card-article-media">
+                      <img src="./assets/images/news-topazio.jpg">
+                    </div>
+                    <div class="card-article-content">
+                      <h6 class="card-article-surtitle">Notícias</h6>
+                      <h4 class="card-article-title">Cervejas emblemáticas de Coimbra</h4>
+                      <img src="./assets/images/news-arrow.svg" class="card-article-arrow">
+                    </div>
+                  </a>
+                </article>
               </div>
-            </div>
-
-            <div class="row beer-specs-container pilsener-specs">
-              <div class="col-6 col-sm-4 col-lg-2 beer-specs-card b-all">
-                <h6>Tipo</h6>
-                <h4>APA</h4>
+              <div class="swiper-slide">
+                <article class="card-article">
+                  <a class="card-article-link" href="#">
+                    <div class="card-article-media">
+                      <img src="./assets/images/news-bsda.jpg">
+                    </div>
+                    <div class="card-article-content">
+                      <h6 class="card-article-surtitle">Novidades</h6>
+                      <h4 class="card-article-title">B.S.D.A.</h4>
+                      <img src="./assets/images/news-arrow.svg" class="card-article-arrow">
+                    </div>
+                  </a>
+                </article>
               </div>
-              <div class="col-6 col-sm-4 col-lg-2 beer-specs-card b-all">
-                <h6>Álcool</h6>
-                <h4>6%</h4>
-              </div>
-              <div class="col-6 col-sm-4 col-lg-2 beer-specs-card b-all">
-                <h6>IBU</h6>
-                <h4>35</h4>
-              </div>
-              <div class="col-6 col-sm-6 col-lg-2 beer-specs-card b-all">
-                <h6>Desde</h6>
-                <h4>Maio 2016</h4>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-4 beer-specs-card b-all">
-                <h6>Cor</h6>
-                <div class="mt-4">
-                  <span class="beer-color"></span>
-                  <span class="beer-color selected"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                  <span class="beer-color"></span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <section class="beer-recomendation-wrapper row">
-          <div class="col-12 col-sm-9 col-lg-7 beer-recomendation-image-link">
-            <img src="../assets/images/pilsener-recommend.jpg" class="beer-recomendation-bg">
-            <a href="../beers.html" class="beer-recomendation-link d-flex align-items-center">
-              <span class="mr-5">Restaurante</span>
-              <img src="../assets/images/news-arrow.svg" class="beer-recomendation-arrow">
-            </a>
-          </div>
-          <div class="col-12 col-sm-10 col-lg-6 offset-sm-2 offset-lg-6 beer-recomendation-card-container">
-            <div class="beer-recomendation-card d-flex flex-column justify-content-between">
-              <div>
-                <h3 class="beer-recomendation-title">Recomendações</h3>
-                <h4 class="beer-recomendation-subtitle">Como Beber</h4>
-                <h5 class="beer-recomendation-description">Irresistível com uma terrina de foie gras com beringela e nozes. 
-                  Estupenda opção para acompanhar uns deliciosos brownies de caramelo e crostini de nozes com queijo chèvre. 
-                </h5>
-              </div>
-              <div class="row b-all">
-                <div class="col-5 col-md-4 beer-specs-recommend-card">
-                  <h6>Temperatura</h6>
-                  <h4>5 - 7ºC</h4>
-                </div>
-                <div class="col-7 col-md-8 beer-specs-recommend-card">
-                  <h6>Sabores</h6>
-                  <h4>Abóbora <span class="beer-specs-separator"></span> Amendoim</h4>
-                </div>
+              <div class="swiper-slide">
+                <article class="card-article">
+                  <a class="card-article-link" href="#">
+                    <div class="card-article-media">
+                      <img src="./assets/images/news-topazio.jpg">
+                    </div>
+                    <div class="card-article-content">
+                      <h6 class="card-article-surtitle">Notícias</h6>
+                      <h4 class="card-article-title">Cervejas emblemáticas de Coimbra</h4>
+                      <img src="./assets/images/news-arrow.svg" class="card-article-arrow">
+                    </div>
+                  </a>
+                </article>
               </div>
             </div>
           </div>
@@ -212,24 +187,24 @@
           <div class="row sitemap-wrapper">
             <div class="col-sm-12 col-lg-3 media-links-wrapper d-flex justify-content-between flex-column">
               <div>
-                <img src="../assets/images/praxis-logo.svg">
+                <img src="assets/images/praxis-logo.svg">
               </div>
               <div class="media-links-container-horizontal d-flex">
                 <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
-                  <img src="../assets/images/facebook-logo.svg">
+                  <img src="assets/images/facebook-logo.svg">
                 </a>
                 <a href="https://www.instagram.com/praxisbeer/" class="media-link instagram">
-                  <img src="../assets/images/instagram-logo.svg">
+                  <img src="assets/images/instagram-logo.svg">
                 </a>
                 <!-- Youtube Link Missing -->
                 <a href="" class="media-link youtube">
-                  <img src="../assets/images/youtube-logo.svg">
+                  <img src="assets/images/youtube-logo.svg">
                 </a>
                 <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" class="media-link tripadvisor">
-                  <img src="../assets/images/tripadvisor-logo.svg">
+                  <img src="assets/images/tripadvisor-logo.svg">
                 </a>
                 <a href="https://untappd.com/w/praxis/34853/" class="media-link untappd">
-                  <img src="../assets/images/untappd-logo.svg">
+                  <img src="assets/images/untappd-logo.svg">
                 </a>
               </div>
             </div>
@@ -260,11 +235,11 @@
             </div>
           </div>
         </footer>
-
       </main>
-    </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/sticky-beer.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/news-scroll.js"></script>
+  </body>
 </html>
