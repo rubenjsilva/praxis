@@ -29,6 +29,68 @@
         align-items: center;
     }
 
+/*
+--------------------------------------------------------------------------------
+Active Beer
+--------------------------------------------------------------------------------
+*/
+
+    .swiper-slide-next {
+        .cover {
+            .picture {
+                &:after {
+                    height: 32rem;
+
+                    @include phablet {
+                        height: 40rem;
+                    }
+                }
+
+                &:before {
+                    filter: blur(9px);
+                    opacity: 0.4;
+                    bottom: -4rem;
+                }
+
+                .media {
+                    transform: scale(1);
+                    filter: grayscale(0%);
+                }
+
+                .obj-label-left {
+                    left: -3rem;
+                    opacity: 1;
+
+                    @include desktop {
+                        left: -2rem;
+                    }
+                }
+
+                .obj-label-right {
+                    right: -3rem;
+                    opacity: 1;
+
+                    @include desktop {
+                        right: -2rem;
+                    }
+                }
+            }
+
+            .title {
+                transform: translate(-50%, -8rem);
+
+                @include phablet {
+                    transform: translate(-50%, -8rem);
+                }
+            }
+        }
+    }
+
+
+/*
+--------------------------------------------------------------------------------
+*/
+
     .cover {
         position: relative;
         width: 100%;
@@ -47,8 +109,7 @@
         }
 
         &:hover .picture::after {
-            height: 35rem;
-            background-color: #FACA78;
+            height: 32rem;
 
             @include phablet {
                 height: 40rem;
@@ -67,8 +128,7 @@
         }
 
         &:hover .title {
-            transform: translate(-50%, -10rem);
-            color: #FACA78;
+            transform: translate(-50%, -8rem);
 
             @include phablet {
                 transform: translate(-50%, -8rem);
@@ -96,9 +156,13 @@
             opacity: .2;
         }
 
-        &:hover .obj-label-left{
-            left: -2rem;
+        &:hover .obj-label-left {
+            left: -3rem;
             opacity: 1;
+
+            @include desktop {
+                left: -2rem;
+            }
         }
 
         .obj-label-right {
@@ -113,8 +177,12 @@
         }
 
         &:hover .obj-label-right{
-            right: -2rem;
+            right: -3rem;
             opacity: 1;
+
+            @include desktop {
+                right: -2rem;
+            }
         }
 
         .picture {
@@ -177,6 +245,34 @@
                 z-index: 2;
                 overflow-wrap: break-word;
                 word-wrap: break-word;
+            }
+        }
+    }
+}
+
+/* -------- CUSTOM BEER COLORS ----------- */
+
+@each $beer, $color in $beer-colors {
+    .#{$beer}-item {
+        .cover {
+            &:hover .title {
+                color: $color;
+            }
+
+            &:hover .picture::after {
+                background-color: $color;
+            }
+        }
+
+        &.swiper-slide-next {
+            .cover {
+                .title {
+                    color: $color;
+                }
+
+                .picture::after {
+                    background-color: $color;
+                }
             }
         }
     }
