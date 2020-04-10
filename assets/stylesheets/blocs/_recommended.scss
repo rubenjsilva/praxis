@@ -23,6 +23,35 @@
         z-index: -1;   
     }
 
+    .css-carousel {
+        height: 100%;
+        width: 100%;
+        overflow: visible;
+
+        .scroll-wrapper {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            transition-property: transform;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            @include desktop {
+                padding-bottom: 2rem;
+                overflow: none;
+            }
+        }
+    }
+
+    .scroll-slide {
+        height: 60vh;
+        min-width: 30rem;
+        }
+    }
+
     .light-title {
         color: $gray-5;
     }
@@ -49,7 +78,7 @@
             }
         }
 
-        .scroll-container {
+        .scroll-container-recommended {
             margin-top: 0;
         }
 
@@ -188,7 +217,7 @@
             }
         }
     }
-}}
+}
 
 /* -------- CUSTOM BEER COLORS ----------- */
 
