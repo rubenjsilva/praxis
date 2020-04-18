@@ -12,7 +12,7 @@
 
     &:after {
         content: "";
-        background: url('../images/seeds-vector-texture.svg') center no-repeat;
+        background: url("../images/seeds-vector-texture.svg") center no-repeat;
         background-size: cover;
         opacity: 0.7;
         top: 0;
@@ -20,7 +20,7 @@
         bottom: 0;
         right: 0;
         position: absolute;
-        z-index: -1;   
+        z-index: -1;
     }
 
     .css-carousel {
@@ -49,38 +49,38 @@
     .scroll-slide {
         height: 60vh;
         min-width: 30rem;
-        }
+    }
+}
+
+.light-title {
+    color: $gray-5;
+}
+
+.others-wrapper {
+    position: relative;
+    margin-top: 2rem;
+
+    @include phablet {
+        margin-top: 6rem;
     }
 
-    .light-title {
-        color: $gray-5;
-    }
-
-    .others-wrapper {
-        position: relative;
-        margin-top: 2rem;
+    .big-type {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $h1-font-size;
+        opacity: 0.03;
 
         @include phablet {
-            margin-top: 6rem;
+            top: 50%;
+            font-size: 40rem;
         }
+    }
 
-        .big-type {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: $h1-font-size;
-            opacity: .03;
-
-            @include phablet {
-                top: 50%;
-                font-size: 40rem;
-            }
-        }
-
-        .scroll-container-recommended {
-            margin-top: 0;
-        }
+    .scroll-container-recommended {
+        margin-top: 0;
+    }
 
     .scroll-slide-recommended {
         height: 45rem;
@@ -99,6 +99,7 @@
         }
 
         .beer-article {
+            position: relative;
             height: 100%;
             z-index: 1;
             margin-left: 0;
@@ -124,8 +125,8 @@
                     position: relative;
 
                     &:before {
-                        content: '';
-                        @include transition(all, .7);
+                        content: "";
+                        @include transition(all, 0.7);
                         @include position(absolute, null, 50%, -3rem);
                         transform: translateX(-50%);
                         width: 2px;
@@ -137,16 +138,16 @@
                     .beer-bg {
                         width: 100%;
                         height: 100%;
-                        @include transition(all, .7);
+                        @include transition(all, 0.7);
                         @include position(absolute, null, 50%, -3rem);
                         transform: translateX(-50%);
-                        background: radial-gradient(50% 50% at 50% 50%, #CA8D33 0%, rgba(244, 189, 106, 0) 100%);
+                        background: radial-gradient(50% 50% at 50% 50%, #ca8d33 0%, rgba(244, 189, 106, 0) 100%);
                         opacity: 0;
                         z-index: -1;
                     }
 
                     img {
-                        @include transition(all, .7);
+                        @include transition(all, 0.7);
                         height: 100%;
                         transform: scale(1);
                     }
@@ -172,47 +173,47 @@
                 }
 
                 &:hover .beer-article-media .beer-bg {
-                    opacity: .5;
+                    opacity: 0.5;
                 }
 
                 &:hover .beer-article-media img {
-                    @include transition(all, .7);
+                    @include transition(all, 0.7);
                     transform: scale(1.02);
                 }
+            }
 
-                .beer-article-content {
-                    @include position(absolute, 0, 0);
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
-                    color: $white;
-                    height: 100%;
-                    width: 100%;
+            .beer-article-content {
+                @include position(absolute, 0, 0);
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                color: $white;
+                height: 100%;
+                width: 100%;
 
-                    .beer-article-hidden-title {
-                        @include transition(all, .7);
-                        @include position(absolute, -3rem, 50%);
-                        transform: translateX(-50%);
-                        color: $dark default;
-                        opacity: 0;
-                        mix-blend-mode: multiply;
-                    }
+                .beer-article-hidden-title {
+                    @include transition(all, 0.7);
+                    @include position(absolute, -3rem, 50%);
+                    transform: translateX(-50%);
+                    color: $dark default;
+                    opacity: 0;
+                    mix-blend-mode: multiply;
+                }
 
-                    .beer-article-title {
-                        @include transition(opacity, 1);
-                        @include position(absolute, null, 50%, 0);
-                        transform: translateX(-50%);
-                        color: $dark;
-                        opacity: .2;
-                        transition-delay: .3s;
-                    }
+                .beer-article-title {
+                    @include transition(opacity, 1);
+                    @include position(absolute, null, 50%, 0);
+                    transform: translateX(-50%);
+                    color: $dark;
+                    opacity: 0.2;
+                    transition-delay: 0.3s;
+                }
 
-                    button {
-                        @include transition(all, .7);
-                        @include position(absolute, null, 50%, -2rem);
-                        transform: translateX(-50%);
-                        opacity: 0;
-                    }
+                .button {
+                    @include transition(all, 0.7);
+                    @include position(absolute, null, 50%, -2rem);
+                    transform: translateX(-50%);
+                    opacity: 0;
                 }
             }
         }

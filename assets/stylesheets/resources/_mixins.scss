@@ -40,20 +40,6 @@ Position
 
 /*
 --------------------------------------------------------------------------------
-GRID CONTAINER
---------------------------------------------------------------------------------
-*/
-@mixin grid($columns, $rows, $column_gap:0, $row_gap:0) {
-  display: grid;
-  grid-column-gap: $column_gap;
-  grid-row-gap: $row_gap;
-  grid-template-columns: $columns;
-  grid-template-rows: $rows;
-}
-
-
-/*
---------------------------------------------------------------------------------
 Fix for mobile devices
 --------------------------------------------------------------------------------
 */
@@ -85,4 +71,12 @@ Custom helpers
 
 @mixin translate($x, $y) {
   transform: translate($x, $y);
+}
+
+@mixin show() {
+  display: block;
+}
+
+@mixin hide() {
+  display: none;
 }
