@@ -91,6 +91,16 @@ h6 {
   }
 }
 
+p {
+  font-size: $font-size-sm;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+
+  @include tablet {
+    font-size: $font-size-baseline;
+  }
+}
+
 span {
   display: inline-block;
 }
@@ -126,7 +136,7 @@ label, .label {
 }
 
 b {
-  font-weight: 700;
+  font-family: $font-family-sans-serif-med;
 }
 
 strong {
