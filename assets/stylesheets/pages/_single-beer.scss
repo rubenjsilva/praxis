@@ -103,7 +103,14 @@
     }
 }
 
-.beer-recomendation {
+
+/*
+--------------------------------------------------------------------------------
+Food Recommendations
+--------------------------------------------------------------------------------
+*/
+
+.food-recommendation {
     &-wrapper {
         height: 100%;
 
@@ -119,7 +126,7 @@
             height: 100%;
         }
 
-        .beer-recomendation-bg {
+        .food-recommendation-bg {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -132,12 +139,13 @@
         bottom: -0.1rem;
         opacity: .6;
         color: $white;
+        text-transform: uppercase;
 
         &:hover {
             opacity: .8;
         }
 
-        &:hover .beer-recomendation-arrow {
+        &:hover .food-recommendation-arrow {
             bottom: -0.5rem;
             transform: scale(1.2);
         }
@@ -201,7 +209,11 @@
 }
 
 
-/* -------- BACKGROUND GRADIENTS ----------- */
+/*
+--------------------------------------------------------------------------------
+Background Gradients
+--------------------------------------------------------------------------------
+*/
 
 @each $beer, $gradient in $beer-bg {
     .#{$beer}-wrapper {
@@ -209,7 +221,11 @@
     }
 }
 
-/* -------- CUSTOM BEER COLORS ----------- */
+/*
+--------------------------------------------------------------------------------
+Custom Beer Colors
+--------------------------------------------------------------------------------
+*/
 
 @each $beer, $color in $beer-colors {
     .#{$beer}-section {
