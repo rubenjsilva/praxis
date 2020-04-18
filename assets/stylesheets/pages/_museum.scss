@@ -95,6 +95,8 @@
     }
   }
 
+  /* -------- TIMELINE MIDDLE LINE ----------- */
+
   &:before,
   &:after {
     content: "";
@@ -117,6 +119,8 @@
     background-color: $gold;
     height: 50vh;
   }
+
+   /* -------- TIMELINE GENERAL WRAPPER ----------- */
 
   .timeline-panel-wrapper {
     position: relative;
@@ -178,6 +182,8 @@
         }
       }
 
+      /* -------- TIMELINE DOT ----------- */
+
       &:not(.timeline-inverted) {
         &:before {
           content: "";
@@ -210,6 +216,8 @@
       }
     }
 
+    /* -------- TIMELINE IMG PANEL ----------- */
+
     .timeline-panel-img {
       object-fit: contain;
       padding: 0 3rem;
@@ -223,6 +231,8 @@
         max-width: 100%;
       }
     }
+
+    /* -------- TIMELINE YEAR ----------- */
 
     .timeline-badge {
       color: $dark;
@@ -249,23 +259,6 @@
           z-index: -1;
         }
       }
-
-      &.active {
-        color: $white;
-        animation-name: lines;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-
-        &:before {
-          animation-name: lines;
-          animation-duration: 1s;
-          animation-delay: 1s;
-          animation-fill-mode: forwards;
-          animation-iteration-count: 1;
-        }
-      }
     }
 
     .timeline-inverted,
@@ -282,7 +275,11 @@
 
 
 
-/* -------- ANIMATIONS ----------- */
+/*
+--------------------------------------------------------------------------------
+Animations
+--------------------------------------------------------------------------------
+*/
 
 @keyframes ani-img {
   0% {

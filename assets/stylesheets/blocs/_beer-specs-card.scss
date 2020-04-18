@@ -37,6 +37,19 @@
             }
         }
 
+        &:nth-child(4) {
+            border-left: $gray-border;
+
+            @include phablet {
+                border-left: none;
+            }
+
+            @include desktop {
+                border-left: $gray-border;
+            }
+        }
+
+
         &:first-child {
             border-left: none;
         }

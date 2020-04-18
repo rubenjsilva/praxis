@@ -172,6 +172,10 @@ Active Beer
             left: 4rem;
             z-index: 0;
             opacity: .2;
+
+            @include resolution(1500px) {
+                left: 6rem;
+            }
         }
 
         &:hover .obj-label-left {
@@ -192,6 +196,10 @@ Active Beer
             right: 4rem;
             z-index: 0;
             opacity: .2;
+
+            @include resolution(1500px) {
+                right: 6rem;
+            }
         }
 
         &:hover .obj-label-right{
