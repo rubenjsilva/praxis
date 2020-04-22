@@ -30,6 +30,15 @@
       z-index: 0;
     }
   }
+
+  video {
+    @include position(absolute, 0, 0);
+      height: 100%;
+      width: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
+      z-index: -1;
+  }
 }
 
 .beer-info-wrapper {
