@@ -5,6 +5,12 @@
 
     &.community-news {
         padding-top: 14rem;
+
+        .tabs-navigation {
+            @include phablet {
+                padding: 0 8rem;
+            }
+        }
     }
 
     &.homepage-news {
