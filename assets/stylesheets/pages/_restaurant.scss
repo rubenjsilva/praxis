@@ -1,0 +1,169 @@
+.menu-section {
+    background-color: $black;
+    padding-bottom: 14rem;
+
+    .menu-title {
+        position: relative;
+        padding-top: 5rem;
+        color: rgba($white, 0.05);
+    }
+
+    .menu-surtitle {
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+        color: $white;
+
+        @include phablet {
+            margin-top: -7rem;
+        }
+    }
+
+    .menu-dates {
+        color: $gray-2;
+    }
+
+    .menu-surtitle, .menu-title, .menu-dates {
+        text-align: center;
+    }
+
+    .menu-wrapper {
+        padding: 8rem 2rem 2rem 2rem;
+
+        @include phablet {
+            padding: 8rem 4rem 4rem 4rem;
+        }
+
+        @include tablet {
+            padding: 9rem 6rem 6rem 6rem;
+        }
+
+        @include desktop {
+            padding: 9rem 8rem 8rem 8rem;
+        }
+        
+        .menu-available {
+            margin-bottom: 6rem;
+
+            &-title {
+                color: $gold;
+                margin-bottom: 3rem;
+            }
+
+            .menu-dish {
+                &-wrapper {
+                    margin-bottom: 2rem;
+                }
+
+                &-container {
+                    display: flex;
+                    justify-content: space-between;
+                    color: $gray-5;
+                }
+
+                &-ingredients {
+                    color: $gray-2;
+                    margin-top: -.2rem;
+                }
+            }
+        }
+    }
+
+    .sided-plate-col {
+        /* Do this element sticky in mobile */
+    }
+
+    .sided-plate-wrapper {
+        margin-top: 4rem;
+        height: 100%;
+        display: none;
+
+        @include desktop {
+            display: block;
+        }
+
+        .sided-plate {
+            position: relative;
+            z-index: 4;
+        }
+
+        .plate-img {
+            width: 100%;
+            z-index: 6;
+        }
+
+        .salt-img, .pepper-img{
+            position: absolute;
+            z-index: -1;
+        }
+
+        .salt-img {
+            bottom: -0.5rem;
+            left: -0.5rem;
+        }
+        
+        .pepper-img {
+            top: -0.5rem;
+            right: -0.5rem;
+        }
+    }
+}
+
+.chef-section {
+    background-color: $black;
+    
+    .chef-content-wrapper, .restaurant-content-wrapper {
+        height: 100vh;
+    }
+
+    .compound-image-wrapper {
+        &.ng-margin-top {
+            margin-top: -5vh;
+        }
+
+        .parallax-window {
+            background: transparent;
+
+            &.flat-image {
+                height: 25vh;
+            }
+
+            &.thin-image {
+                height: 25rem;
+            }
+
+            &.ratio-image {
+                height: 80vh;
+            }
+        }
+    }
+
+    .chef-narrative {
+        &-wrapper {
+            padding: 4rem 8rem 8rem 8rem;
+        }
+
+        &-title {
+            color: $white;
+            margin-bottom: 6rem;
+        }
+
+        &-info {
+            color: $gray-3;
+        }
+    }
+
+    .chef-slogan {
+        text-align: center;
+        color: $gold;
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .restaurant-content-wrapper {
+        margin-top: 16rem;
+    }
+}
