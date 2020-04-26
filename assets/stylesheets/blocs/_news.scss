@@ -1,19 +1,7 @@
 .carousel {
     height: 90%;
-    width: 100%;
-    position: relative;
 
     .swiper-wrapper {
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        height: 100%;
-        box-sizing: border-box;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        user-select: none;
-        touch-action: pan-y;
-        -webkit-tap-highlight-color: transparent;
         padding: 4rem 2rem 2rem 2rem;
 
         @include tablet {

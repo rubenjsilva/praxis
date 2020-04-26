@@ -2,27 +2,8 @@
     background-color: $black;
     padding-bottom: 14rem;
 
-    .menu-title {
-        position: relative;
-        padding-top: 5rem;
-        color: rgba($white, 0.05);
-    }
-
-    .menu-surtitle {
-        margin-top: -4rem;
-        margin-bottom: 1rem;
-        color: $white;
-
-        @include phablet {
-            margin-top: -7rem;
-        }
-    }
-
     .menu-dates {
         color: $gray-2;
-    }
-
-    .menu-surtitle, .menu-title, .menu-dates {
         text-align: center;
     }
 
@@ -111,7 +92,7 @@
 .chef-section {
     background-color: $black;
     
-    .chef-content-wrapper, .restaurant-content-wrapper {
+    .chef-content-wrapper {
         height: 100vh;
     }
 
@@ -128,11 +109,24 @@
             }
 
             &.thin-image {
-                height: 25rem;
+                position: absolute;
+                left: 8rem;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 55rem;
+                width: 30rem;
+                box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.95);
             }
 
             &.ratio-image {
                 height: 80vh;
+                box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.95);
+
+                &.half-width {
+                    width: 75%;
+                    margin-left: auto;
+                    display: block;
+                }
             }
         }
     }
@@ -164,6 +158,8 @@
     }
 
     .restaurant-content-wrapper {
+        height: 100%;
         margin-top: 16rem;
+        padding-bottom: 6rem;
     }
 }

@@ -25,7 +25,7 @@
     <meta property="article:publisher" content="https://www.facebook.com/cervejaPraxis"/>
     <meta property="article:author" content="https://www.facebook.com/cervejaPraxis"/>
     
-  
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
 
              
@@ -77,7 +77,7 @@
                 <li><a href="restaurant.html" class="menu-link">Restaurante</a></li>
                 <li><a href="brewery.html" class="menu-link">Fábrica Praxis</a></li>
                 <li><a href="community.html" class="menu-link">Comunidade</a></li>
-                <li class="disabled"><a href="" class="menu-link">Loja Online</a></li>
+                <li><a href="shop.html" class="menu-link">Loja Online</a></li>
               </ul>
               <div class="media-links-container-vertical d-flex">
                 <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
@@ -111,10 +111,10 @@
           </div>
         </section>
         
-        <section class="dark-section menu-section">
+        <section class="dark-section menu-section db-title-section">
           <!--<img class="bg-texture o-80" src="assets/images/beer-vector-texture.svg" alt="Seeds Background">-->
-          <h1 class="menu-title">Menu</h1>
-          <h4 class="menu-surtitle">Praxis em tua casa</h4>
+          <h1 class="db-title">Menu</h1>
+          <h4 class="db-surtitle">Praxis em tua casa</h4>
           <h6 class="menu-dates">7 de abril a 25 de abril - de quarta a domingo</h6>
 
           <div class="menu-wrapper">
@@ -224,15 +224,51 @@
           <div class="restaurant-content-wrapper">
             <div class="row">
               <div class="col-lg-7 compound-image-wrapper">
-                <div class="parallax-window ratio-image" data-parallax="scroll" data-speed=".8" data-image-src="assets/images/restaurant-chef-lg.jpg"></div>
+                <div class="parallax-window thin-image" data-parallax="scroll" data-speed=".8" data-image-src="assets/images/restaurant-croc-lg.jpg"></div>
+                <div class="parallax-window ratio-image half-width" data-parallax="scroll" data-speed=".8" data-image-src="assets/images/restaurant-pure-lg.jpg"></div>
               </div>
               <div class="col-lg-5 chef-narrative-wrapper">
                 <h4 class="chef-narrative-title">Restaurante Praxis</h4>
-                <h5 class="chef-narrative-info">O Restaurante Praxis integra a Fábrica e Museu da Cerveja de Coimbra.
-                Apresentamos uma gastronomia variada, com as melhores carnes, o melhor pescado e uma seleção com mariscos de qualidade.
-                Aqui, na Praxis, encontra os melhores conceitos dos petiscos cervejeiros.</h5>
+                <h5 class="chef-narrative-info">Servimos os nossos clientes com produtos da melhor qualidade e primamos pelo cumprimento das regras e normas da confeção alimentar. 
+                  Temos uma equipa que procura sempre satisfazer quem nos visita de forma profissional, humana e simpática. </h5><br>
+                  <h5 class="chef-narrative-info">Nós, a Praxis, convidamos todos a fazerem uma visita ao restaurante, às instalações de Produção (onde se faz a nossa cerveja Praxis), e à nossa decoração com a história da Cerveja de Coimbra.</h5>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="dark-section menu-section db-title-section">
+          <!--<img class="bg-texture o-80" src="assets/images/beer-vector-texture.svg" alt="Seeds Background">-->
+          <h1 class="db-title">Galeria</h1>
+          <h4 class="db-surtitle">Feast your eyes</h4>
+
+          <div class="image-carousel swiper-container swiper-container-gallery">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-1.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-2.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-3.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-1.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-2.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-3.jpg">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/img-gallery-1.jpg">
+              </div>
+            </div>
+            <div class="swiper-pagination light-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </section>
 
@@ -312,7 +348,9 @@
     </body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="assets/js/parallax.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/rotate-plate.js"></script>
+    <script src="assets/js/img-gallery.js"></script>
 </html>
