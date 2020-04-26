@@ -20,11 +20,16 @@
     .swiper-pagination {
         &.swiper-pagination-progressbar {
             &.light-pagination {
-                left: 5%;
+                left: 10%;
                 bottom: -4rem;
-                width: 90%;
+                width: 80%;
                 top: auto;
                 background-color: $gray-1;
+
+                @include desktop {
+                    left: 5%;
+                    width: 90%;
+                }
 
                 .swiper-pagination-progressbar-fill {
                     background-color: $gray-5;

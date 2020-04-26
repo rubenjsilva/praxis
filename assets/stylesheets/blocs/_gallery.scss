@@ -1,6 +1,10 @@
 .image-carousel {
     height: 60%;
-    margin-top: 10rem;
+    margin-top: 5rem;
+
+    @include desktop {
+        margin-top: 10rem;
+    }
 
     .swiper-wrapper {
         .swiper-slide {

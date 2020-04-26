@@ -1,6 +1,11 @@
+/*
+--------------------------------------------------------------------------------
+MENU SECTION
+--------------------------------------------------------------------------------
+*/
+
 .menu-section {
-    background-color: $black;
-    padding-bottom: 14rem;
+    padding-bottom: 10rem;
 
     .menu-dates {
         color: $gray-2;
@@ -47,6 +52,16 @@
                 }
             }
         }
+
+        .menu-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .button {
+                width: 26rem;
+            }
+        }
     }
 
     .sided-plate-col {
@@ -89,11 +104,19 @@
     }
 }
 
+/*
+--------------------------------------------------------------------------------
+CHEF SECTION
+--------------------------------------------------------------------------------
+*/
+
 .chef-section {
-    background-color: $black;
-    
     .chef-content-wrapper {
-        height: 100vh;
+        height: 100%;
+
+        @include desktop {
+            height: 100vh;
+        }
     }
 
     .compound-image-wrapper {
@@ -105,22 +128,35 @@
             background: transparent;
 
             &.flat-image {
-                height: 25vh;
+                display: none;
+
+                @include tablet {
+                    height: 25vh;
+                    display: block;
+                }
             }
 
             &.thin-image {
                 position: absolute;
-                left: 8rem;
                 top: 50%;
                 transform: translateY(-50%);
-                height: 55rem;
-                width: 30rem;
-                box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.95);
+                left: 1rem;
+                height: 30rem;
+                width: 15rem;
+
+                @include tablet {
+                    left: 8rem;
+                    height: 55rem;
+                    width: 30rem;
+                }
             }
 
             &.ratio-image {
-                height: 80vh;
-                box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.95);
+                height: 60vh;
+
+                @include desktop {
+                    height: 80vh;
+                }
 
                 &.half-width {
                     width: 75%;
@@ -128,17 +164,33 @@
                     display: block;
                 }
             }
+
+            &.flat-image, &.thin-image, &.ratio-image {
+                box-shadow: 0rem .4rem 4rem rgba(0, 0, 0, 0.95);
+
+                @include tablet {
+                    box-shadow: 0rem .4rem 8rem rgba(0, 0, 0, 0.95);
+                }
+            }
         }
     }
 
     .chef-narrative {
         &-wrapper {
-            padding: 4rem 8rem 8rem 8rem;
+            padding: 4rem 3.5rem 2rem 3.5rem;
+
+            @include tablet {
+                padding: 4rem 8rem 8rem 8rem;
+            }
         }
 
         &-title {
             color: $white;
-            margin-bottom: 6rem;
+            margin-bottom: 3rem;
+
+            @include desktop {
+                margin-bottom: 6rem;
+            }
         }
 
         &-info {
@@ -154,12 +206,94 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 6rem;
+
+            @include tablet {
+                margin-top: 0;
+            }
         }
     }
 
     .restaurant-content-wrapper {
         height: 100%;
-        margin-top: 16rem;
+        margin-top: 8rem;
         padding-bottom: 6rem;
+
+        @include tablet {
+            margin-top: 16rem;
+        }
+    }
+}
+
+
+/*
+--------------------------------------------------------------------------------
+GALLERY SECTION
+--------------------------------------------------------------------------------
+*/
+
+.gallery-section {
+    padding-bottom: 10rem;
+}
+
+
+/*
+--------------------------------------------------------------------------------
+TAKEAWAY SECTION
+--------------------------------------------------------------------------------
+*/
+
+.takeaway-section {
+    .takeaway {
+        &-wrapper {
+            padding: 10rem 2rem 8rem 2rem;
+
+            @include tablet {
+                padding: 15rem 8rem 15rem 8rem;
+            }
+        }
+
+        &-title {
+            margin-bottom: 3rem;
+            color: $white;
+
+            @include desktop {
+                 margin-bottom: 6rem;
+            }
+        }
+    }
+
+    h5 {
+        color: $gray-3;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 6rem;
+
+        @include tablet {
+            width: auto;
+        }
+    }
+}
+
+/*
+--------------------------------------------------------------------------------
+GENERAL RESTAURANT PAGE
+--------------------------------------------------------------------------------
+*/
+
+.chef-section, .menu-section, .gallery-section, .takeaway-section {
+    background-color: $black;
+
+    img {
+        &.bg-texture{
+            @include position(absolute, 0, 0);
+            height: 100%;
+            width: 100%;
+            object-position: 50% 50%;
+            object-fit: cover;
+            z-index: 0;
+        }
     }
 }
