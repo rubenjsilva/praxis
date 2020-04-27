@@ -1,5 +1,5 @@
 .button {
-  @include transition(all, .5);
+  @include transition(all, 0.5);
   border-radius: 1px;
   min-width: 14rem;
   height: 5rem;
@@ -7,28 +7,53 @@
   text-transform: uppercase;
   float: left;
   text-align: center;
+  position: relative;
 
   @include tablet {
     min-width: 16rem;
   }
 
   &.button-icon {
-    display: flex;
-    align-items: center;
+    padding-left: 15%;
+    padding-right: 10%;
+
+    @include hd {
+      padding-left: 15%;
+      padding-right: 10%;
+    }
 
     img {
-      margin-right: 2rem;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+
+      &.icon {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(0, -50%);
+
+        @include desktop {
+          left: 10%;
+        }
+
+        @include hd {
+          left: 15%;
+        }
+
+        @include resolution(1600px) {
+          left: 20%;
+        }
+      }
     }
   }
 
   &:hover {
     &.dark {
-      background-color: darken( $dark, 7% );
+      background-color: darken($dark, 7%);
     }
 
     &.light {
-      background-color: darken( $white, 7% );
+      background-color: darken($white, 7%);
     }
   }
 
@@ -41,17 +66,21 @@
     background-color: $white;
     color: $dark;
   }
+
+  &.full-width {
+    width: 100%;
+  }
 }
 
 .disabled {
   color: $gray-4 !important;
-  opacity: .8;
+  opacity: 0.8;
   pointer-events: none !important;
   cursor: default;
 }
 
 .under-btn {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: $light-border;
   color: $gray-5;
   text-transform: uppercase;
