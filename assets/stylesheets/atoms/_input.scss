@@ -23,8 +23,96 @@ label {
     }
 }
 
-.newsletter-field-container {
-    .button {
-        height: 4.6rem;
+/*
+--------------------------------------------------------------------------------
+QUANTITY INPUT
+--------------------------------------------------------------------------------
+*/
+
+.quantity-wrapper {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 2rem;
+    z-index: 3;
+
+    .quantity-input {
+        position: relative;
+        min-width: 14rem;
+        height: 5rem;
+        float: left;
+
+        @include tablet {
+            min-width: 12rem;
+        }
+
+        @include resolution(1400px) {
+            min-width: 14rem;
+        }
+
+        @include resolution(1600px) {
+            min-width: 15rem;
+        }
+
+        input {
+            height: 100%;
+            width: 100%;
+            line-height: 1.65;
+            text-align: center;
+            float: left;
+            display: block;
+            border: 1px solid $dark;
+            background-color: $white;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .quantity-button {
+            cursor: pointer;
+            color: $dark;
+            position: absolute;
+            height: 100%;
+            width: 4.5rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+
+            @include tablet {
+                width: 4rem;
+            }
+
+            @include resolution(1400px) {
+                width: 4.5rem;
+            }
+
+            &.quantity-up {
+                top: 0;
+                right: 0;
+                border-left: 1px solid $dark;
+            }
+
+            &.quantity-down {
+                top: 0;
+                left: 0;
+                border-right: 1px solid $dark;
+            }
+        }
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
     }
 }

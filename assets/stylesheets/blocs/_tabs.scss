@@ -1,8 +1,4 @@
 .tabs-navigation {
-    @include phablet {
-        padding: 0 8rem;
-    }
-
     .tab-nav {
         list-style: none;
         position: relative;
