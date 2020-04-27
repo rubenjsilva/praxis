@@ -49,3 +49,10 @@
   pointer-events: none !important;
   cursor: default;
 }
+
+.under-btn {
+  padding-bottom: .5rem;
+  border-bottom: $light-border;
+  color: $gray-5;
+  text-transform: uppercase;
+}

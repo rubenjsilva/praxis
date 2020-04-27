@@ -2,9 +2,13 @@ var swiper = new Swiper('.swiper-container-beers', {
   slidesPerView: 1,
   spaceBetween: 0,
   grabCursor: true,
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   breakpoints: {
     640: {
