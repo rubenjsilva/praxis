@@ -1,0 +1,44 @@
+.swiper-container {
+    width: 100%;
+    position: relative;
+    /*careful*/
+    overflow: inherit;
+
+    .swiper-wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .swiper-pagination {
+        &.swiper-pagination-progressbar {
+            &.light-pagination {
+                left: 10%;
+                bottom: -4rem;
+                width: 80%;
+                top: auto;
+                background-color: $gray-1;
+
+                @include desktop {
+                    left: 5%;
+                    width: 90%;
+                }
+
+                .swiper-pagination-progressbar-fill {
+                    background-color: $gray-5;
+                }
+            }
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: $gray-3;
+    }
+}
