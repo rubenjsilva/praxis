@@ -23,7 +23,6 @@ label {
     }
 }
 
-
 /*
 --------------------------------------------------------------------------------
 QUANTITY INPUT
@@ -45,15 +44,15 @@ QUANTITY INPUT
         float: left;
 
         @include tablet {
-          min-width: 12rem;
+            min-width: 12rem;
         }
 
         @include resolution(1400px) {
-          min-width: 14rem;
+            min-width: 14rem;
         }
 
         @include resolution(1600px) {
-          min-width: 15rem;
+            min-width: 15rem;
         }
 
         input {
@@ -72,20 +71,19 @@ QUANTITY INPUT
         }
 
         .quantity-button {
-            height: 100%;
-            width: 100%;
-            position: absolute;
             cursor: pointer;
-            width: 4.5rem;
-            text-align: center;
             color: $dark;
+            position: absolute;
+            height: 100%;
+            width: 4.5rem;
+            display: flex;
+            justify-content: center;
+            text-align: center;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             -o-user-select: none;
             user-select: none;
-            display: flex;
-            justify-content: center;
 
             @include tablet {
                 width: 4rem;
@@ -102,7 +100,7 @@ QUANTITY INPUT
             }
 
             &.quantity-down {
-                bottom: 0;
+                top: 0;
                 left: 0;
                 border-right: 1px solid $dark;
             }
@@ -110,12 +108,11 @@ QUANTITY INPUT
     }
 }
 
-
 input[type="number"] {
     -moz-appearance: textfield;
 
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
         -webkit-appearance: none;
     }
 }
-
