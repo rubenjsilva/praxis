@@ -32,12 +32,20 @@
 	<body>
 	  <header class="menu">
 		<nav class="navbar">
-		  <a href="index.html" class="navbar-brand">
-			<img src="assets/images/praxis-logo.svg">
-		  </a>
-		  <a class="burger-menu" href="#">
-			<span class="bar"></span>
-		  </a>
+			<div class="brand-container">
+				<a href="index.html" class="navbar-brand">
+					<img src="assets/images/praxis-logo.svg">
+				</a>
+				<a class="burger-menu" href="#">
+					<span class="bar"></span>
+				</a>
+			</div>
+
+			<!-- Add   filled-cart   class when cart has a product -->
+			<a class="shopping-menu filled-cart" href="#">
+				<img class="shopping-cart-icon" src="assets/images/shopping-cart-icon.svg">
+			</a>
+		</nav>
 
 		  <div class="overlay">
 			<div class="menu-panel">
@@ -95,7 +103,6 @@
 			  </div>
 			</div>
 		  </div>
-		</nav>
 	  </header>
 
 	  <main>
