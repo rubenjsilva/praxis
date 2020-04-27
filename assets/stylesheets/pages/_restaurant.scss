@@ -56,10 +56,16 @@ MENU SECTION
         .menu-actions {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
+            flex-direction: column;
+
+            @include tablet {
+                align-items: baseline;
+                flex-direction: row;
+            }
 
             .button {
-                width: 26rem;
+                margin-top: 2rem;
             }
         }
     }
@@ -146,8 +152,12 @@ CHEF SECTION
 
                 @include tablet {
                     left: 8rem;
-                    height: 55rem;
+                    height: 45rem;
                     width: 30rem;
+                }
+
+                @include hd {
+                    height: 50rem;
                 }
             }
 
@@ -180,7 +190,7 @@ CHEF SECTION
             padding: 4rem 3.5rem 2rem 3.5rem;
 
             @include tablet {
-                padding: 4rem 8rem 8rem 8rem;
+                padding: 4rem 8rem 4rem 8rem;
             }
         }
 
@@ -244,6 +254,8 @@ TAKEAWAY SECTION
 */
 
 .takeaway-section {
+    border-bottom: $light-border;
+
     .takeaway {
         &-wrapper {
             padding: 10rem 2rem 8rem 2rem;
@@ -268,12 +280,7 @@ TAKEAWAY SECTION
     }
 
     .button {
-        width: 100%;
         margin-bottom: 6rem;
-
-        @include tablet {
-            width: auto;
-        }
     }
 }
 
@@ -294,6 +301,14 @@ GENERAL RESTAURANT PAGE
             object-position: 50% 50%;
             object-fit: cover;
             z-index: 0;
+        }
+    }
+
+    .button {
+        width: 100%;
+
+        @include tablet {
+            width: 26rem;
         }
     }
 }
