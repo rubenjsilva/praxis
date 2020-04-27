@@ -1,0 +1,21 @@
+.db-title-section {
+    .db-title {
+        position: relative;
+        padding-top: 5rem;
+        color: rgba($white, 0.05);
+    }
+
+    .db-surtitle {
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+        color: $white;
+
+        @include phablet {
+            margin-top: -7rem;
+        }
+    }
+
+    .db-surtitle, .db-title {
+        text-align: center;
+    }
+}
