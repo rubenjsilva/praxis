@@ -73,6 +73,14 @@
 	&.full-width {
 		width: 100%;
 	}
+
+	&.delete {
+		min-width: auto;
+		height: auto;
+		padding: .5rem 0;
+		color: $dark;
+		border-bottom: 2px solid $dark;
+	}
 }
 
 .disabled {
@@ -83,8 +91,8 @@
 }
 
 .under-btn {
-	color: $gray-5;
-	padding-bottom: 0.5rem;
-	border-bottom: $light-border;
 	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+	color: $gray-5;
+	border-bottom: $light-border;
 }

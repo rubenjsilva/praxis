@@ -42,10 +42,120 @@
 			</div>
 
 			<!-- Add   filled-cart   class when cart has a product -->
-			<a class="shopping-menu filled-cart" href="#">
+			<button type="button" data-open="cartModal" class="shopping-menu filled-cart open-modal">
 				<img class="shopping-cart-icon" src="assets/images/shopping-cart-icon.svg">
-			</a>
+			</button>
 		</nav>
+
+		<div class="modal" id="cartModal" data-animation="slideInOutRight">
+			<div class="modal-dialog">
+
+				<div class="modal-header">
+					<h3>Meu cesto</h3>
+					<button class="close-modal" aria-label="close modal" data-close>
+						<img src="assets/images/close.svg">
+					</button>
+				</div>
+
+				<!------ EMPTY CART ----->
+
+				<!--
+				<div class="empty-cart-wrapper">
+					<div class="modal-content">
+						<div class="empty-cart-badge">
+							<img class="empty-cart-icon" src="assets/images/empty-cart.svg">
+						</div>
+						<h4 class="mt-40 mb-10">O teu cesto está vazio...</h4>
+						<h5>Mas não tem de estar!</h5>
+						<a class="button dark" href="shop.html">Produtos Praxis</a>
+					</div>
+				</div>
+				-->
+				
+
+				<!------ FILLED CART ----->
+
+				<div class="modal-content">
+					<article class="cart-item">
+						<div class="cart-item-thumbnail">
+							<img src="assets/images/ambar-beer-md.png">
+						</div>
+						<div class="cart-item-info-wrapper">
+							<div class="cart-item-info">
+								<h4 class="cart-item-name">Ambar</h4>
+								<h6 class="cart-item-price">2.50€</h6>
+							</div>
+							<div class="cart-item-form">
+								<div class="cart-item-field">
+									<input type="number" min="1" max="100" value="1" class="field-input">
+								</div>
+								<div class="form-action-button">
+									<button class="button delete">Remover</button>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="cart-item">
+						<div class="cart-item-thumbnail">
+							<img src="assets/images/pilsener-beer-md.png">
+						</div>
+						<div class="cart-item-info-wrapper">
+							<div class="cart-item-info">
+								<h4 class="cart-item-name">Portuguse Pedro</h4>
+								<h6 class="cart-item-price">2.50€</h6>
+							</div>
+							<div class="cart-item-form">
+								<div class="cart-item-field">
+									<input type="number" min="1" max="100" value="1" class="field-input">
+								</div>
+								<div class="form-action-button">
+									<button class="button delete">Remover</button>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="cart-item">
+						<div class="cart-item-thumbnail">
+							<img src="assets/images/dunkel-beer-md.png">
+						</div>
+						<div class="cart-item-info-wrapper">
+							<div class="cart-item-info">
+								<h4 class="cart-item-name">Dunkel</h4>
+								<h6 class="cart-item-price">2.50€</h6>
+							</div>
+							<div class="cart-item-form">
+								<div class="cart-item-field">
+									<input type="number" min="1" max="100" value="1" class="field-input">
+								</div>
+								<div class="form-action-button">
+									<button class="button delete">Remover</button>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<!-- FOOTER only belongs to filled cart, empty cart doesn't have footer -->
+				
+				<div class="modal-footer">
+					<div class="modal-footer-total">
+						<div class="total-description">
+							<span class="subtotal-text">Subtotal</span>
+							<span class="ship-text">Envio</span>
+							<h4 class="total-text">Total</h4>
+						</div>
+						<div class="total-values">
+							<span class="subtotal-value">5.00€</span>
+							<span class="ship-value">1.00€</span>
+							<h4 class="total-value">6.00€</h4>
+						</div>
+					</div>
+					<button class="button dark">Finalizar compra</button>
+				</div>
+
+				<!-- FOOTER only belongs to filled cart, empty cart doesn't have footer -->
+			</div>
+		</div>
 
 		  <div class="overlay">
 			<div class="menu-panel">
@@ -490,5 +600,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/js/navigation.js"></script>
 	<script src="assets/js/quantity-input.js"></script>
+	<script src="assets/js/cart-modal.js"></script>
   </body>
 </html>
