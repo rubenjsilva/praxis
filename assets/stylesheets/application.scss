@@ -13,6 +13,8 @@
 'atoms/button_safari',
 'atoms/scrollbar',
 'atoms/input',
+'atoms/radio',
+'atoms/checkbox',
 
 'blocs/main',
 'blocs/navbar',
@@ -28,6 +30,10 @@
 'blocs/gallery',
 'blocs/cart-modal',
 'blocs/cart-item',
+'blocs/checkout-total',
+'blocs/payment-card',
+'blocs/loading',
+
 
 'pages/beers',
 'pages/single-beer',
@@ -36,6 +42,7 @@
 'pages/museum',
 'pages/shop',
 'pages/restaurant',
+'pages/checkout',
 
 'resources/helpers';
 
