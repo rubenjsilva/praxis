@@ -41,7 +41,15 @@
 				</a>
 			</div>
 
-			<!-- Add   filled-cart   class when cart has a product -->
+			<!-- Add this back-link div checkout page and comunity article page -->
+            
+            <div class="back-link-container">
+                <a href="#" class="back-link">
+                    <img class="back-link-arrow" src="assets/images/back-arrow.svg">
+                    Voltar aos produtos
+                </a>
+            </div>
+
 			<button type="button" data-open="cartModal" class="shopping-menu filled-cart open-modal">
 				<img class="shopping-cart-icon" src="assets/images/shopping-cart-icon.svg">
 			</button>
@@ -57,22 +65,6 @@
 					</button>
 				</div>
 
-				<!------ EMPTY CART ----->
-
-				<!--
-				<div class="empty-cart-wrapper">
-					<div class="modal-content">
-						<div class="empty-cart-badge">
-							<img class="empty-cart-icon" src="assets/images/empty-cart.svg">
-						</div>
-						<h4 class="mt-40 mb-10">O teu cesto está vazio...</h4>
-						<h5>Mas não tem de estar!</h5>
-						<a class="button dark" href="shop.html">Produtos Praxis</a>
-					</div>
-				</div>
-				-->
-				
-
 				<!------ FILLED CART ----->
 
 				<div class="modal-content">
@@ -84,44 +76,6 @@
 							<div class="cart-item-info">
 								<h4 class="cart-item-name">Ambar</h4>
 								<h6 class="cart-item-price">2.50€</h6>
-							</div>
-							<div class="cart-item-form">
-								<div class="cart-item-field">
-									<input type="number" min="1" max="100" value="1" class="field-input">
-								</div>
-								<div class="form-action-button">
-									<button class="button delete">Remover</button>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="cart-item">
-						<div class="cart-item-thumbnail">
-							<img src="assets/images/pilsener-beer-md.png">
-						</div>
-						<div class="cart-item-info-wrapper">
-							<div class="cart-item-info">
-								<h4 class="cart-item-name">Portuguse Pedro</h4>
-								<h6 class="cart-item-price">2.50€</h6>
-							</div>
-							<div class="cart-item-form">
-								<div class="cart-item-field">
-									<input type="number" min="1" max="100" value="1" class="field-input">
-								</div>
-								<div class="form-action-button">
-									<button class="button delete">Remover</button>
-								</div>
-							</div>
-						</div>
-					</article>
-					<article class="cart-item">
-						<div class="cart-item-thumbnail">
-							<img src="assets/images/pack-beer-md.png">
-						</div>
-						<div class="cart-item-info-wrapper">
-							<div class="cart-item-info">
-								<h4 class="cart-item-name">Pack 8</h4>
-								<h6 class="cart-item-price">10.50€</h6>
 							</div>
 							<div class="cart-item-form">
 								<div class="cart-item-field">
@@ -220,9 +174,9 @@
 			<h3 class="checkout-section-title o-10">Finalizar compra</h3>
 
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-12 col-md-8">
 
-                    <!--------- PERSONAL INFO CARD ---------->
+                    <!--------- PERSONAL INFO CARD (Completed & Locked) ---------->
 
                     <div class="checkout-card personal-info-card completed-card">
                         <div class="checkout-card-header">
@@ -250,7 +204,7 @@
                         </div>
                     </div>
 
-
+                    <!--------- PERSONAL INFO CARD (Empty) ---------->
 
                     <div class="checkout-card personal-info-card">
                         <div class="checkout-card-header">
@@ -259,7 +213,7 @@
                         <div class="checkout-card-body">
                             <form class="form">
                                 <div class="row form-field-wrapper">
-                                    <div class="col-md-6 form-field">
+                                    <div class="col-md-6 form-field error">
                                         <label for="fname">Nome</label>
                                         <input type="text" id="fname" name="fname" class="field-input" required>
                                         <small class="error-message">Este campo apenas deve conter letras</small>
@@ -280,13 +234,13 @@
                                     </div>
                                 </div>
                                 <div class="row form-field-wrapper mb-30">
-                                    <div class="col-6 form-field">
+                                    <div class="col-12 col-lg-6 form-field">
                                         <label for="nif">Número de identificação fiscal</label>
                                         <input type="number" id="nif" name="nif" inputmode="numeric" pattern="[0-9]*" class="field-input" required>
                                     </div>
                                 </div>
                                 <div class="row form-field-wrapper">
-                                    <div class="col form-field">
+                                    <div class="col-12 form-field">
                                         <label for="address">Morada</label>
                                         <input type="text" id="address" name="address" class="field-input" required>
                                     </div>
@@ -361,7 +315,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <div class="sticky-wrapper">
 
                     <!--------- RESUME CARD ---------->
@@ -394,12 +348,12 @@
                             </div>
                             <div class="checkout-card-body p-0">
                                 <div class="row checkout-item">
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <div class="checkout-item-thumbnail">
                                             <img src="assets/images/pack-beer-md.png">
                                         </div>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-8">
                                         <div class="checkout-item-info">
                                             <h4 class="checkout-item-name">Pack 8</h4>
                                             <small class="checkout-item-price">Quantidade:<b class="value">1</b></small>
@@ -408,12 +362,12 @@
                                     </div>
                                 </div>
                                 <div class="row checkout-item">
-                                    <div class="col-md-4">
+                                    <div class="col-4">
                                         <div class="checkout-item-thumbnail">
                                             <img src="assets/images/ambar-beer-md.png">
                                         </div>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-8">
                                         <div class="checkout-item-info">
                                             <h4 class="checkout-item-name">Ambar</h4>
                                             <small class="checkout-item-price">Quantidade:<b class="value">20</b></small>

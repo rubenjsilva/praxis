@@ -35,7 +35,11 @@ label {
 }
 
 .form-field {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 3rem;
+    }
 
     &.error {
         .field-input {
@@ -50,6 +54,7 @@ label {
     }
 
     .error-message {
+        margin-top: .5rem;
         display: none;
     }
 }

@@ -143,5 +143,9 @@ strong {
 }
 
 small {
-  font-size: $font-size-sm;
+  font-size: $h6-font-size-sm;
+
+  @include tablet {
+    font-size: $font-size-sm
+  }
 }

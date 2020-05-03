@@ -1,7 +1,7 @@
 .checkout-section {
     padding: 12rem 2rem 4rem 2rem;
 
-    @include tablet {
+    @include desktop {
         padding: 15rem 8rem 10rem 8rem;
     }
 
@@ -28,13 +28,19 @@ CHECKOUT CARD (General configs)
         margin-bottom: 3rem;
         background-color: $white;
 
-        &:last-child {
-            margin-bottom: 0;
+        @include tablet {
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
         &-header {
-            padding: 2.5rem 3rem;
+            padding: 2rem;
             background-color: $dark;
+
+            @include desktop {
+                padding: 2.5rem 3rem;
+            }
 
             &-title {
                 @extend button;
@@ -43,11 +49,19 @@ CHECKOUT CARD (General configs)
         }
 
         &-body {
-            padding: 3rem;
+            padding: 2rem;
+
+            @include desktop {
+                padding: 3rem;
+            }
         }
 
         &-footer {
-            padding: 0 3rem 3rem 3rem;
+            padding: 0 2rem 2rem 2rem;
+
+            @include desktop {
+                padding: 0 3rem 3rem 3rem;
+            }
 
             .button {
                 float: none;
@@ -138,5 +152,9 @@ COMPLETED CARD (Card with client info completed and locked)
 .sticky-wrapper {
     position: -webkit-sticky;
     position: sticky;
-    top: 3rem;
+    top: 12rem;
+
+    @include desktop {
+        top: 3rem;
+    }
 }
