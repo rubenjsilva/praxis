@@ -1,0 +1,160 @@
+.checkout-section {
+    padding: 12rem 2rem 4rem 2rem;
+
+    @include desktop {
+        padding: 15rem 8rem 10rem 8rem;
+    }
+
+    @include resolution(1600px) {
+        padding: 15rem 18rem 10rem 18rem;
+    }
+
+    &-title {
+        margin-bottom: 4rem;
+
+        @include tablet {
+            margin-bottom: 8rem;
+        }
+    }
+
+/*
+--------------------------------------------------------------------------------
+CHECKOUT CARD (General configs)
+--------------------------------------------------------------------------------
+*/
+
+    .checkout-card {
+        border: 1px solid $gray-4;
+        margin-bottom: 3rem;
+        background-color: $white;
+
+        @include tablet {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-header {
+            padding: 2rem;
+            background-color: $dark;
+
+            @include desktop {
+                padding: 2.5rem 3rem;
+            }
+
+            &-title {
+                @extend button;
+                color: $white;
+            }
+        }
+
+        &-body {
+            padding: 2rem;
+
+            @include desktop {
+                padding: 3rem;
+            }
+        }
+
+        &-footer {
+            padding: 0 2rem 2rem 2rem;
+
+            @include desktop {
+                padding: 0 3rem 3rem 3rem;
+            }
+
+            .button {
+                float: none;
+                margin-left: auto;
+                display: block;
+            }
+        }
+
+/*
+--------------------------------------------------------------------------------
+SIDE CARDS
+--------------------------------------------------------------------------------
+*/
+        &.light {
+            .checkout-card-header {
+                background-color: $gray-4;
+
+                &-title {
+                    color: $dark;
+                }
+            }
+        }
+
+        &.cart-card {
+            .checkout-item {
+                &.row {
+                    border-top: 1px solid $gray-4;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+
+                &-thumbnail {
+                    padding: 2rem 0 2rem 1.5rem;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        max-height: 7rem;
+                        object-fit: contain;
+                    }
+                }
+
+                &-info {
+                    padding: 2rem 2rem 2rem 0;
+
+                    .checkout-item-name {
+                        @extend button;
+                        cursor: default;
+                        margin-bottom: 1rem;
+                    }
+
+                    .checkout-item-price {
+                        margin-bottom: 0.5rem;
+                        display: block;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .value {
+                            padding-left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+/*
+--------------------------------------------------------------------------------
+COMPLETED CARD (Card with client info completed and locked)
+--------------------------------------------------------------------------------
+*/
+
+        &.completed-card {
+            .checkout-card-header {
+                display: flex;
+                justify-content: space-between;
+
+                .completed-icon {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.sticky-wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12rem;
+
+    @include desktop {
+        top: 3rem;
+    }
+}

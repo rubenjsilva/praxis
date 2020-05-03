@@ -94,7 +94,6 @@ h6 {
 p {
   font-size: $font-size-sm;
   line-height: 150%;
-  letter-spacing: 0.02em;
 
   @include tablet {
     font-size: $font-size-baseline;
@@ -144,5 +143,9 @@ strong {
 }
 
 small {
-  font-size: $font-size-sm;
+  font-size: $h6-font-size-sm;
+
+  @include tablet {
+    font-size: $font-size-sm
+  }
 }

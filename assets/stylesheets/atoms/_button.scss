@@ -94,5 +94,32 @@
 	text-transform: uppercase;
 	padding-bottom: 0.5rem;
 	color: $gray-5;
-	border-bottom: $light-border;
+	border-bottom: 1px solid $gray-5;
+}
+
+
+.back-link-container {
+	@include transition;
+	padding: 2.5rem 1.5rem;
+	background-color: $white;
+	height: $navbar-height-sm;
+	position: fixed;
+	top: 0;
+	left: $navbar-height-sm*3;
+	z-index: 9;
+
+	@include tablet{
+		left: $navbar-height*3;
+		height: $navbar-height;
+		padding: 3.5rem 2.5rem;
+	}
+
+	.back-link {
+		color: $dark;
+		text-transform: uppercase;
+
+		&-arrow {
+			margin-right: 1rem;
+		}
+	}
 }

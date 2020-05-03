@@ -1,9 +1,11 @@
 label {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     display: inline-block;
+    color: $gray-2;
 }
 
 .field-input {
+    @include transition;
     display: inline-block;
     height: 4.6rem;
     margin: 0;
@@ -20,6 +22,83 @@ label {
     &.error {
         color: $red;
         border: 1px solid $red;
+    }
+
+    &.disabled, &:disabled {
+        color: $gray-3;
+        background-color: $gray-5;
+    }
+
+    &:focus {
+        border-color: $dark;
+    }
+}
+
+.form-field {
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 3rem;
+    }
+
+    &.error {
+        .field-input {
+            color: $red;
+            border: 1px solid $red;
+        }
+
+        .error-message {
+            color: $red;
+            display: block;
+        }
+    }
+
+    .error-message {
+        margin-top: .5rem;
+        display: none;
+    }
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+RADIO & CHECKBOX INPUTS (General configs)
+--------------------------------------------------------------------------------
+*/
+
+.checkbox-container, .radio-container {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-left: 3rem;
+    user-select: none;
+
+    input {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+    }
+
+    .checkmark {
+        @include transition;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: $white;
+        border: 1px solid $gray-3;
+    }
+}
+
+label {
+    &.radio-container, &.checkbox-container {
+        font-family: $font-family-sans-serif;
+        color: $dark;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        margin-bottom: .5rem;
     }
 }
 

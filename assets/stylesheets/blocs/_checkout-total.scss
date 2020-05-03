@@ -1,0 +1,63 @@
+.modal-footer-total, .checkout-card-total {
+    display: flex;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+
+    .total-description {
+        width: 8rem;
+    }
+
+    .total-values {
+        width: 10rem;
+
+        @include tablet {
+            width: 12rem;
+        }
+    }
+
+    .total-description,
+    .total-values {
+        display: block;
+
+        span {
+            font-family: $font-family-condensed;
+            font-size: $btn-font-size;
+            line-height: 140%;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .total-text,
+        .total-value {
+            margin-top: 1.5rem;
+        }
+    }
+
+    .total-values {
+        h4,
+        span {
+            text-align: right;
+        }
+    }
+}
+
+
+.modal-footer-total {
+    justify-content: flex-end;
+
+    .total-description {
+        h4,
+        span {
+            text-align: right;
+        }
+    }
+}
+
+
+.checkout-card-total {
+    justify-content: space-between;
+}
