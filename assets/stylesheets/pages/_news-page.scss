@@ -1,0 +1,92 @@
+.news-text {
+    &-wrapper {
+        padding: 8rem 2rem 2rem 2rem;
+
+        @include phablet {
+            padding: 8rem 4rem 4rem 4rem;
+        }
+
+        @include tablet {
+            padding: 9rem 6rem 6rem 6rem;
+        }
+
+        @include desktop {
+            padding: 9rem 8rem 8rem 8rem;
+        }
+    }
+
+    &-title {
+        padding-right: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    &-surtitle {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    &-axis-surtitle {
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    &-content {
+        margin-bottom: 1rem;
+        white-space: pre-wrap;
+    }
+}
+
+
+.news-full-image-wrapper {
+    .full-image-wrapper {
+        .parallax-window {
+            min-height: 90vh;
+            background: transparent;
+        }
+    }
+}
+
+
+.news-mixed-wrapper, .news-text-wrapper {
+    .static-image-wrapper {
+        margin: 4rem 0;
+
+        .static-image {
+            width: 100%;
+            height: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+    }
+
+    .fluid-image-wrapper {
+        margin: 4rem 0;
+
+        .parallax-window {
+            height: 100%;
+            min-height: 35rem;
+            background: transparent;
+        }
+
+        &.small {
+            .parallax-window {
+                min-height: 30vh;
+            }
+        }
+
+        &.normal {
+            .parallax-window {
+                min-height: 55vh;
+            }
+        }
+        &.big {
+            .parallax-window {
+                min-height: 70vh;
+
+                @include desktop {
+                    min-height: 90vh;
+                }
+            }
+        }
+    }
+}
