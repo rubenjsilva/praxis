@@ -1,0 +1,44 @@
+.politics-content-wrapper, .politics-header-wrapper {
+    padding: 8rem 2rem 2rem 2rem;
+
+    @include phablet {
+        padding: 8rem 4rem 4rem 4rem;
+    }
+
+    @include tablet {
+        padding: 9rem 6rem 6rem 6rem;
+    }
+
+    @include desktop {
+        padding: 10rem 8rem 8rem 8rem;
+    }
+}
+
+.politics-header-wrapper {
+    background-color: $gray-5;
+    height: 25rem;
+
+    @include tablet {
+        height: 45rem;
+    }
+}
+
+.politics-content {
+    &-wrapper {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+
+    &-container {
+        margin-bottom: 6rem;
+
+        .politics-surtitle {
+            margin-bottom: 2.5rem;
+        }
+
+        .politics-text {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
