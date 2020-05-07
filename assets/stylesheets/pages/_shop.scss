@@ -157,6 +157,40 @@
                     bottom: -5rem;
                 }
             }
+
+            &.product-pack {
+                .pack-quantity-wrapper {
+                    @include transition();
+                    background-color: rgba($black, 0.80);
+                    visibility: visible;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 2rem;
+                    z-index: 3;
+
+                    @include desktop {
+                        visibility: hidden;
+                        bottom: -10rem;
+                    }
+
+                    .pack-quantity {
+                        padding: 1.5rem;
+                        color: $white;
+
+                        > div {
+                            &:not(:last-child) {
+                                margin-bottom: .5rem;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .pack-quantity-wrapper {
+                    visibility: visible;
+                    bottom: 5rem;
+                }
+            }
         }
     }
 }
