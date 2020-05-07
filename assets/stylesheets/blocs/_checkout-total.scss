@@ -7,7 +7,7 @@
     }
 
     .total-description {
-        width: 8rem;
+        width: 12rem;
     }
 
     .total-values {
@@ -48,6 +48,10 @@
 
 .modal-footer-total {
     justify-content: flex-end;
+
+    .min-buy-amount {
+        margin-bottom: -1rem;
+    }
 
     .total-description {
         h4,
