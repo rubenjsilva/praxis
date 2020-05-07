@@ -53,11 +53,12 @@
             position: absolute;
             width: 100vw;
             left: 50%;
-            top: 10%;
+            top: 15%;
             transform: translateX(-50%);
             opacity: .1;
 
             @include tablet {
+                top: 10%;
                 width: 85rem;
             }
         }
@@ -67,16 +68,16 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 36rem;
+            height: 32rem;
             pointer-events: auto;
             border-radius: 4px;
             background: linear-gradient(164.59deg, #2a2a2a 22.3%, #131313 87.6%);
             box-shadow: 0px 3px 60px #000000;
-            padding: 4rem 2rem 2rem 2rem;
+            padding: 4rem 2rem 4rem 2rem;
 
             @include tablet {
-                padding: 6rem 5rem 3rem 5rem;
-                height: 42rem;
+                padding: 6rem 5rem 6rem 5rem;
+                height: 34rem;
             }
 
             .age-verification-title {
