@@ -1,0 +1,22 @@
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+    background-color: $black;
+    @include transition(transform, 1.4);
+
+    &.translate-up {
+        transform: translateY(-100%);
+    }
+
+    .loading-icon {
+        animation: 1.5s spin infinite linear;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%, -50%);
+    }
+}

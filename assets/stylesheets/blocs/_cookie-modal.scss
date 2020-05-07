@@ -36,7 +36,7 @@
     position: fixed;
     display: none;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.96);
+    background-color: rgba(0, 0, 0, 0.99);
 
     .age-verification-window {
         display: flex;
@@ -47,6 +47,19 @@
 
         @include tablet {
             width: 65rem;
+        }
+
+        .backdrop-logo {
+            position: absolute;
+            width: 100vw;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+            opacity: .1;
+
+            @include tablet {
+                width: 85rem;
+            }
         }
 
         .age-verification-content {
