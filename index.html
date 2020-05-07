@@ -30,12 +30,34 @@
     </head>
 
     <body>
-      <div class="cookie-banner" style="display: flex;">
+
+      <!------ LITTLE COOKIE BAR ----->
+
+      <div class="cookie-banner" style="display: none;">
         <small>Utilizamos cookies próprias e de terceiros para melhorar a sua experiência e os nossos serviços. Se continuar a navegar, consideramos que aceita a sua utilização.</small>
         <button class="close-cookie">
           <img src="assets/images/close.svg">
         </button>
-    </div>
+      </div>
+
+      <!------ AGE VERIFICATION MODAL ----->
+
+      <div id="popup" data-popup="popup-1" class="age-verification-overlay">
+        <div class="verify-window age-verification-window">
+          <div class="age-verification-content justify-content-center">
+            <h4 class="age-verification-title t-center">Bem vindo ao mundo praxis <br> Tens mais de 18 anos?</h4>
+            <div class="d-flex justify-content-center actions-wrapper mb-30">
+              <a class="button-no button dark" href="https://www.google.com" target="_parent">No</a>
+              <button class="button-yes button light" data-popup-close="popup-1">
+                  Yes
+              </button>
+            </div>
+            <p class="age-verification-surtitle t-center">Para entrares no site tens de ter mais de 18 anos.</p>
+            <small class="disclaimer">Ao submeteres estes dados, estás a concordar com os Termos e Condições e Política de Cookies do site Praxis. 
+              Para saberes mais, lê os Termos e Condições e Política de Cookies.</small>
+            </div>
+        </div>
+      </div>
 
       <header class="menu">
         <nav class="navbar">
