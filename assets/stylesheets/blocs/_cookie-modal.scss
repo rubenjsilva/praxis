@@ -61,6 +61,14 @@
                 top: 10%;
                 width: 85rem;
             }
+
+            @include hd {
+                top: 5%;
+            }
+
+            @include resolution(1600px) {
+                top: 15%;
+            }
         }
 
         .age-verification-content {
