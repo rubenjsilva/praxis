@@ -80,6 +80,10 @@
             </a>
           </div>
 
+          <a class="phonenumber-menu" href="tel:+351239440207">
+            <h5>239 440 207</h5>
+          </a>
+
           <a class="shopping-menu" href="#">
             <img class="shopping-cart-icon" src="assets/images/shopping-cart-icon.svg">
           </a>
@@ -122,21 +126,20 @@
               <li><a href="shop.html" class="menu-link">Loja Online</a></li>
             </ul>
             <div class="media-links-container-vertical d-flex">
-              <a href="https://www.facebook.com/cervejaPraxis" class="media-link facebook">
+              <a href="https://www.facebook.com/cervejaPraxis" target="_blank" class="media-link facebook">
                 <img src="assets/images/facebook-logo.svg">
               </a>
-              <a href="https://www.instagram.com/praxisbeer/" class="media-link instagram">
+              <a href="https://www.instagram.com/praxisbeer/" target="_blank" class="media-link instagram">
                 <img src="assets/images/instagram-logo.svg">
               </a>
-              <!-- Youtube Link Missing -->
-              <a href="" class="media-link youtube">
-                <img src="assets/images/youtube-logo.svg">
-              </a>
-              <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" class="media-link tripadvisor">
+              <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" target="_blank" class="media-link tripadvisor">
                 <img src="assets/images/tripadvisor-logo.svg">
               </a>
-              <a href="https://untappd.com/w/praxis/34853/" class="media-link untappd">
+              <a href="https://untappd.com/w/praxis/34853/" target="_blank" class="media-link untappd">
                 <img src="assets/images/untappd-logo.svg">
+              </a>
+              <a href="https://www.ratebeer.com/brewer/13539/sort/2/" target="_blank" class="media-link ratebeer">
+                <img src="assets/images/ratebeer-logo.svg">
               </a>
             </div>
           </div>
@@ -148,12 +151,18 @@
           <img class="bg-image" src="assets/images/pure-malt-lg.jpg" alt="Paxis Teaser">
 
           <div class="w-50 align-self-end">
-            <h2 class="invert">Pure <br>Malt Beer</h2>
+            <h2 class="invert">Fino <br>É de coimbra</h2>
+          </div>
+
+          <div class="beer-ratings-wrapper justify-content-between">
+            <a href="https://untappd.com/w/praxis/34853/" target="_blank"><img src="assets/images/untappd-logo.svg" alt="Untappd"></a>
+            
+            <a href="https://www.ratebeer.com/brewer/13539/sort/2/" target="_blank"><img src="assets/images/ratebeer-logo.svg" alt="Ratebeer"></a>
           </div>
         </section>
 
         <section class="fullscreen-wrapper dark-section">
-          <img class="bg-image" src="assets/images/brewery-lg.jpg" alt="Cervejaria">
+          <img class="bg-image" src="assets/images/brew-process-lg.jpg" alt="Cervejaria">
           <!--<video class="bg-video" loop="" muted="" autoplay="" playsinline="" src="./assets/images/praxis_teaser.mp4"></video>-->
           <div class="row">
             <div class="col-12 col-sm-10 col-lg-4 offset-md-1 offset-lg-7">
@@ -357,7 +366,7 @@
               <h5 class="section-description invert">
                 This is the perfect place to shop for souvenirs, find the ultimate glass to drink a Praxis or to reserve a growler. 
                 Proudly showcase your wilder side by visiting the Praxis Brewery!</h5>
-              <!--<a href="shop.html" class="button light disabled">Brevemente</a>-->
+              <a href="shop.html" class="button light">Visitar</a>
             </div>
           </div>
         </section>
@@ -375,10 +384,6 @@
                 <a href="https://www.instagram.com/praxisbeer/" class="media-link instagram">
                   <img src="assets/images/instagram-logo.svg">
                 </a>
-                <!-- Youtube Link Missing -->
-                <a href="" class="media-link youtube">
-                  <img src="assets/images/youtube-logo.svg">
-                </a>
                 <a href="https://www.tripadvisor.pt/Restaurant_Review-g189143-d3336615-Reviews-Praxis_Coimbra-Coimbra_Coimbra_District_Central_Portugal.html" class="media-link tripadvisor">
                   <img src="assets/images/tripadvisor-logo.svg">
                 </a>
@@ -390,8 +395,8 @@
             <div class="col-6 col-lg-2 sitemap">
               <a href="shop.html" class="footer-link disabled"><h6>Loja</h6></a>
               <a href="community.html" class="footer-link"><h6>Comunidade</h6></a>
-              <a href="contacts.html" class="footer-link"><h6>Contactos</h6></a>
-              <a href="community" class="footer-link"><h6>Eventos</h6></a>
+              <a href="contacts.html" class="footer-link"><h6>Restaurante</h6></a>
+              <a href="community" class="footer-link"><h6>Fábrica Praxis</h6></a>
             </div>
             <div class="col-6 col-lg-3 policies">
               <a href="faqs.html" class="footer-link"><small>Perguntas frequentes</small></a>
@@ -399,18 +404,26 @@
               <a href="privacy-policy.html" class="footer-link"><small>Política de Privacidade</small></a>
               <a href="complaint-book" class="footer-link"><small>Livro de reclamações</small></a>
             </div>
-            <div class="col-sm-12 col-lg-4 newsletter">
+
+            <div class="col-sm-12 col-lg-4 newsletter policies">
+              <p class="mb-10">Urbanização Quinta da Várzea,<br> Lote 29, Santa Clara.</p>
+              <a href="mailto:coimbra@praxis.pt" class="footer-link"><p>coimbra@praxis.pt</p></a>
+              <a href="tel:+351239440207" class="footer-link"><p>+351 239 440 207</p></a>
+            </div>
+
+
+            <!--<div class="col-sm-12 col-lg-4 newsletter">
               <label>Fica a par das novidades</label>
               <div class="d-flex newsletter-field-container">
                 <input type="email" placeholder="Insere o teu email..." class="field-input light">
                 <button class="button light">Subscrever</button>
               </div>
-            </div>
+            </div>-->
           </div>
           <div class="row rights-wrapper">
             <div class="col-12 rights-container d-flex justify-content-between">
               <small class="mb-20">® 2020 Praxis. Todos os direitos reservados</small>
-              <small class="mb-20">Made by <a class="madeby" href="https://famazing.pt/">F*Amazing</a></small>
+              <small class="mb-20">Made by <a class="madeby" href="https://famazing.pt/"><img src="assets/images/famazing-footer.png"></a></small>
             </div>
           </div>
         </footer>

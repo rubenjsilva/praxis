@@ -7,11 +7,11 @@
         margin-bottom: 1.5rem;
         height: 1.5rem;
         display: block;
+        font-family: $pangram-regular;
     }
 
     .policies {
         .footer-link {
-            font-family: $pangram-regular;
             letter-spacing: .02rem;
             line-height: 60%;
         }
@@ -68,8 +68,8 @@
                 font-family: $font-family-sans-serif-med;
                 font-size: $font-size-sm;
 
-                &:visited {
-                    color: $white;
+                img {
+                    margin-bottom: -3px;
                 }
             }
         }

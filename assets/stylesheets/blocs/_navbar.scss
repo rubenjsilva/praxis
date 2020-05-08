@@ -149,6 +149,21 @@ Praxis Logo & Burguer Menu
                 width: 100%;
             }
         }
+
+        .phonenumber-menu {
+            @include position(fixed, 0, null, null, $navbar-height);
+            background-color: $white;
+            color: $black;
+            display: none;
+            width: 22rem;
+            height: $navbar-height;
+            padding: 3rem;
+            z-index: 5;
+
+            @include tablet {
+                display: block;
+            }
+        }
     }
 
     /*
