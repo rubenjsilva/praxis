@@ -64,6 +64,6 @@
 
   @include tablet {
     padding: 13rem 8rem 3rem 8rem;
-    height: 100vh;
+    min-height: 100vh;
   }
 }

@@ -155,14 +155,19 @@ Praxis Logo & Burguer Menu
             background-color: $black;
             color: $gray-5;
             display: none;
-            width: 22rem;
+            width: 24rem;
             height: $navbar-height;
             padding: 3rem;
             z-index: 5;
             border-right: 1px solid $dark;
+            align-items: center;
 
             @include tablet {
-                display: block;
+                display: flex;
+            }
+
+            img {
+                margin-right: 1rem;
             }
         }
     }
