@@ -50,8 +50,13 @@
             .close-modal {
                 @include position(absolute, 0, null, null, 0);
                 background-color: $black;
-                width: $navbar-height;
-                height: $navbar-height;
+                width: $navbar-height-sm;
+                height: $navbar-height-sm;
+
+                @include tablet {
+                    width: $navbar-height;
+                    height: $navbar-height;
+                }
             }
         }
 
