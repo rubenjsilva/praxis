@@ -151,19 +151,30 @@ Praxis Logo & Burguer Menu
         }
 
         .phonenumber-menu {
-            @include position(fixed, 0, null, null, $navbar-height);
+            @include position(fixed, 0, null, null, $navbar-height-sm);
             background-color: $black;
             color: $gray-5;
-            display: none;
-            width: 24rem;
-            height: $navbar-height;
-            padding: 3rem;
+            width: $navbar-height-sm;
+            height: $navbar-height-sm;
+            padding: 2rem;
             z-index: 5;
             border-right: 1px solid $dark;
             align-items: center;
 
             @include tablet {
                 display: flex;
+                right: $navbar-height;
+                height: $navbar-height;
+                width: 24rem;
+                padding: 3rem;
+            }
+
+            h5 {
+                display: none;
+
+                @include tablet {
+                    display: inline;
+                }
             }
 
             img {

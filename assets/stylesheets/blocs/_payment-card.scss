@@ -16,5 +16,46 @@
         width: 100%;
         margin-bottom: 2rem;
         position: relative;
+
+        .payment-details {
+            padding: 2rem 2.5rem;
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+            }
+
+            @include desktop {
+                padding: 3rem 4rem;
+            }
+
+            .mb-img {
+                margin-bottom: 2rem;
+
+                @include tablet {
+                    margin-right: 4rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    table {
+        font-size: $font-size-baseline !important;
+        border: none !important;
+
+        tbody {
+            tr {
+                padding: 0 1rem;
+
+                @include desktop {
+                    padding: 0 3rem;
+                }
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
     }
 }

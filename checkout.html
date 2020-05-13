@@ -266,7 +266,50 @@
                         </div>
                     </div>
 
-                    <!--------- PAYMENT CARD ---------->
+                    <!--------- PAYMENT CARD (add success class on first div to change chard header color) ---------->
+
+					<div class="checkout-card payment-card payment-success">
+                        <div class="checkout-card-header">
+                            <h4 class="checkout-card-header-title">Informações da encomenda</h4>
+                        </div>
+                        <div class="checkout-card-body">
+							<h5 class="mb-30">Foi-lhe enviado um email com todos os dados da compra e pagamento.</h5>
+
+							<!--------- PAYMENT DETAILS WRAPPER (put both payment method details inside this (payment-generator-info) div) ---------->
+
+							<div class="payment-generator-info">
+								<div class="payment-details d-flex align-items-center">
+									<img class="mb-img" src="assets/images/multibanco.png">
+									<div class="d-flex">
+										<div class="labels">
+											<p>Entidade:</p>
+											<p>Referência:</p>
+											<p>Valor:</p>
+										</div>
+										<div class="values ml-20">
+											<p><b>12256</b></p>
+											<p><b>1234 5679 9800</b></p>
+											<p><b>14<span> €</span></b></p>
+										</div>
+									</div>
+								</div>
+
+								<!--------- LOADING WRAPPER (can be used in other places also) ---------->
+
+                                <div class="loading-wrapper">
+                                    <img class="loading-icon" src="assets/images/loading-icon.png">
+                                </div>
+
+                                <!--------- LOADING WRAPPER (can be used in other places also) ---------->
+
+                            </div>
+						</div>
+						<div class="checkout-card-footer">
+                            <button class="button dark">Volta aos produtos</button>
+                        </div>
+					</div>
+
+					<!--------- PAYMENT CARD ---------->
 
                     <div class="checkout-card payment-card">
                         <div class="checkout-card-header">
@@ -290,18 +333,6 @@
                                     <span class="checkmark"></span>
                                 </label>
                             </form>
-
-                            <div class="payment-generator-info">
-
-                                <!--------- LOADING WRAPPER (can be used in other places also) ---------->
-
-                                <div class="loading-wrapper">
-                                    <img class="loading-icon" src="assets/images/loading-icon.png">
-                                </div>
-
-                                <!--------- LOADING WRAPPER (can be used in other places also) ---------->
-
-                            </div>
 
                             <label class="checkbox-container">
                                 <input type="checkbox" name="checkbox">
