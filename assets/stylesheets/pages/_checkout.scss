@@ -34,6 +34,12 @@ CHECKOUT CARD (General configs)
             }
         }
 
+        &.payment-success {
+            .checkout-card-header {
+                background-color: $green;
+            }
+        }
+
         &-header {
             padding: 2rem;
             background-color: $dark;
@@ -41,6 +47,7 @@ CHECKOUT CARD (General configs)
             @include desktop {
                 padding: 2.5rem 3rem;
             }
+
 
             &-title {
                 @extend button;
