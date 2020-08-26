@@ -1,5 +1,47 @@
+.main-cax {
+    background-color: $black;
+
+    .fullscreen-wrapper {
+        video {
+            z-index: 1;
+        }
+    }
+
+    .last-banner {
+        height: 40rem;
+        width: 100%;
+        object-fit: cover;
+
+        @include desktop-down {
+            height: 25rem;
+        }
+    }
+
+    .caxopo-preset-section {
+        .presentation-logo, .presentation-ig {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .presentation-logo {
+            @include desktop-down {
+               width: 90%;
+            }
+        }
+
+        .presentation-ig {
+            height: 90%;
+        }
+    }
+}
 
 .caxopo-section {
+    @include desktop-down {
+        height: 100%;
+    }
+
     .caxopo-content-wrapper {
         height: 100%;
 
@@ -9,18 +51,8 @@
     }
 
     .compound-image-wrapper {
-
         .parallax-window {
             background: transparent;
-
-            &.flat-image {
-                display: none;
-
-                @include tablet {
-                    height: 25vh;
-                    display: block;
-                }
-            }
 
             &.thin-image {
                 position: absolute;
@@ -49,8 +81,9 @@
                 }
 
                 &.section-one {
-                    width: 65%;
+                    width: 75%;
                     margin-left: auto;
+                    margin-right: auto;
                     display: block;
                 }
 
@@ -73,9 +106,16 @@
         .side-ig {
             position: absolute;
             top: 0;
-            right: -16rem;
-            height: 100%;
+            right: -15rem;
+            width: 100%;
+            height: 90%;
             opacity: .4;
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+
         }
     }
 
@@ -108,7 +148,11 @@
         }
     }
 
-    .restaurant-content-wrapper {
+    &.origins-section  {
         height: 100%;
+
+        @include desktop {
+            height: 110vh;
+        }
     }
 }

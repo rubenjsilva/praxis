@@ -24,6 +24,7 @@ Mobile first queries
 @mixin phablet        { @media (min-width: 556px)  { @content; } }
 @mixin tablet         { @media (min-width: 768px)  { @content; } }
 @mixin desktop        { @media (min-width: 992px) { @content; } }
+@mixin desktop-down   { @media (max-width: 991px) { @content; } }
 @mixin hd             { @media (min-width: 1200px) { @content; } }
 @mixin resolution($r) { @media (min-width: #{$r})  { @content; } }
 
