@@ -1,0 +1,114 @@
+
+.caxopo-section {
+    .caxopo-content-wrapper {
+        height: 100%;
+
+        @include desktop {
+            height: 100vh;
+        }
+    }
+
+    .compound-image-wrapper {
+
+        .parallax-window {
+            background: transparent;
+
+            &.flat-image {
+                display: none;
+
+                @include tablet {
+                    height: 25vh;
+                    display: block;
+                }
+            }
+
+            &.thin-image {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 1rem;
+                height: 25rem;
+                width: 10rem;
+
+                @include tablet {
+                    left: 4rem;
+                    height: 35rem;
+                    width: 25rem;
+                }
+
+                @include hd {
+                    height: 40rem;
+                }
+            }
+
+            &.ratio-image {
+                height: 60vh;
+
+                @include desktop {
+                    height: 80vh;
+                }
+
+                &.section-one {
+                    width: 65%;
+                    margin-left: auto;
+                    display: block;
+                }
+
+                &.section-two {
+                    width: 85%;
+                    margin-right: auto;
+                    display: block;
+                }
+            }
+
+            &.flat-image, &.thin-image, &.ratio-image {
+                box-shadow: 0rem .4rem 4rem rgba(0, 0, 0, 0.95);
+
+                @include tablet {
+                    box-shadow: 0rem .4rem 8rem rgba(0, 0, 0, 0.95);
+                }
+            }
+        }
+
+        .side-ig {
+            position: absolute;
+            top: 0;
+            right: -16rem;
+            height: 100%;
+            opacity: .4;
+        }
+    }
+
+    .caxopo-narrative {
+        &-wrapper {
+            padding: 4rem 3.5rem 2rem 3.5rem;
+
+            @include tablet {
+                padding: 4rem 8rem 4rem 8rem;
+            }
+        }
+
+        &-title {
+            color: $white;
+            margin-bottom: 3rem;
+
+            @include desktop {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &-subtitle {
+            color: $gray-4;
+            margin-bottom: 2rem;
+        }
+
+        &-info {
+            color: $gray-3;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .restaurant-content-wrapper {
+        height: 100%;
+    }
+}

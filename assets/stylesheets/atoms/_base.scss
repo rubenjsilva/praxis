@@ -29,75 +29,47 @@ h1, h2, h3, h4, h6, label, button {
 }
 
 h1 {
-  font-size: $h1-font-size-sm;
+  @include responsive_font($min: 10.6, $max: 23);
   letter-spacing: 0.06em;
   line-height: 90%;
-
-  @include tablet {
-    font-size: $h1-font-size;
-  }
 }
 
 h2 {
-  font-size: $h2-font-size-sm;
+  @include responsive_font($min: 7.2, $max: 15);
   letter-spacing: 0.04em;
   line-height: 90%;
-
-  @include tablet {
-    font-size: $h2-font-size;
-  }
 }
 
 h3 {
-  font-size: $h3-font-size-sm;
+  @include responsive_font($min: 5, $max: 8.6);
   letter-spacing: 0.02em;
   line-height: 100%;
-
-  @include tablet {
-    font-size: $h3-font-size;
-  }
 }
 
 h4 {
-  font-size: $h4-font-size-sm;
+  @include responsive_font($min: 2.6, $max: 3.6);
   letter-spacing: 0.02em;
   line-height: 100%;
-
-  @include tablet {
-    font-size: $h4-font-size;
-  }
 }
 
 h5 {
+  @include responsive_font($min: 1.8, $max: 2.4);
   font-family: $font-family-sans-serif-med;
-  font-size: $h5-font-size-sm;
   font-weight: 200;
   letter-spacing: 0.02em;
   line-height: 130%;
-
-  @include tablet {
-    font-size: $h5-font-size;
-  }
 }
 
 h6 {
+  @include responsive_font($min: 1.2, $max: 1.4);
   font-family: $font-family-sans-serif-bold;
-  font-size: $h6-font-size-sm;
   letter-spacing: 0.14em;
   line-height: 100%;
-
-  @include tablet {
-    font-size: $h6-font-size;
-  }
 }
 
 p {
-  font-size: $font-size-sm;
+  @include responsive_font($min: 1.4, $max: 1.6);
   line-height: 150%;
-
-  @include tablet {
-    font-size: $font-size-baseline;
-  }
 }
 
 span {
@@ -106,13 +78,9 @@ span {
 
 a, button {
   cursor: pointer;
-  font-size: $btn-font-size-sm;
+  @include responsive_font($min: 1.6, $max: 1.8);
   letter-spacing: 0.12em;
   @include transition(all, .5);
-
-  @include tablet {
-    font-size: $btn-font-size;
-  }
 }
 
 a {
@@ -125,13 +93,9 @@ a {
 
 label, .label {
   font-family: $font-family-condensed;
-  font-size: $h6-font-size-sm;
+  @include responsive_font($min: 1.2, $max: 1.4);
   line-height: 100%;
   letter-spacing: 0.2em;
-
-  @include tablet {
-    font-size: $font-size-sm;
-  }
 }
 
 b {
@@ -143,9 +107,5 @@ strong {
 }
 
 small {
-  font-size: $h6-font-size-sm;
-
-  @include tablet {
-    font-size: $font-size-sm
-  }
+  @include responsive_font($min: 1.2, $max: 1.4);
 }
