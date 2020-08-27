@@ -4,6 +4,17 @@ Fonts auxiliar mixins
 --------------------------------------------------------------------------------
 */
 
+@mixin responsive_font($min, $max) {
+  font-size: #{$min}rem;
+
+  @include resolution(600px) {
+    font-size: calc(#{$min}rem + ((#{$max} * 10) - (#{$min} * 10)) * ((100vw - 650px) / 550));
+  }
+  @include resolution(1200px) {
+    font-size: #{$max}rem;
+  }
+}
+
 
 /*
 --------------------------------------------------------------------------------
@@ -13,6 +24,7 @@ Mobile first queries
 @mixin phablet        { @media (min-width: 556px)  { @content; } }
 @mixin tablet         { @media (min-width: 768px)  { @content; } }
 @mixin desktop        { @media (min-width: 992px) { @content; } }
+@mixin desktop-down   { @media (max-width: 991px) { @content; } }
 @mixin hd             { @media (min-width: 1200px) { @content; } }
 @mixin resolution($r) { @media (min-width: #{$r})  { @content; } }
 
