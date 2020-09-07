@@ -20,29 +20,37 @@ $green:  #27AE60;
 $beer-colors: (
     ambar: #ED4F00,
     belgiandark: #B08A70,
+    belgian-dark: #B08A70,
     dunkel: #CACCD0,
     ipa: #31795B,
     lausus: #797165,
     portuguesepedro: #E74239,
+    portuguese-pedro: #E74239,
     pilsener: #E5B257,
     weiss: #E5B257,
     pumpkinale: #EE894F,
+    pumpkin-ale: #EE894F,
     bsda: $dark,
-    dunkelstrong: $dark
+    dunkelstrong: $dark,
+    dunkel-strong: $dark
 );
 
 $beer-bg: (
     ambar: linear-gradient(153.33deg, rgba(255, 155, 105, 0.4) 21.01%, rgba(251, 104, 31, 0.4) 87.05%),
     belgiandark: linear-gradient(153.33deg, rgba(176, 138, 112, 0.4) 21.01%, rgba(145, 107, 81, 0.4) 87.05%),
+    belgian-dark: linear-gradient(153.33deg, rgba(176, 138, 112, 0.4) 21.01%, rgba(145, 107, 81, 0.4) 87.05%),
     dunkel: linear-gradient(153.33deg, rgba(202, 204, 208, 0.4) 21.01%, rgba(177, 180, 187, 0.4) 87.05%),
     ipa: linear-gradient(153.33deg, rgba(186, 181, 153, 0.4) 21.01%, rgba(164, 154, 129, 0.4) 87.05%),
     lausus: linear-gradient(153.33deg, rgba(181, 170, 165, 0.4) 21.01%, rgba(180, 173, 166, 0.6) 87.05%),
     portuguesepedro: linear-gradient(153.33deg, rgba(242, 216, 171, 0.6) 21.01%, rgba(230, 195, 136, 0.6) 87.05%),
+    portuguese-pedro: linear-gradient(153.33deg, rgba(242, 216, 171, 0.6) 21.01%, rgba(230, 195, 136, 0.6) 87.05%),
     pilsener: linear-gradient(153.33deg, rgba(229, 178, 87, 0.4) 21.01%, rgba(208, 145, 32, 0.4) 87.05%),
     weiss: linear-gradient(153.33deg, rgba(229, 178, 87, 0.4) 21.01%, rgba(208, 145, 32, 0.4) 87.05%),
     pumpkinale: linear-gradient(153.33deg, rgba(245, 178, 130, 0.4) 21.01%, rgba(235, 160, 115, 0.4) 87.05%),
+    pumpkin-ale: linear-gradient(153.33deg, rgba(245, 178, 130, 0.4) 21.01%, rgba(235, 160, 115, 0.4) 87.05%),
     bsda: linear-gradient(167.27deg, #2A2A2A 22.3%, #131313 87.6%),
-    dunkelstrong: linear-gradient(167.27deg, #2A2A2A 22.3%, #131313 87.6%)
+    dunkelstrong: linear-gradient(167.27deg, #2A2A2A 22.3%, #131313 87.6%),
+    dunkel-strong: linear-gradient(167.27deg, #2A2A2A 22.3%, #131313 87.6%)
 );
 
 
