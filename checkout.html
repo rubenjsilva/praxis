@@ -41,7 +41,9 @@
 				</a>
 			</div>
 
+			
 			<!-- Add this back-link div checkout page and comunity article page -->
+			<!-- NEW BACK LINK -->
             
             <div class="back-link-container">
                 <a href="#" class="back-link">
@@ -245,7 +247,7 @@
                                         <input type="text" id="address" name="address" class="field-input" required>
                                     </div>
                                 </div>
-                                <div class="row form-field-wrapper">
+                                <div class="row form-field-wrapper mb-30">
                                     <div class="col-md-4 form-field">
                                         <label for="zip">Código postal</label>
                                         <input type="text" id="zip" name="zip" inputmode="numeric" pattern="[0-9]*" class="field-input" required>
@@ -257,6 +259,13 @@
                                     <div class="col-md-4 form-field">
                                         <label for="country">País</label>
                                         <input type="text" id="country" name="country" value="Portugal" class="field-input" disabled>
+                                    </div>
+                                </div>
+
+								<div class="row form-field-wrapper">
+                                    <div class="col-12 form-field">
+                                        <label for="obs">Observações</label>
+                                        <textarea type="text" id="obs" name="obs" class="field-input" rows="4"></textarea>
                                     </div>
                                 </div>
                             </form> 
@@ -303,9 +312,12 @@
                                 <!--------- LOADING WRAPPER (can be used in other places also) ---------->
 
                             </div>
+						<small class="o-30 mb-10 d-block">
+							As encomendas serão entregues até 5 dias úteis após o pagamento ser validado.
+						</small>
 						</div>
 						<div class="checkout-card-footer">
-                            <button class="button dark">Volta aos produtos</button>
+                            <button class="button dark">Voltar aos produtos</button>
                         </div>
 					</div>
 
