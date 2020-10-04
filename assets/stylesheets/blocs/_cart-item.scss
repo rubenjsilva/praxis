@@ -63,17 +63,17 @@
     &-field {
         display: flex;
         align-items: center;
-        max-width: 7rem;
-        padding-right: 2rem;
+        max-width: 8rem;
+        padding-right: 3rem;
 
-        .field-input {
-            text-align: center;
+        .select {
+            min-width: 8rem;
         }
     }
 
     .form-action-button {
         display: flex;
         align-items: center;
-        padding-left: 2rem;
+        padding-left: 4rem;
     }
 }

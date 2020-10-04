@@ -1,0 +1,52 @@
+select {
+    border: 1px solid $dark;
+    background-color: $white;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+.select {
+    position: relative;
+    display: flex;
+    line-height: 3;
+    background-color: $white;
+    overflow: hidden;
+    min-width: 12rem;
+    height: 5rem;
+    float: left;
+
+    @include tablet {
+        min-width: 10rem;
+    }
+
+    select {
+        cursor: pointer;
+        font-family: $font-family-sans-serif;
+        font-size: $font-size-baseline;
+        flex: 1;
+        padding: 1.5rem;
+        color: $dark;
+
+    }
+
+    &:after {
+        cursor: pointer;
+        content: url('./../images/chevron-down-icon.svg');
+        position: absolute;
+        top: 0.8rem;
+        right: 1rem;
+        pointer-events: none;
+        transition: 0.25s all ease;
+    }
+}

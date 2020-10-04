@@ -51,6 +51,11 @@
 
     .min-buy-amount {
         margin-bottom: -1rem;
+        text-align: right;
+
+        @include tablet {
+            text-align: left;
+        }
     }
 
     .total-description {

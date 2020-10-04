@@ -87,7 +87,20 @@
 							</div>
 							<div class="cart-item-form">
 								<div class="cart-item-field">
-									<input type="number" min="1" max="100" value="1" class="field-input">
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
+									</div>
 								</div>
 								<div class="form-action-button">
 									<button class="button delete">Remover</button>
@@ -106,7 +119,20 @@
 							</div>
 							<div class="cart-item-form">
 								<div class="cart-item-field">
-									<input type="number" min="1" max="100" value="1" class="field-input">
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
+									</div>
 								</div>
 								<div class="form-action-button">
 									<button class="button delete">Remover</button>
@@ -125,7 +151,20 @@
 							</div>
 							<div class="cart-item-form">
 								<div class="cart-item-field">
-									<input type="number" min="1" max="100" value="1" class="field-input">
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
+									</div>
 								</div>
 								<div class="form-action-button">
 									<button class="button delete">Remover</button>
@@ -224,24 +263,28 @@
 	  <main>
 		<section class="shop-section">
 			<h2 class="shop-section-title o-10">Produtos</h2>
-			<div class="tabs-navigation">
-				<ul class="tab-nav">
-					<li class="tab-item">
-						<a class="tab-link active" href="#">Tudo</a>
-					</li>
-					<li class="tab-item">
-						<a class="tab-link" href="#">Cervejas</a>
-					</li>
-					<li class="tab-item">
-						<a class="tab-link" href="#">Packs</a>
-					</li>
-					<li class="tab-item">
-						<a class="tab-link" href="#">Novidades</a>
-					</li>
-					<li class="tab-item">
-						<a class="tab-link" href="#">Outros</a>
-					</li>
-				</ul>
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="tabs-navigation">
+					<ul class="tab-nav">
+						<li class="tab-item">
+							<a class="tab-link active" href="#">Tudo</a>
+						</li>
+						<li class="tab-item">
+							<a class="tab-link" href="#">Cervejas</a>
+						</li>
+						<li class="tab-item">
+							<a class="tab-link" href="#">Packs</a>
+						</li>
+						<li class="tab-item">
+							<a class="tab-link" href="#">Novidades</a>
+						</li>
+						<li class="tab-item">
+							<a class="tab-link" href="#">Especiais</a>
+						</li>
+					</ul>
+				</div>
+
+				<a href="#" class="button dark">Criar pack</a>
 			</div>
 
 			<div class="products-wrapper">
@@ -265,10 +308,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -295,15 +347,30 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
 										<span>Adicionar</span>
 									</button>
+									<!--<div class="quantity-input">
+										<input type="number" min="1" max="100" step="1" value="1">
+										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									</div>
+									-->
 								</div>
 							</article>
 						</div>
@@ -323,10 +390,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -351,10 +427,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -378,10 +463,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -402,10 +496,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -426,10 +529,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -450,10 +562,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -477,10 +598,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -504,10 +634,19 @@
 									</div>
 								</a>
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
@@ -570,10 +709,19 @@
 								</div>
 
 								<div class="quantity-wrapper">
-									<div class="quantity-input">
-										<input type="number" min="1" max="100" step="1" value="1">
-										<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
-										<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+									<div class="select">
+										<select name="select" id="select">
+											<option selected>0</option>
+											<option value="1">4</option>
+											<option value="2">8</option>
+											<option value="3">12</option>
+											<option value="4">15</option>
+											<option value="5">16</option>
+											<option value="6">20</option>
+											<option value="7">24</option>
+											<option value="8">28</option>
+											<option value="9">30</option>
+										</select>
 									</div>
 									<button class="button button-icon dark full-width">
 										<img class="icon" src="assets/images/shopping-cart-icon.svg">
