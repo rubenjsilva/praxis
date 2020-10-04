@@ -77,6 +77,10 @@
             padding-bottom: 2rem;
         }
 
+        &-ingredients, &-description {
+            @include responsive_font($min: 1.8, $max: 2);
+        }
+
         &-ingredient-container {
             margin-left: 1.4rem;
 
@@ -85,7 +89,7 @@
             }
 
             p {
-                padding: 1.6rem 0;
+                padding: 1.5rem 0;
                 position: relative;
 
                 img {
