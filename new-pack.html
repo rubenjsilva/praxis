@@ -170,8 +170,8 @@
 		  </div>
 	  </header>
 
-	  <main>
-		<section class="pickpack-section">
+	  <main class="pickpack-flow">
+		<section class="pickpack-section page" id="pageOne">
 			<h4 class="pickpack-section-title">Escolha o tamanho do seu pack</h4>
 
             <div class="row">
@@ -183,7 +183,7 @@
 							</div>	
 							<div class="pack-info">
 								<h4 class="pack-name">Pack 4</h4>
-								<p class="pack-price">Preço mínimo: 10€</p>
+								<p class="pack-price">Preço mínimo: <b>10€</b></p>
 							</div>
 						</div>
 					</article>
@@ -196,7 +196,7 @@
 							</div>
 							<div class="pack-info">
 								<h4 class="pack-name">Pack 8</h4>
-								<p class="pack-price">Preço mínimo: 10€</p>
+								<p class="pack-price">Preço mínimo: <b>10€</b></p>
 							</div>
 						</div>
 					</article>
@@ -209,7 +209,7 @@
 							</div>
 							<div class="pack-info">
 								<h4 class="pack-name">Pack 15</h4>
-								<p class="pack-price">Preço mínimo: 10€</p>
+								<p class="pack-price">Preço mínimo: <b>10€</b></p>
 							</div>
 						</div>
 					</article>
@@ -219,6 +219,160 @@
 			<div class="footer-actions first-step">
 				<a href="#pickBeers" class="button dark disabled" id="nextButton">Seguinte</a>
 			</div>
+
+			<!--<div class="footer-actions second-step">
+
+				<button class="button button-icon dark disabled">
+                    <img src="assets/images/shopping-cart-icon.svg">
+                    Adicionar ao carrinho
+                </button>
+				<button class="button button-icon dark disabled">
+                    <img src="assets/images/shopping-cart-icon.svg">
+                    Adicionar ao carrinho
+                </button>
+			</div>-->
+		</section>
+
+
+
+		<section class="pickpack-section page" id="pageTwo">
+			<h4 class="pickpack-section-title">Escolha as suas cervejas</h4>
+
+            <div class="row">
+                <div class="col-12 col-md-9">
+					<div class="grid-container">
+						<div class="grid-item">
+							<h4 class="beer-list-title">Pilsener</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Ambar</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Weiss</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Ipa</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Dunkel</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Pumkin Ale</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Belgian Dark</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						<div class="grid-item">
+							<h4 class="beer-list-title">Portuguese Pedro</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+						
+						<div class="grid-item">
+							<h4 class="beer-list-title">Lausus</h4>
+							<div class="beer-list-image">
+								<img src="assets/images/ambar-beer-md.png">
+							</div>
+
+							<div class="quantity-input">
+								<input type="number" min="1" max="100" step="1" value="0">
+								<span class="quantity-button quantity-down"><img src="./assets/images/minus.svg"></span>
+								<span class="quantity-button quantity-up"><img src="./assets/images/plus.svg"></span>
+							</div>
+						</div>
+					</div>
+                </div>
+
+                <div class="col-12 col-md-3">
+					<div class="sticky-wrapper">
+                        <div class="checkout-card resume-card light">
+                            <div class="checkout-card-header">
+                                <h4 class="checkout-card-header-title">Pack 8</h4>
+                            </div>
+                            <div class="checkout-card-body">
+                                <div class="checkout-card-total">
+                                    <div class="total-description">
+                                        <h4 class="total-text">Total</h4>
+                                    </div>
+                                    <div class="total-values">
+                                        <h4 class="total-value">6.00€</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</section>
 
 	  </main>
@@ -228,5 +382,6 @@
 	<script src="assets/js/quantity-input.js"></script>
 	<script src="assets/js/cart-modal.js"></script>
 	<script src="assets/js/new-pack.js"></script>
+	<script src="assets/js/quantity-input.js"></script>
   </body>
 </html>

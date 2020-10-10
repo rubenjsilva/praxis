@@ -1,4 +1,13 @@
 
+$('#nextButton').click(function() {
+    var slideNumber = $($(this).attr('href')).index('.page'),
+        margin = slideNumber * 100 + '%';
+
+    $('main').animate({ marginLeft: margin }, 750);
+    return false;
+});
+
+
 function packClick(clickedId) {
     const clickedPackId = clickedId;
     console.log(clickedPackId);
