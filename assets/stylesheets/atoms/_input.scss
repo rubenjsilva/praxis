@@ -126,38 +126,56 @@ QUANTITY INPUT
 
 .quantity-input {
     position: relative;
-    min-width: 12rem;
-    height: 4rem;
+    min-width: 11rem;
+    height: 3.8rem;
     float: left;
 
     @include resolution(1600px) {
         min-width: 14rem;
-        height: 5rem;
+        height: 4rem;
+    }
+
+    &:hover {
+        input, .quantity-button.quantity-up, .quantity-button.quantity-down {
+            border-color: $gray-2;
+        }
+
+        svg path {
+            stroke: $gray-2;
+        }
     }
 
     input {
+        @include transition;
         height: 100%;
         width: 100%;
         line-height: 1.65;
         text-align: center;
         float: left;
         display: block;
-        border: 1px solid $dark;
+        border: 1px solid $gray-3;
         background-color: $white;
 
         &:focus {
             outline: 0;
+            border-color: $gray-2;
+        }
+        
+        &:focus + .quantity-button {
+            border-color: $gray-2;
         }
     }
 
     .quantity-button {
+        @include transition;
         cursor: pointer;
         color: $dark;
         position: absolute;
         height: 100%;
-        width: 4rem;
+        width: 3.5rem;
         display: flex;
         justify-content: center;
+        align-items: center;
         text-align: center;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -169,16 +187,20 @@ QUANTITY INPUT
             width: 4.5rem;
         }
 
+        svg path {
+            @include transition;
+        }
+
         &.quantity-up {
             top: 0;
             right: 0;
-            border-left: 1px solid $dark;
+            border-left: 1px solid $gray-3;
         }
 
         &.quantity-down {
             top: 0;
             left: 0;
-            border-right: 1px solid $dark;
+            border-right: 1px solid $gray-3;
         }
     }
 }

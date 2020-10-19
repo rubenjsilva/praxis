@@ -1,3 +1,28 @@
+.shop-nav-wrapper {
+    position: relative;
+
+    .new-pack-action {
+        position: relative;
+        
+        .button {
+            width: -webkit-fill-available;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+
+            @include phablet {
+                margin-top: 0;
+                z-index: 1;
+            }
+        }
+
+        @include phablet {
+            position: absolute;
+            right: 0;
+            top: -50%;
+        }
+    }
+}
+
 .tabs-navigation {
     .tab-nav {
         list-style: none;

@@ -4,6 +4,14 @@ $('#nextButton').click(function() {
         margin = slideNumber * 100 + '%';
 
     $('main').animate({ marginLeft: margin }, 750);
+    $('.second-step').css({ display: 'flex' });
+    return false;
+});
+
+$('#backButton').click(function() {
+
+    $('main').animate({ marginLeft: 0 }, 750);
+    $('.second-step').css({ display: 'none' });
     return false;
 });
 
@@ -23,5 +31,4 @@ function packClick(clickedId) {
 
     const nextButton = document.getElementById('nextButton');
     nextButton.classList.remove("disabled");
-
 }
