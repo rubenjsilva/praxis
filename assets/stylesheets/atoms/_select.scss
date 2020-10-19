@@ -30,6 +30,10 @@ select::-ms-expand {
         min-width: 10rem;
     }
 
+    @include resolution(1600px) {
+        min-width: 12rem;
+    }
+
     select {
         cursor: pointer;
         font-family: $font-family-sans-serif;

@@ -2,50 +2,31 @@
 	@include transition(all, 0.5);
 	border-radius: 1px;
 	min-width: 14rem;
-	height: 5rem;
-	padding: 1.4rem 1.8rem;
+	padding: 1.2rem 1.8rem;
 	text-transform: uppercase;
 	float: left;
 	text-align: center;
 	position: relative;
+	vertical-align: middle;
 
 	@include tablet {
 		min-width: 16rem;
+		height: 5rem;
+		padding: 1.4rem 1.8rem;
 	}
 
 	&.button-icon {
-		padding-left: 15%;
-		padding-right: 10%;
-
-		@include hd {
-			padding-left: 20%;
-		}
-
-		@include resolution(1400px) {
-			padding-left: 15%;
-		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		img {
 			max-width: 100%;
 			max-height: 100%;
 
 			&.icon {
-				position: absolute;
-				top: 50%;
-				left: 10%;
-				transform: translate(0, -50%);
-
-				@include desktop {
-					left: 10%;
-				}
-
-				@include hd {
-					left: 15%;
-				}
-
-				@include resolution(1600px) {
-					left: 20%;
-				}
+				position: relative;
+				margin-right: 1.2rem;
 			}
 		}
 	}
@@ -86,7 +67,7 @@
 .disabled {
 	cursor: default;
 	color: $gray-4 !important;
-	opacity: 0.8;
+	opacity: 0.7;
 	pointer-events: none !important;
 }
 
@@ -98,28 +79,34 @@
 }
 
 
+
 .back-link-container {
 	@include transition;
-	padding: 2.5rem 1.5rem;
+	padding: 9rem 2rem 2rem 2rem;
 	background-color: $white;
-	height: $navbar-height-sm;
 	position: fixed;
 	top: 0;
-	left: $navbar-height-sm*3;
+	left: 0;
 	z-index: 9;
+	width: 100%;
 
-	@include tablet{
+	@include tablet {
 		left: $navbar-height*3;
 		height: $navbar-height;
 		padding: 3.5rem 2.5rem;
+		width: max-content;
+	}
+}
+
+.back-link {
+	color: $dark;
+	text-transform: uppercase;
+
+	&:active {
+		color: $dark;
 	}
 
-	.back-link {
-		color: $dark;
-		text-transform: uppercase;
-
-		&-arrow {
-			margin-right: 1rem;
-		}
+	&-arrow {
+		margin-right: 1rem;
 	}
 }
