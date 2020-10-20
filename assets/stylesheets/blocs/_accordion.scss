@@ -1,0 +1,93 @@
+.sub-section-title {
+    margin-bottom: 3rem;
+
+    &:not(:first-child) {
+        margin-top: 8rem;
+    }
+}
+
+.accordion {
+    width: 100%;
+    margin: 0 auto;
+
+    .accordion-item {
+        border-bottom: 2px solid $gray-5;
+
+        &:first-child {
+            border-top: 2px solid $gray-5;
+        }
+
+        .accordion-header, .accordion-body {
+            background: $white;
+        }
+
+        .accordion-header {
+            @include transition();
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .accordion-title {
+                color: $dark;
+                padding: 2rem 2rem 2rem 0;
+                margin: 0;
+                width: 100%;
+
+                @include tablet {
+                    padding: 4rem 3rem 4rem 0;
+                }
+            }
+        }
+
+        .icon-container {
+            height: 3rem;
+            width: 3rem;
+            margin-right: 3rem;
+            position: relative;
+
+            svg {
+                @include transition();
+                height: 3rem;
+                width: 3rem;
+                position: absolute;
+
+                &.plus-icon {
+                    opacity: 1;
+                }
+
+                &.minus-icon {
+                    opacity: 0;
+                    transform: rotate(-90deg);
+
+                }
+            }
+        }
+
+        &.active {
+            .icon-container {
+                svg.plus-icon {
+                    transform: rotate(90deg);
+                    opacity: 0;
+                }
+
+                svg.minus-icon {
+                    transform: rotate(0deg);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .accordion-body {
+            background: $white;
+            display: none;
+
+            .accordion-body-contents {
+                padding: 0 4rem 2rem 0;
+                color: $gray-1;
+            }
+        }
+    }
+}
+
