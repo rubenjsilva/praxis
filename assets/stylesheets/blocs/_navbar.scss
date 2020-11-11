@@ -264,7 +264,7 @@ Navigation Modal
                         @extend h3;
                         color: $white;
                         display: block;
-                        padding: 1rem 0;
+                        padding: .5rem 0;
 
                         &.beers-link {
                             @include transition(all, 0.7);
