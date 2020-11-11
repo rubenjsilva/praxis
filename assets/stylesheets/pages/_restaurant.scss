@@ -50,6 +50,10 @@ MENU SECTION
                     color: $gray-2;
                     margin-top: -.2rem;
                 }
+
+                &-allergens {
+                    color: $white;
+                }
             }
         }
 
@@ -255,14 +259,14 @@ TAKEAWAY SECTION
 .takeaway-section {
     .takeaway {
         &-wrapper {
-            padding: 2rem 2rem 4rem 2rem;
+            padding: 4rem 2rem 4rem 2rem;
 
             @include tablet {
-                padding: 0rem 6rem 6rem 6rem;
+                padding: 6rem 6rem 6rem 6rem;
             }
 
             @include desktop {
-                padding: 0rem 8rem 10rem 8rem;
+                padding: 10rem 8rem 10rem 8rem;
             }
         }
 
