@@ -1,0 +1,85 @@
+.contacts-section {
+    background-color: $black;
+    padding-bottom: 4rem;
+
+    @include tablet {
+        padding-bottom: 8rem;
+    }
+
+    .contacts-wrapper {
+        padding: 8rem 2rem 2rem 2rem;
+
+        @include tablet {
+            padding: 9rem 6rem 6rem 6rem;
+        }
+
+        @include desktop {
+            padding: 9rem 8rem 8rem 8rem;
+        }
+
+        .map-wrapper {
+            height: 100%;
+            display: block;
+            margin-bottom: 5rem;
+
+            @include tablet {
+                margin-bottom: 0;
+            }
+
+            .map-image {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 5rem;
+                z-index: 4;
+
+                img {
+                    width: 100%;
+                }
+
+                .contacts-media-links {
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 2rem;
+
+                    @include desktop {
+                        margin-top: 4rem;
+                    }
+
+                    .media-link {
+                        margin-right: 2rem;
+
+                        @include tablet {
+                            margin-right: 3rem;
+                        }
+
+                        @include desktop {
+                            margin-right: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contacts-block-container {
+        .contacts-block {
+            margin-bottom: 6rem;
+
+            &-title {
+                margin-bottom: 5rem;
+            }
+
+            &-surtitle {
+                margin-bottom: 1rem;
+            }
+
+            .schedule-grid {
+                display: grid;
+                grid-template-columns: 150px 150px;
+                row-gap: 1.5rem;
+                column-gap: 1.5rem;
+            }
+        }
+    }
+}
