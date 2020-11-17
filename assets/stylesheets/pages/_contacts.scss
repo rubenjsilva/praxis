@@ -47,14 +47,16 @@
                     }
 
                     .media-link {
-                        margin-right: 2rem;
+                        &:not(:last-child){
+                            margin-right: 2rem;
 
-                        @include tablet {
-                            margin-right: 3rem;
-                        }
+                            @include tablet {
+                                margin-right: 3rem;
+                            }
 
-                        @include desktop {
-                            margin-right: 4rem;
+                            @include desktop {
+                                margin-right: 4rem;
+                            }
                         }
                     }
                 }
