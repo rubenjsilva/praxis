@@ -200,10 +200,6 @@ Navigation Modal
         z-index: 19;
         overflow: auto;
 
-        @include desktop {
-            overflow: hidden;
-        }
-
         &.menu-open {
             transform: translateX(0%);
         }
@@ -212,11 +208,11 @@ Navigation Modal
             padding: 10rem 2rem 2rem;
 
             @include desktop {
-                padding: 12rem 8rem 10rem 12rem;
+                padding: 11rem 8rem 8rem 12rem;
             }
 
-            @include hd {
-                padding: 12rem 8rem 10rem 18rem;
+            @include resolution(1400px) {
+                padding: 12rem 8rem 8rem 18rem;
             }
 
             ul {
@@ -262,6 +258,7 @@ Navigation Modal
 
                     .menu-link {
                         @extend h3;
+                        @include responsive_font($min: 4.8, $max: 7.6);
                         color: $white;
                         display: block;
                         padding: .5rem 0;
